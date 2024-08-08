@@ -280,16 +280,16 @@ Sefer lislemenizde otobüs hareket saati  için YerelInternetSaat bilet fiyatı 
 :::info
 Size gönderilen Tarih ve Saat alanı üzerinde **<u>_hiçbir değişiklik yapmadan_</u>** kullanabilirsiniz.( +03:00 +02:00 gibi yaz saati, kış saati uygulaması bizim tarafımızda ayarlanmaktadır.)
 :::
-:::info
+:::tip
 Bazı koltuklar için özel sınıflar uygulanmaktadır ve ücret farkı doğmaktadır.Bu ücret farklılığı otobüs planında daha detaylı olarak belirtilmektedir.Sefer listelemesinde ise sinif farkı ücretini BiletFiyatiInternet ücretine ekleyerek 2 adet ücret gösterebilirsiniz.  
-Örneğin: 40 TL / 50 TL
+**Örneğin:** 40 TL / 50 TL
 :::
 :::info
 Otobüs tipi özellikleri için sefer listesinde OTipOzellik bilgileri gelmektedir.Burada index’i 1 olan veriler otobüs özelliklerini vermektedir.Index verileri sefer listesiyle birlikte gelen OTipOzellik verileri ile eşleştirilir ve detaylı bilgiye erişilir.  
-Örneğin OTipOzellik ozelliği 1100000000000000000000000000000000000 olsun.  
+**Örneğin:** OTipOzellik ozelliği 1100000000000000000000000000000000000 olsun.  
 0.index i 1 yani O_Tip_Ozellik listesinde bulunan 0 nolu index ile eşleşmektedir.Aşağıdaki liste üzerinden baktığımızda O_Tip_Ozellik verisi 0 olan Internet özellliği seçilen sefer için mevcuttur.
 :::
-:::info
+:::tip
 İlgili sefer için koltuk seçiminin olup olmadığını belirten KoltukSecimiVar alanı gelmektedir. Eğer bu alan false ise koltuk planı sorgulamadan direk satış yapılabilir.
 :::
 :::info

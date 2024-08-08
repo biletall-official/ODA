@@ -8,14 +8,14 @@ https://ws.biletall.com/3DSecure/SecurePay2.aspx
 http://94.55.20.137//WSTEST/3DSecure/SecurePay2.aspx
 
 **<u>Test Ortamı Kart Bilgileri:</u>**  
-**Kart Numarası:** 5218076007402834
-**Son Kullanma Tarihi:** 11/40 
-**Güvenlik Numarası:** 820
-**Kart 3D Secure Şifresi:** 123456
+**Kart Numarası:** 5218076007402834  
+**Son Kullanma Tarihi:** 11/40   
+**Güvenlik Numarası:** 820  
+**Kart 3D Secure Şifresi:** 123456  
 
-**satisXML:** Satış yapacağınız xml değerini arka planda set etmelisiniz.
+**satisXML:** Satış yapacağınız xml değerini arka planda set etmelisiniz.  
 **yetkiXML:** Web servis kullanıcı adı şifrenizi göndereceğiniz XML arka planda set etmelisiniz
-**successURL:** Para çekme işlemi başarılı ise sonucun döneceği sayfanızın URL sidir. Post ettiğiniz sayfanızda web servisin 3d ödeme sayfası açılır , 3d secure satış işlemi gerçekleştirilir ve sayfa içerisine dönerek belirtmiş olduğunuz sayfaya sonuç bilgisini gönderir. 
+**successURL:** Para çekme işlemi başarılı ise sonucun döneceği sayfanızın URL sidir. Post ettiğiniz sayfanızda web servisin 3d ödeme sayfası açılır , 3d secure satış işlemi gerçekleştirilir ve sayfa içerisine dönerek belirtmiş olduğunuz sayfaya sonuç bilgisini gönderir.   
 **failURL :** Para çekme işlemi başarısız ise sonucun döneceği sayfanızın URL sidir. Biletleme işlemi gerçekleşmez.
 
 

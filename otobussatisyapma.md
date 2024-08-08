@@ -7,8 +7,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |**KalkisNoktaID***|Seçilen seferin KalkisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**|
 |**VarisNoktaID***|Seçilen seferin VarisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**|
 |**Tarih***|Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**|
-|**Saat***|Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)
-**Format:(datetime, ‘s’).**|
+|**Saat***|Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)**Format:(datetime, ‘s’).**|
 |**HatNo***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)**Format: integer**|
 |**SeferNo***|Sefer listesinde bulunan SeferTakipNo alanı|
 |**KoltukNo1***|İlk yolcu için seçilen koltuk numarası|

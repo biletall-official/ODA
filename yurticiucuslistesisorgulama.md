@@ -75,7 +75,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 Gidiş için seçilecek uçuşların fiyat seçeneklerinin yer aldığı bir Seçenekler listesi, uçuş bilgilerinin yer aldığı bir Segmentler listesi bulunmaktadır.  
 Gidiş seferlerinde olduğu gibi dönüş seferleri için DonusSecenekler ve DonusSegmentler listeleri bulunmaktadır.  
+:::tip
 Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçeneğin SegmentSiniflar listesinden sınıflarına bakılarak o sınıfın ilgili segmentleri alınabilir.Ve sonrasında istenilirse Segmentin  ücret detaylarını SecenekUcretDetaylar listesinden çekilerek kullanılabilir.  
+:::
 
 **SEÇENEKLER LİSTESİ**
 

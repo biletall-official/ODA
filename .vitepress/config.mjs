@@ -1,15 +1,31 @@
 import { defineConfig } from 'vitepress'
 
-
 export default defineConfig({
   title: "BiletAll ",
   description: "BiletAll Web Servis Teknik Dökümanı",
   themeConfig: {
     nav: [
-      
       { text: 'Başlangıç', link: '/amaç.md' },
-
+      {
+        text: '1.1.0',
+        items: [
+          { text: 'changelog', link: '/changelog.md' },
+        ]
+      }
     ],
+      sidebar: {
+      '/changelog/': [
+        {
+          text: 'Sürüm Notları',
+          collapsible: true,
+          collapsed: true, 
+          items: [
+            { text: '1.1.0', link: '/changelog.md' },
+          ],
+        },
+      ],
+    },
+    
 
     sidebar: [
         {
@@ -95,8 +111,8 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ],
-      outlineTitle: 'Bu Sayfada', // Sağdaki menü başlığı
-    outline: 'deep', // Derinlik seviyesi
+      outlineTitle: 'Bu Sayfada', 
+    outline: 'deep', 
     },
   },
 )

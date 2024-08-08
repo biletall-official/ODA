@@ -1,6 +1,6 @@
 # SEFER SEÇME - FİYAT ÇEKME
-:::info
-Önemli Not : Fiyat çekme aşamasında ilgili uçuş sınıfının tükenmesinden kaynaklı hata alabilirsiniz. Hata almanız durumunda fiyat çekmeye çalıştığınız uçuşun parkuru için yeniden sefer sorgulaması yapmanız gerekmektedir.
+:::danger
+Fiyat çekme aşamasında ilgili uçuş sınıfının tükenmesinden kaynaklı hata alabilirsiniz. Hata almanız durumunda fiyat çekmeye çalıştığınız uçuşun parkuru için yeniden sefer sorgulaması yapmanız gerekmektedir.
 Yurtiçi veya yurtdışı uçuş listeleri alındıktan uçuş planına göre segment seçimleri yapılır. Tek yön bir uçuş planı varsa gidiş segmenti, gidiş-dönüş şeklinde bir uçuş planı varsa gidiş ve dönüş segmentleri seçilip oluşan seyahat planının ücret bilgisi çekilir. Fiyat çekme işleminde kullanılacak FirmaNo bilgisi için, sefer listesinde gelen FirmaNo alanı kullanılmalıdır.
 :::
 ## ŞEMA
