@@ -22,6 +22,7 @@ Koltuk seçim işleminde bazen seçilen koltuk ya da koltuklar başka bir platfo
 :::info
 (*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir;  
 
 ```xml
@@ -85,7 +86,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir;
 <IslemSonuc>
   <Sonuc>true</Sonuc>
 </IslemSonuc>
-````
+```
 ### HATA SONUCU
 
 ```xml

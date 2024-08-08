@@ -309,7 +309,7 @@ Yabancı yolcu için satış istek örneği;
     <OnOdemeTutar>40.0000</OnOdemeTutar>
   </WebYolcu>
 </IslemSatis>
-````
+```
 ### CEVAP
 
 ## SEYAHAT ÜLKE İSTEK
@@ -344,4 +344,4 @@ Yabancı yolcu için satış istek örneği;
     <OtobusSeyahatUyari />
   </Ulke>
 </SeyahatUlkeler>
-````
+```

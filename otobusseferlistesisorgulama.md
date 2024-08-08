@@ -306,19 +306,16 @@ Sefer sorgusuna “SeyahatSuresiGosterimTipi”parametresi eklenmiştir. Bu para
 <OTipOzellik>
 	<O_Tip_Ozellik>0</O_Tip_Ozellik>
 	<O_Tip_Ozellik_Aciklama>İnternet</O_Tip_Ozellik_Aciklama>
-	<O_Tip_Ozellik_Detay>  
-//Sağladığımız internet bağlantısını bilgisayarınızda kullanabilirsiniz.  
+	<O_Tip_Ozellik_Detay>   
 </O_Tip_Ozellik_Detay>
 	<O_Tip_Ozellik_Icon>Internet.gif</O_Tip_Ozellik_Icon>
     </OTipOzellik>
     <OTipOzellik>
 	<O_Tip_Ozellik>1</O_Tip_Ozellik>
 	<O_Tip_Ozellik_Aciklama>Rahat Koltuk</O_Tip_Ozellik_Aciklama>
-	<O_Tip_Ozellik_Detay>  
-//Bu araçta geniş ve rahat koltuk bulunmaktadır.  
+	<O_Tip_Ozellik_Detay>    
 </O_Tip_Ozellik_Detay>
 	<O_Tip_Ozellik_Icon>Rahat_Koltuk.gif</O_Tip_Ozellik_Icon>
     </OTipOzellik>
-
 ```
 :::
