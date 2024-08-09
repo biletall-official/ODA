@@ -6,9 +6,10 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: "Başlangıç", link: "/amaç.md" },
+      { text: "Katkıda Bulunanlar", link: "/katkidabulunanlar.md" },
       {
         text: "1.1.0",
-        items: [{ text: "changelog", link: "/changelog.md" }],
+        items: [{ text: "SÜRÜM NOTLARI", link: "/changelog.md" }],
       },
     ],
 
@@ -165,7 +166,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/biletall-official" },
     ],
     outlineTitle: "Bu Sayfada",
     outline: "deep",

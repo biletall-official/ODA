@@ -14,7 +14,6 @@ Budo da araç tipi sorgulama bulunmamaktadır.
 ```
 
 ## CEVAP
-
 ```xml
 <IdoAracTipleri>
   <AracTip>

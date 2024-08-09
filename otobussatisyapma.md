@@ -3,9 +3,8 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-
-| FirmaNo                   | Seçilen seferi yapacak olan firmanın firma numarası                                                                                                                                                                                                  |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| FirmaNo                   | Seçilen seferi yapacak olan firmanın firma numarası |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | **KalkisNoktaID\***       | Seçilen seferin KalkisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**                                                                                                                                                                   |
 | **VarisNoktaID\***        | Seçilen seferin VarisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**                                                                                                                                                                    |
 | **Tarih\***               | Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**                                                                                                                                             |
@@ -18,7 +17,8 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 | TcVatandasiMi1            | 1 ya da boş gönderildiğinde TcKimlikNo değeri zorunlu hale gelir. TC Vatandaşı olmayan her yolcu için 0 gönderilmelidir.                                                                                                                             |
 | TcKimlikNo1               | İlk yolcunun kimlik numarası.Tc Vatandaşları için zorunludur.                                                                                                                                                                                        |
 | HESKodu1                  | İlk yolcunun HES Kodu Tc Vatandaşları için zorunludur.                                                                                                                                                                                               |
-| PasaportUlkeKod1          | TC Vatandaşı olmayan her yolcu için pasaport ülke kodu bilgisi. Ülkelerin ikili kodları gönderilmelidir.                                                                                                                                             |
+| PasaportUlkeKod1          | TC Vatandaşı olmayan her yolcu için pasaport ülke kodu bilgisi. Ülkelerin ikili kodları gönderilmelidir. |
+
 | PasaportNo1               | TC Vatandaşı olmayan her yolcu için pasaport numarası bilgisi.                                                                                                                                                                                       |
 | BinecegiYer1              | İlk yolcunun yolda bineceği yer bilgisi. (Biniş yerinin adı) **Format:(string, max: 15 karakter).**                                                                                                                                                  |
 | ServisYeriKalkis1         | İlk yolcunun seferden önce alınacağı servis durağıdır.(Servis noktasının adı. Aynı anda Bineceği yer ve Kalkış servisi seçilmemelidir.) **Format:(string, max: 15 karakter).**                                                                       |

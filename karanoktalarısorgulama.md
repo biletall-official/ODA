@@ -29,8 +29,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |Açıklama|Varsa nokta ile ilgili açıklama belirtir.|
 |MerkezMi|Noktanın merkez mi yoksa bir merkeze bağlı mı olduğunu belirtir.|
 |BağlıOlduğuNokta|Noktanın bağlı olduğu merkez nokta ID'sidir.|
-
+::: details Kodu görüntülemek için tıklayın.
 ```xml
+console.log(
 <KaraNoktalar>
   <KaraNokta>
     <ID>84</ID>
@@ -193,4 +194,6 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
     < BagliOlduguNoktaID >738</BagliOlduguNoktaID>
   </KaraNokta>
 </KaraNoktalar>
+)
 ```
+:::
