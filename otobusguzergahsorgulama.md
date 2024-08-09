@@ -1,5 +1,7 @@
 # GÜZERGAH SORGULAMA
+
 ## İSTEK
+
 ```xml
 <Hat>
   <FirmaNo>37</FirmaNo>
@@ -13,6 +15,7 @@
 ```
 
 ## CEVAP
+
 ```xml
 Sonuc:
 <NewDataSet>

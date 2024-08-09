@@ -1,9 +1,11 @@
 # HAVA NOKTALARI SORGULAMA
+
 :::info
-Bu sorgu ile Biletall web servisleri için düzenlenmiş havaalanı kalkış-varış noktaları elde edilir. 
+Bu sorgu ile Biletall web servisleri için düzenlenmiş havaalanı kalkış-varış noktaları elde edilir.
 :::
 
 ## ŞEMA
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 ```xml
@@ -11,24 +13,26 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## İSTEK
+
 ```xml
 <HavaNoktaGetirKomut/>
 ```
 
 ## CEVAP
-|ALANLAR|AÇIKLAMALAR|
-|--------------------|----------------------------------------------|
-|UlkeKod|Havaalanının bulunduğu ülkenin kodudur.|
-|UlkeAd|Havaalanının bulunduğu ülkenin adıdır.|
-|UlkeAdEn|Havaalanının bulunduğu ülkenin adının İngilizcesidir.|
-|SehirKod|Havaalanının bulunduğu şehrin kodudur.|
-|SehirAd|Havaalanının bulunduğu şehrin adıdır.|
-|SehirAdEn|Havaalanının bulunduğu şehrin adının İngilizcesidir.
-|HavaAlanKod|Havaalanının kodudur.|
-|HavaAlanAd|Havaalanının adıdır.|
-|HavaAlanAdEn|Havaaalanı adının İngilizcesidir.|
-|HavaAlanBolge|Havaalanının bulunduğu bölgenin adıdır.|
-|HavaAlanBolgeEn|Havaalanının bulunduğu bölgenin adının İngilizcesidir.|
+
+| ALANLAR         | AÇIKLAMALAR                                            |
+| --------------- | ------------------------------------------------------ |
+| UlkeKod         | Havaalanının bulunduğu ülkenin kodudur.                |
+| UlkeAd          | Havaalanının bulunduğu ülkenin adıdır.                 |
+| UlkeAdEn        | Havaalanının bulunduğu ülkenin adının İngilizcesidir.  |
+| SehirKod        | Havaalanının bulunduğu şehrin kodudur.                 |
+| SehirAd         | Havaalanının bulunduğu şehrin adıdır.                  |
+| SehirAdEn       | Havaalanının bulunduğu şehrin adının İngilizcesidir.   |
+| HavaAlanKod     | Havaalanının kodudur.                                  |
+| HavaAlanAd      | Havaalanının adıdır.                                   |
+| HavaAlanAdEn    | Havaaalanı adının İngilizcesidir.                      |
+| HavaAlanBolge   | Havaalanının bulunduğu bölgenin adıdır.                |
+| HavaAlanBolgeEn | Havaalanının bulunduğu bölgenin adının İngilizcesidir. |
 
 ```xml
 <HavaNoktalar>

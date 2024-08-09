@@ -1,10 +1,13 @@
 # FİRMA SORGULAMA
-## ŞEMA
-Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.  
-Alanların açıklaması şu şekildedir.  
 
-|Firma No|Hesabınıza bağlı otobüs firmasının bilgilerini çekmeye yarar.|  
-|--------|-------------------------------------------------------|  
+## ŞEMA
+
+Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.  
+Alanların açıklaması şu şekildedir.
+
+| Firma No | Hesabınıza bağlı otobüs firmasının bilgilerini çekmeye yarar. |
+| -------- | ------------------------------------------------------------- |
+
 ```xml
 <xs:element name="Firmalar_2">
     <xs:complexType>
@@ -15,19 +18,22 @@ Alanların açıklaması şu şekildedir.
   </xs:element>
 ```
 
-Görüldüğü üzere bu alanların hiç birini gönderme zorunluluğu yoktur.  
+Görüldüğü üzere bu alanların hiç birini gönderme zorunluluğu yoktur.
 
-## İSTEK  
+## İSTEK
+
 ```XML
 <Firmalar_2 xmlns=""></Firmalar_2>
-```  
+```
+
 ::: info
 Not : Test ortamında firmaları listelemek için <Firmalar xmlns=""></Firmalar> şeklinde istek göndermeniz gerekirken canlı ortamda <Firmalar_2 xmlns=""></Firmalar_2> şeklinde göndermeniz gerekmektedir.
 :::
 
 ## CEVAP
-|Sefere kadar iptal edebilme süresi dakika|Eğer firmada bilet iptal aktifse sefer saatine kaç dakika kalana kadar iptal edilebileceğini belirtir. Boş gelirse firmada böyle bir bilgi bulunmuyor demektir.|
-|-----------------------------------------|---------------------------------------------------------------------------------------------------|  
+
+| Sefere kadar iptal edebilme süresi dakika | Eğer firmada bilet iptal aktifse sefer saatine kaç dakika kalana kadar iptal edilebileceğini belirtir. Boş gelirse firmada böyle bir bilgi bulunmuyor demektir. |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ```xml
 <Firmalar>
@@ -49,5 +55,4 @@ Not : Test ortamında firmaları listelemek için <Firmalar xmlns=""></Firmalar>
 			1440
 		</SefereKadarIptalEdilebilmeSuresiDakika>
        </Firma>
-```  
-
+```

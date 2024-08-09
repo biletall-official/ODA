@@ -1,9 +1,11 @@
 # REZERVASYONLU SATIŞ YAPMA
+
 :::info
 Rezervasyonlu satış yapma işlemi, satış yapma işlemindeki gibidir.Ek olarak RezervePnrNo bilgisi kullanılmaktadır.
 :::
 
 ## İSTEK
+
 ```xml
 <IslemSatis>
   <FirmaNo>37</FirmaNo>
@@ -40,6 +42,7 @@ Rezervasyonlu satış yapma işlemi, satış yapma işlemindeki gibidir.Ek olara
 ```
 
 ## CEVAP
+
 ```xml
 <IslemSonuc>
   <Sonuc>true</Sonuc>

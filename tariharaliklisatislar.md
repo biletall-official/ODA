@@ -1,11 +1,14 @@
 # TARİH ARALIKLI SATIŞLAR VE İPTALLER LİSTELEME
+
 :::tip
 Tarih aralıklı satış ve iptallerinizi işlem bazında görmenizi sağlar. Tarih aralığında sizin yaptığınız veya sizin biletinize yapılan işlemleri listeler. Belli aralıklarla bu sorguyu çalıştırarak kendi veritabanınızla biletall arasındaki senkronizasyonu sağlayabilirsiniz.
 :::
 :::warning
 Cevap xml’indeki “IslemiYapanFarkliKullaniciMi” sizin satış işlemleriniz başka bir kullanıcı tarafından(biletall veya çağrı merkezi) iptal edilmişse 1 değerini alır.
 :::
+
 ## İSTEK
+
 ```xml
  <Islemlerim_2 xmlns="">
   <BaslangicTarihi>2019-12-09T10:00:00</BaslangicTarihi>
@@ -14,6 +17,7 @@ Cevap xml’indeki “IslemiYapanFarkliKullaniciMi” sizin satış işlemlerini
 ```
 
 ## CEVAP
+
 ```xml
 <Islemler xmlns="">
   <Islem>
@@ -51,6 +55,6 @@ Cevap xml’indeki “IslemiYapanFarkliKullaniciMi” sizin satış işlemlerini
     <IslemTarihi>2019-09-23T15:22:20.57+03:00</IslemTarihi>
     <IslemiYapanKullanici>xyz.com WS Kullanıcısı</IslemiYapanKullanici>
     <IslemiYapanFarkliKullaniciMi>0</IslemiYapanFarkliKullaniciMi>
-  </Islem>  
+  </Islem>
 </Islemler>
 ```

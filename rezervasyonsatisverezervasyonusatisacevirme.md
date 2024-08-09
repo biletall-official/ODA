@@ -1,6 +1,8 @@
 # REZERVASYON , SATIŞ VE REZERVASYONU SATIŞA ÇEVİRME İŞLEMLERİ
+
 ## ŞEMA
-Uçak Rezervasyon ve Satış işlemleri için sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.  
+
+Uçak Rezervasyon ve Satış işlemleri için sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 :::tip
 IslemUcak_2 xml’i ile yurtiçi ve yurtdışı rezervasyon ve satış istekleri gönderilebilmektedir.
@@ -316,55 +318,60 @@ IslemUcak_2 xml’i ile yurtiçi ve yurtdışı rezervasyon ve satış istekleri
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-</xs:schema>  
+</xs:schema>
 ```
+
 ## UÇAK REZERVASYON İŞLEMİ
+
 :::info
 Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları bulunmaktadır. Yurt dışı uçuşlarda rezervasyon işlemi sadece FirmaNo su 1100 olan firmalar için geçerlidir. Diğer firmalar için rezervasyon işlemi yapılamamaktadır.
 :::
 
 ### İSTEK
 
-|**IslemTip***|Rezervasyon için **1** Satış için **0** değeri alır.|
-|---------------------|-------------------------------------------------------------|
-|**FirmaNo***|Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.|
-|**TelefonNo***|Telefon numarası bilgisi**Format:(string, 10 karakter - XXXXXXXXXX).**|
-|**CepTelefonNo***|Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**|
-|**Email***|Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$)|
+| **IslemTip\***     | Rezervasyon için **1** Satış için **0** değeri alır.                                 |
+| ------------------ | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| **FirmaNo\***      | Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.                                |
+| **TelefonNo\***    | Telefon numarası bilgisi**Format:(string, 10 karakter - XXXXXXXXXX).**               |
+| **CepTelefonNo\*** | Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**          |
+| **Email\***        | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
-|Segment Alanları|Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir.|
-|--------------------|---------------------------------------------------------------|
-|**Kalkis***|Segmentin kalkış havaalanı kodu.|
-|**Varis***|Segmentin varış havaalanı kodu.|
-|KalkisTarih***|Kalkış tarihi|
-|**VarisTarih***|Varış tarihi|
-|**UcusNo***|Segmentin uçuş numarası|
-|**FirmaKod***|İlgili uçuşu yapan havayolu firması kodu.|
-|**Sinif***|İlgili uçuşun sınıfını belirtir.|
-|**DonusMu***|İlgili segmentin dönüş segmenti mi olduğunu belirtir|
-|SeferKod|İlgili segmentin sefer kodunu belirtir|
+| Segment Alanları  | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir. |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Kalkis\***      | Segmentin kalkış havaalanı kodu.                                                                                                                                |
+| **Varis\***       | Segmentin varış havaalanı kodu.                                                                                                                                 |
+| KalkisTarih\*\*\* | Kalkış tarihi                                                                                                                                                   |
+| **VarisTarih\***  | Varış tarihi                                                                                                                                                    |
+| **UcusNo\***      | Segmentin uçuş numarası                                                                                                                                         |
+| **FirmaKod\***    | İlgili uçuşu yapan havayolu firması kodu.                                                                                                                       |
+| **Sinif\***       | İlgili uçuşun sınıfını belirtir.                                                                                                                                |
+| **DonusMu\***     | İlgili segmentin dönüş segmenti mi olduğunu belirtir                                                                                                            |
+| SeferKod          | İlgili segmentin sefer kodunu belirtir                                                                                                                          |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
-|Yolcu Alanları|Yolcu alanlarında uçuş planı içerisindeki her yolcu bilgisi(Yolcu1, Yolcu2…şeklinde) girilmelidir.|
-|------------------------------------------|------------------------------------|
-|**Ad***|Yolcu adı|
-|**Soyad***|Yolcu soyadı|
-|**Cinsiyet***|Cinsiyet. **Bay:2 Bayan:1**|
-|**YolcuTip***|İlgili yolcu tipi kodu.**Yetişkin:1 Çocuk:2 Bebek:3 Yaşlı:4 Öğrenci:5 Özürlü:6 Asker:7 Genç:8**|
-|DogumTarih|yyyy-MM-dd formatında gönderilmelidir. Doğum tarihinin zorunluluğunu bir önceki adım olan fiyat çekme işleminde gerçekleştirebilirsiniz.|
-|PasaportNo|Yurt dışı uçuşlarda pasaport no zorunlu ise  ülke kodu girilmeden gönderilmesi gerekmektedir.|
-|PasaportGecerlilikTarihi|Pasaport no zorunluysa pasaport geçerlilik tarihi de girilmelidir. Pasaport geçerlilik tarihi, sefer kalkış tarihinden itibaren 6 ay daha geçerli olmalıdır.|
-|TcKimlikNo|Yolcu T.C. kimlik numarası|
-|**NetFiyat***|UcusFiyat ile çekilen ücretlerden yolcu tipine göre net fiyat bilgisi|
-|**Vergi***|UcusFiyat ile çekilen ücretlerden yolcu tipine göre vergi bilgisi|
-|**ServisUcret***|UcusFiyat ile çekilen ücretlerden yolcu tipine göre Servis ücreti bilgisi|
+| Yolcu Alanları           | Yolcu alanlarında uçuş planı içerisindeki her yolcu bilgisi(Yolcu1, Yolcu2…şeklinde) girilmelidir.                                                           |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ad\***                 | Yolcu adı                                                                                                                                                    |
+| **Soyad\***              | Yolcu soyadı                                                                                                                                                 |
+| **Cinsiyet\***           | Cinsiyet. **Bay:2 Bayan:1**                                                                                                                                  |
+| **YolcuTip\***           | İlgili yolcu tipi kodu.**Yetişkin:1 Çocuk:2 Bebek:3 Yaşlı:4 Öğrenci:5 Özürlü:6 Asker:7 Genç:8**                                                              |
+| DogumTarih               | yyyy-MM-dd formatında gönderilmelidir. Doğum tarihinin zorunluluğunu bir önceki adım olan fiyat çekme işleminde gerçekleştirebilirsiniz.                     |
+| PasaportNo               | Yurt dışı uçuşlarda pasaport no zorunlu ise ülke kodu girilmeden gönderilmesi gerekmektedir.                                                                 |
+| PasaportGecerlilikTarihi | Pasaport no zorunluysa pasaport geçerlilik tarihi de girilmelidir. Pasaport geçerlilik tarihi, sefer kalkış tarihinden itibaren 6 ay daha geçerli olmalıdır. |
+| TcKimlikNo               | Yolcu T.C. kimlik numarası                                                                                                                                   |
+| **NetFiyat\***           | UcusFiyat ile çekilen ücretlerden yolcu tipine göre net fiyat bilgisi                                                                                        |
+| **Vergi\***              | UcusFiyat ile çekilen ücretlerden yolcu tipine göre vergi bilgisi                                                                                            |
+| **ServisUcret\***        | UcusFiyat ile çekilen ücretlerden yolcu tipine göre Servis ücreti bilgisi                                                                                    |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -413,10 +420,11 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 ```
 
 #### CEVAP
-|Sonuc|İşlem sonucu. **true/false**|
-|--------------|-----------------------------------------------------|
-|PNR|İşlem sonunda oluşan PNR numarası|
-|RezervasyonOpsiyon|Rezervasyonun geçerli olacağı tarih-saat bilgisi|
+
+| Sonuc              | İşlem sonucu. **true/false**                     |
+| ------------------ | ------------------------------------------------ |
+| PNR                | İşlem sonunda oluşan PNR numarası                |
+| RezervasyonOpsiyon | Rezervasyonun geçerli olacağı tarih-saat bilgisi |
 
 ```xml
 <IslemSonuc>
@@ -425,76 +433,82 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 	<RezervasyonOpsiyon>28.11.2011 13:00</RezervasyonOpsiyon>
 </IslemSonuc>
 ```
+
 ## UÇAK SATIŞ İŞLEMİ
+
 ### İSTEK
+
 Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulunmaktadır.
 
-|**IslemTip***|Rezervasyon için **1** Satış için **0** değeri alır.|
-|----------------|-------------------------------------------------------|
-|**FirmaNo***|Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.|
-|**TelefonNo***|Telefon numarası bilgisi**Format:(string, 10 karakter - XXXXXXXXXX).**|
-|**CepTelefonNo***|Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**|
-|**Email***|Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$)|
+| **IslemTip\***     | Rezervasyon için **1** Satış için **0** değeri alır.                                 |
+| ------------------ | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
+| **FirmaNo\***      | Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.                                |
+| **TelefonNo\***    | Telefon numarası bilgisi**Format:(string, 10 karakter - XXXXXXXXXX).**               |
+| **CepTelefonNo\*** | Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**          |
+| **Email\***        | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
-|Segment Alanları|Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir.|
-|---------------------|--------------------------------------------------------------|
-|**Kalkis***|Segmentin kalkış havaalanı kodu.|
-|**Varis***|Segmentin varış havaalanı kodu.|
-|**KalkisTarih***|Kalkış tarihi|
-|**VarisTarih***|Varış tarihi|
-|**UcusNo***|Segmentin uçuş numarası|
-|**FirmaKod***|İlgili uçuşu yapan havayolu firması kodu.|
-|**Sinif***|İlgili uçuşun sınıfını belirtir.|
-|**DonusMu***|İlgili segmentin dönüş segmenti mi olduğunu belirtir|
-|SeferKod|İlgili segmentin sefer kodunu belirtir.Bu bilgi Atlasglobal uçuşlarında gelmektedir.|
+| Segment Alanları  | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir. |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Kalkis\***      | Segmentin kalkış havaalanı kodu.                                                                                                                                |
+| **Varis\***       | Segmentin varış havaalanı kodu.                                                                                                                                 |
+| **KalkisTarih\*** | Kalkış tarihi                                                                                                                                                   |
+| **VarisTarih\***  | Varış tarihi                                                                                                                                                    |
+| **UcusNo\***      | Segmentin uçuş numarası                                                                                                                                         |
+| **FirmaKod\***    | İlgili uçuşu yapan havayolu firması kodu.                                                                                                                       |
+| **Sinif\***       | İlgili uçuşun sınıfını belirtir.                                                                                                                                |
+| **DonusMu\***     | İlgili segmentin dönüş segmenti mi olduğunu belirtir                                                                                                            |
+| SeferKod          | İlgili segmentin sefer kodunu belirtir.Bu bilgi Atlasglobal uçuşlarında gelmektedir.                                                                            |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
-|Yolcu Alanları|Yolcu alanlarında uçuş planı içerisindeki her yolcu bilgisi(Yolcu1, Yolcu2…şeklinde) girilmelidir.|
-|-------------------------|------------------------------------------|
-|**Ad***|Yolcu adı|
-|**Soyad***|Yolcu soyadı|
-|**Cinsiyet***|**Cinsiyet.Bay:2 Bayan:1** |
-|**YolcuTip***|İlgili yolcu tipi kodu.**Yetişkin:1 Çocuk:2 Bebek:3 Yaşlı:4 Öğrenci:5 Özürlü:6 Asker:7 Genç:8**|
-|TcKimlikNo|Yolcu T.C. kimlik numarası|
-|DogumTarih|yyyy-MM-dd formatında gönderilmelidir.Doğum tarihinin zorunluluğunu bir önceki adım olan fiyat çekme işleminde gerçekleştirebilirsiniz.|
-|PasaportNo|Yurt dışı uçuşlarda pasaport no zorunlu ise  ülke kodu girilmeden gönderilmesi gerekmektedir.|
-|PasaportGecerlilikTarihi |Pasaport no zorunluysa pasaport geçerlilik tarihi de girilmelidir. Pasaport geçerlilik tarihi, sefer kalkış tarihinden itibaren 6 ay daha geçerli olmalıdır.|
-|**NetFiyat***|UcusFiyat ile çekilen ücretlerden yolcu tipine göre net fiyat bilgisi|
-|**Vergi***|UcusFiyat ile çekilen ücretlerden yolcu tipine göre vergi bilgisi|
-|**ServisUcret***|UcusFiyat ile çekilen ücretlerden yolcu tipine göre Servis ücreti bilgisi|
+| Yolcu Alanları           | Yolcu alanlarında uçuş planı içerisindeki her yolcu bilgisi(Yolcu1, Yolcu2…şeklinde) girilmelidir.                                                           |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ad\***                 | Yolcu adı                                                                                                                                                    |
+| **Soyad\***              | Yolcu soyadı                                                                                                                                                 |
+| **Cinsiyet\***           | **Cinsiyet.Bay:2 Bayan:1**                                                                                                                                   |
+| **YolcuTip\***           | İlgili yolcu tipi kodu.**Yetişkin:1 Çocuk:2 Bebek:3 Yaşlı:4 Öğrenci:5 Özürlü:6 Asker:7 Genç:8**                                                              |
+| TcKimlikNo               | Yolcu T.C. kimlik numarası                                                                                                                                   |
+| DogumTarih               | yyyy-MM-dd formatında gönderilmelidir.Doğum tarihinin zorunluluğunu bir önceki adım olan fiyat çekme işleminde gerçekleştirebilirsiniz.                      |
+| PasaportNo               | Yurt dışı uçuşlarda pasaport no zorunlu ise ülke kodu girilmeden gönderilmesi gerekmektedir.                                                                 |
+| PasaportGecerlilikTarihi | Pasaport no zorunluysa pasaport geçerlilik tarihi de girilmelidir. Pasaport geçerlilik tarihi, sefer kalkış tarihinden itibaren 6 ay daha geçerli olmalıdır. |
+| **NetFiyat\***           | UcusFiyat ile çekilen ücretlerden yolcu tipine göre net fiyat bilgisi                                                                                        |
+| **Vergi\***              | UcusFiyat ile çekilen ücretlerden yolcu tipine göre vergi bilgisi                                                                                            |
+| **ServisUcret\***        | UcusFiyat ile çekilen ücretlerden yolcu tipine göre Servis ücreti bilgisi                                                                                    |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **Fatura Alanı**
 
-|FaturaTip|Fatura tipi,**Kişi:0 Firma:1**|
-|---------------------|------------------------|
-|KisiAd|Fatura kişi adı|
-|KisiSoyad|Fatura kişi soyadı|
-|KisiTCKimlikNo|Fatura kişi tc kimlik no|
-|KisiAdres|Fatura kişi adres|
-|FirmaAd|Fatura firma ad|
-|FirmaVergiNo|Fatura firma vergi numarası|
-|FirmaVergiDairesi|Fatura firma vergi dairesi|
-|FirmaAdres|Fatura firma adresi|
+| FaturaTip         | Fatura tipi,**Kişi:0 Firma:1** |
+| ----------------- | ------------------------------ |
+| KisiAd            | Fatura kişi adı                |
+| KisiSoyad         | Fatura kişi soyadı             |
+| KisiTCKimlikNo    | Fatura kişi tc kimlik no       |
+| KisiAdres         | Fatura kişi adres              |
+| FirmaAd           | Fatura firma ad                |
+| FirmaVergiNo      | Fatura firma vergi numarası    |
+| FirmaVergiDairesi | Fatura firma vergi dairesi     |
+| FirmaAdres        | Fatura firma adresi            |
 
 **WebYolcu Alanı**
 
-|KrediKartNo|Müşteri kredi kartı numarası|
-|------------------|-----------------------------------|
-|KrediKartSahip|Müşteri kredi kart sahibi adı|
-|KrediKartGecerlilikTarihi|Kredi kart geçerlilik tarihi **Örn : 8.2013 (ay.yıl)**|
-|KrediKartCCV2|Kredi kartı güvenlik numarası|
-|AcikPnrNo|Kullanılmak istenen biletall açık parasının PNR kodu|
-|AcikPnrSoyad(Yeni)|Açık biletin Soyad bilgisi <u>**Not:**</u> Açık bilet kullanımı yoksa bu bilgiler gönderilmemelidir.|
-|AcikTutar|Kullanılmak istenen biletall açık parasının tutarı|
-|RezervePnrNo|Daha önce rezerve edilen bir işlem satışa dönüştürülüyorsa işlemin Rezervasyon PNR kodu.|
+| KrediKartNo               | Müşteri kredi kartı numarası                                                                         |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| KrediKartSahip            | Müşteri kredi kart sahibi adı                                                                        |
+| KrediKartGecerlilikTarihi | Kredi kart geçerlilik tarihi **Örn : 8.2013 (ay.yıl)**                                               |
+| KrediKartCCV2             | Kredi kartı güvenlik numarası                                                                        |
+| AcikPnrNo                 | Kullanılmak istenen biletall açık parasının PNR kodu                                                 |
+| AcikPnrSoyad(Yeni)        | Açık biletin Soyad bilgisi <u>**Not:**</u> Açık bilet kullanımı yoksa bu bilgiler gönderilmemelidir. |
+| AcikTutar                 | Kullanılmak istenen biletall açık parasının tutarı                                                   |
+| RezervePnrNo              | Daha önce rezerve edilen bir işlem satışa dönüştürülüyorsa işlemin Rezervasyon PNR kodu.             |
 
 ```xml
 <IslemUcak_2>
@@ -546,7 +560,7 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 		<NetFiyat>110</NetFiyat>
 		<Vergi>58</Vergi>
 		<ServisUcret>15</ServisUcret>
-	</Yolcu2>	
+	</Yolcu2>
 	<Fatura>
 		<FaturaTip>0</FaturaTip>
 		<KisiAd>AHMET</KisiAd>
@@ -559,7 +573,7 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 		<FirmaAdres />
 	</Fatura>
 	<WebYolcu>
-<Ip>127.0.0.1</Ip>	
+<Ip>127.0.0.1</Ip>
 		<KrediKartNo>xxxxxxxxxxxxxxxx</KrediKartNo>
 		<KrediKartSahip>AHMET ALKAN</KrediKartSahip>
 		<KrediKartGecerlilikTarihi>7.2013</KrediKartGecerlilikTarihi>
@@ -567,12 +581,13 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 	</WebYolcu>
 </IslemUcak_2>
 ```
+
 #### CEVAP
 
-|Sonuc|İşlem sonucu. **true/false**|
-|-------------------|------------------------------------------|
-|PNR|İşlem sonunda oluşan PNR numarası|
-|EBilet alanları|Yolcu sayısı kadar gönderilen yolcu sırasıyla e bilet numaraları oluşacaktır.|
+| Sonuc           | İşlem sonucu. **true/false**                                                  |
+| --------------- | ----------------------------------------------------------------------------- |
+| PNR             | İşlem sonunda oluşan PNR numarası                                             |
+| EBilet alanları | Yolcu sayısı kadar gönderilen yolcu sırasıyla e bilet numaraları oluşacaktır. |
 
 ```xml
 <IslemSonuc>
@@ -582,7 +597,9 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 	<EBilet2>XXXXXXXXX</EBilet2>
 </IslemSonuc>
 ```
+
 ## UÇAK REZERVASYONUNU SATIŞA ÇEVİRME İŞLEMİ
+
 :::tip
 Rezervasyonu satışa çevirme işlemi satış işlemi gibidir. Buna ek olarak WebYolcu içerisinde RezervePnrNo alanı da gönderilmelidir.FirmaNo alanı için PNR sorgusuyla birlikte gelen PNR listesinde bulunan FirmaNo alanı kullanılmalıdır.
 :::
@@ -637,7 +654,7 @@ Rezervasyonu satışa çevirme işlemi satış işlemi gibidir. Buna ek olarak W
 		<NetFiyat>110</NetFiyat>
 		<Vergi>58</Vergi>
 		<ServisUcret>15</ServisUcret>
-	</Yolcu2>	
+	</Yolcu2>
 	<Fatura>
 		<FaturaTip>0</FaturaTip>
 		<KisiAd>AHMET</KisiAd>
@@ -650,7 +667,7 @@ Rezervasyonu satışa çevirme işlemi satış işlemi gibidir. Buna ek olarak W
 		<FirmaAdres />
 	</Fatura>
 	<WebYolcu>
-<Ip>127.0.0.1</Ip>	
+<Ip>127.0.0.1</Ip>
 		<KrediKartNo>xxxxxxxxxxxxxxxx</KrediKartNo>
 		<KrediKartSahip>AHMET ALKAN</KrediKartSahip>
 		<KrediKartGecerlilikTarihi>7.2013</KrediKartGecerlilikTarihi>

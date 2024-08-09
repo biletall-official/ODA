@@ -1,17 +1,23 @@
 # ÖN ÖDEME BAKİYE SORGULAMA
+
 ## İSTEK
+
 :::tip
-Ön ödemeli çalışan kullanıcıların bakiyelerini kontrol edebilmeleri sağlanmaktadır. 
+Ön ödemeli çalışan kullanıcıların bakiyelerini kontrol edebilmeleri sağlanmaktadır.
 :::
+
 ```xml
 <OnOdemeBakiye></OnOdemeBakiye>
 ```
+
 ## CEVAP
+
 ```xml
 <OnOdemeBakiye>
   <Tutar>0</Tutar>
 </OnOdemeBakiye>
 ```
+
 ## Asp.Net KKULLANIMI:
 
 ```csharp

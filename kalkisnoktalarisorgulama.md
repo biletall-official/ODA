@@ -1,12 +1,14 @@
 # KALKIŞ NOKTALARI SORGULAMA
-## ŞEMA  
+
+## ŞEMA
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
-|**FirmaNo***|İdo noktalarının gelmesi için FirmaNo parametresi 5000 olarak gönderilmesi zorunludur.|
-|----------------|--------------------------|
+| **FirmaNo\*** | İdo noktalarının gelmesi için FirmaNo parametresi 5000 olarak gönderilmesi zorunludur. |
+| ------------- | -------------------------------------------------------------------------------------- |
 
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -18,7 +20,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 	</xs:complexType>
 </xs:element>
 ```
+
 ## İSTEK
+
 ```xml
 <Kalkis>
   <FirmaNo>5000</FirmaNo>
@@ -26,6 +30,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## CEVAP
+
 ```xml
 <IdoNoktalar>
   <IdoNokta>

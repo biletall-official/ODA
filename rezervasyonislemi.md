@@ -1,5 +1,7 @@
 # REZERVASYON İŞLEMİ
+
 ## ŞEMA
+
 :::info
 İdo servisinde koltuk planı çekme ve satış işlemi öncesinde rezervasyon yapmanız gerekmektedir. Bu rezervasyonun sonucunda size sistem tarafından oluşturulan koltuk numaraları bilgisi gelecektir. Bu rezervasyon olağanın aksine 10-15 dakikalık kısa opsiyonlu bir rezervasyon olup süresinin sonunda kendiliğinden iptal edilmektedir.
 :::
@@ -77,7 +79,7 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
                           </xs:element>
                         </xs:sequence>
                       </xs:complexType>
-                    </xs:element>                
+                    </xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
@@ -94,10 +96,10 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
               	<xs:element name="Adres" type="xs:string" minOccurs="0" />
        	     </xs:sequence>
          </xs:complexType>
-              </xs:element>           
+              </xs:element>
        	     </xs:sequence>
           </xs:complexType>
-        	</xs:element>	
+        	</xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -144,38 +146,40 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
   </xs:simpleType>
 </xs:schema>
 ```
+
 ## İSTEK
 
 **Pnr:**
-|**CepTelefon***|İletişim için cep telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**|
+|**CepTelefon\***|İletişim için cep telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**|
 |------------|----------------------------------|
-|**Eposta***|İletişim için eposta adresi bilgisi|
+|**Eposta\***|İletişim için eposta adresi bilgisi|
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **Yolcular :**
-|**ID***|ID alanına yolculara sıradan 1 den başlayarak değer vermeniz uygun olacaktır. ID alanı **Format: int**|
+|**ID\***|ID alanına yolculara sıradan 1 den başlayarak değer vermeniz uygun olacaktır. ID alanı **Format: int**|
 |---------------------|-------------------------|
-|**YolcuTip***|İdo Yolcu Tip kodları şöyledir; **Yetişkin:1 Çocuk:2 Yaşlı:4 Öğrenci:5 Özürlü:6 Basın:10 Gazi:11 AracSurucu:12 EkCocuk:13**|
-|**Ad***|Yolcu adı|
-|**Soyad***|Yolcu soyadı|
-|**Cinsiyet***|Cinsiyet.**Bay:2 Bayan:1**|
-|**DogumTarih***|yyyy-MM-dd formatında gönderilmelidir. Doğum tarihinin zorunluluğunu bir önceki adım olan fiyat çekme işleminde gerçekleştirebilirsiniz.|
+|**YolcuTip\***|İdo Yolcu Tip kodları şöyledir; **Yetişkin:1 Çocuk:2 Yaşlı:4 Öğrenci:5 Özürlü:6 Basın:10 Gazi:11 AracSurucu:12 EkCocuk:13**|
+|**Ad\***|Yolcu adı|
+|**Soyad\***|Yolcu soyadı|
+|**Cinsiyet\***|Cinsiyet.**Bay:2 Bayan:1**|
+|**DogumTarih\***|yyyy-MM-dd formatında gönderilmelidir. Doğum tarihinin zorunluluğunu bir önceki adım olan fiyat çekme işleminde gerçekleştirebilirsiniz.|
 |SeaAndMilesNo|İdo özel yolcu kartı numarasıdır.|
 |Uyruk|TC yada Diğer|
 |BagliOlduguYetiskinID|Çocuk yolcular için zorunludur. Çocuk yolcunun bağlı olduğu yetişkin yolcuya verdiğiniz ID değerini bu alana atamalısınız.|
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
-|AracBilgi|Eğer yolcu tipi araç sürücüsü ise AracBilgi alanları doldurulmalıdır.|
-|-----------------|---------------------------|
-|**AracTip***|İdo araç tipleri sorgusundan kod alanını kullanmalısınız.Örn: Otomobil için ‘OTM’ **Format:(string, 3 karakter).**|
-|**Plaka***|Araç plakası|
-|**KiralikMi***|**Evet:1 Hayır:0**|
+| AracBilgi       | Eğer yolcu tipi araç sürücüsü ise AracBilgi alanları doldurulmalıdır.                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **AracTip\***   | İdo araç tipleri sorgusundan kod alanını kullanmalısınız.Örn: Otomobil için ‘OTM’ **Format:(string, 3 karakter).** |
+| **Plaka\***     | Araç plakası                                                                                                       |
+| **KiralikMi\*** | **Evet:1 Hayır:0**                                                                                                 |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **SeferBilgi:**
@@ -184,33 +188,33 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
 **SeferBilgi** ve **Parkur** yapısı içerisinde Segment alanları aşağıdaki şekilde açıklanmaktadır.
 :::
 
-|**SegmentKod***|Sefer sonucunda Segment alanında gelen **‘SegmentKod’** değeri.|
-|----------------|-----------------------------|
-|**NeredenKod***|Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).**|
-|**NereyeKod***|Segmentin varış noktasının kodu.**Format:(string, 3 karakter).**|
-|**FiyatKod***|İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.|
-|**AracFiyatKod***|İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.|
-|**SinifKod***|İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.|
-|**KoltukSinifKod***|İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.|
-|**KabinSinifKod***|İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.|
+| **SegmentKod\***     | Sefer sonucunda Segment alanında gelen **‘SegmentKod’** değeri.   |
+| -------------------- | ----------------------------------------------------------------- |
+| **NeredenKod\***     | Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).** |
+| **NereyeKod\***      | Segmentin varış noktasının kodu.**Format:(string, 3 karakter).**  |
+| **FiyatKod\***       | İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.   |
+| **AracFiyatKod\***   | İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.   |
+| **SinifKod\***       | İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.   |
+| **KoltukSinifKod\*** | İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.   |
+| **KabinSinifKod\***  | İlgili segmentin içerisinden seçilen ücret seçeneğinden alınır.   |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **FaturaBilgi:**
 :::tip
-Rezervasyon işleminde ekranınıza "E-Bilet İstiyorum" seçeneği koymalı, bu seçenek işaretlendiğinde de FaturaBilgi alanını göndermelisiniz.  Burada şahıs/firma seçeneğide yaparak fatura/ebilet talebini gönderebilirsiniz.
+Rezervasyon işleminde ekranınıza "E-Bilet İstiyorum" seçeneği koymalı, bu seçenek işaretlendiğinde de FaturaBilgi alanını göndermelisiniz. Burada şahıs/firma seçeneğide yaparak fatura/ebilet talebini gönderebilirsiniz.
 :::
-	
-|**Tip***|0:Şahıs , 1:Firma|
+|**Tip\***|0:Şahıs , 1:Firma|
 |------------|----------------------------------|
-|Ad|**Şahıs ise zorunlu***|
-|Soyad|**Şahıs ise zorunlu***|
-|**TCKimlikNo***|**Şahıs ise zorunlu***|
-|**FirmaUnvan***|**Firma ise zorunlu***|
-|**VergiNo***|**Firma ise zorunlu***|
+|Ad|**Şahıs ise zorunlu\***|
+|Soyad|**Şahıs ise zorunlu\***|
+|**TCKimlikNo\***|**Şahıs ise zorunlu\***|
+|**FirmaUnvan\***|**Firma ise zorunlu\***|
+|**VergiNo\***|**Firma ise zorunlu\***|
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -295,20 +299,19 @@ Rezervasyon işleminde ekranınıza "E-Bilet İstiyorum" seçeneği koymalı, bu
 
 ## CEVAP
 
-Rezervasyon işlemi sonucunda **RezervasyonKomut** yapısı içerisindeki Pnr yapısı içerisine bazı sonuç değerleri eklenerek sunulur.  
+Rezervasyon işlemi sonucunda **RezervasyonKomut** yapısı içerisindeki Pnr yapısı içerisine bazı sonuç değerleri eklenerek sunulur.
 
-Burada oluşan değerlerden bazıları;  
+Burada oluşan değerlerden bazıları;
 
-|PnrNo|Pnr numarası işlemin yolcular açısından takip numarasıdır. İdo tarafında da bu numara ile işlem takip edilmektedir.|
-|------------|----------------------------------------------|
-|PnrKod|Pnr kodu sistem tarafından işlemin takibi amacıyla sonraki işlemlerde kullanılacaktır.|
-|YolcuKod|Yolcu kodu sistem tarafından yolcunun işlem takibi amacıyla sonraki işlemlerde kullanılacaktır.|
-|KoltukSecim|Parkur > Segment > SistemKoltukSecimler yapısı altında ilgili segmentte hangi yolcu için hangi koltuk numarasının atandığı belirtilmektedir.|
+| PnrNo       | Pnr numarası işlemin yolcular açısından takip numarasıdır. İdo tarafında da bu numara ile işlem takip edilmektedir.                          |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| PnrKod      | Pnr kodu sistem tarafından işlemin takibi amacıyla sonraki işlemlerde kullanılacaktır.                                                       |
+| YolcuKod    | Yolcu kodu sistem tarafından yolcunun işlem takibi amacıyla sonraki işlemlerde kullanılacaktır.                                              |
+| KoltukSecim | Parkur > Segment > SistemKoltukSecimler yapısı altında ilgili segmentte hangi yolcu için hangi koltuk numarasının atandığı belirtilmektedir. |
 
 :::danger
 RezervasyonKomut işleminden sonra gelen OdemeKurallari bilgisi ödemeyi nasıl yapmanız gerektiğini bildirir. Odeme3DSecureAktifMi alanı **1** geldiğinde sanal poslu ödemede 3d secure kullanabileceğinizi, Odeme3DSecureZorunluMu alanı **1** geldiğinde ise ödeme işlemini 3D secure ile yapmanızın zorunlu olduğunu ifade eder. Burada 3D secure kullanma yönteminiz diğer satış işlemleriyle aynıdır. satisXML input değeri içerisinde SatisKomut gönderilir ve sonuç olarak diğer işlemlerdeki gibi PNR bilgisi alınır.
 :::
-
 
 ```xml
 <RezervasyonKomut>

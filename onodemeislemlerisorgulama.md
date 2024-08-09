@@ -1,8 +1,11 @@
 # ÖN ÖDEME İŞLEMLERİ SORGULAMA
+
 :::tip
 Ön ödemeli çalışan kullanıcıların hesaplarına, daha önce ön ödeme ile satılan biletlerle ilgili, diğer kanallardan yapılan iptal işlemi sonucu iade yapılabilir. Aşağıdaki servis ile her gün bir önceki günün iadeleri çekilip, pnr sahiplerine belirtilen tutar kadar iade yapılmalıdır.
 :::
+
 ## İSTEK
+
 ```xml
 <OnOdemeIslemlerim>
   <BaslangicTarihi>2016-07-29</BaslangicTarihi>
@@ -10,7 +13,9 @@
   <IslemTipi>IADE</IslemTipi>
 </OnOdemeIslemlerim>
 ```
+
 ## CEVAP
+
 ```xml
 <OnOdemeIslemlerim>
   <xs:schema id="OnOdemeIslemlerim" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
@@ -45,6 +50,6 @@
     <Soyad>ARICI</Soyad>
     <Tip>IADE</Tip>
     <Tutar>313.9800</Tutar>
-  </OnOdemeIslem>  
+  </OnOdemeIslem>
 </OnOdemeIslemlerim>
 ```

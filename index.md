@@ -4,12 +4,9 @@ layout: home
 hero:
   name: "BiletAll Dökümantasyon"
   text: "BiletAll Web Servis Teknik Dökümani"
-  tagline: 
+  tagline:
   actions:
     - theme: brand
       text: "İçerik"
       link: /amaç.md
-    
 ---
-
-

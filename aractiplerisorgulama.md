@@ -1,15 +1,20 @@
 # ARAÇ TİPLERİ SORGULAMA
+
 :::info
 Araç tipleri, kodları ve yolcu kapasitelerini alacağınız servistir. Arama ve satış işlemlerinde ilgili bölümlerde buradaki kodlar kullanılacaktır. Seçimlerinizde araç içeriyorsa araç içi yolcu sayılarını kapasitelere göre düzenlemelisiniz. Örn : 1 araç seçimi yaptığınızda araç içi yolcu kapasiteniz 4 adettir.
 :::
 :::info
 Budo da araç tipi sorgulama bulunmamaktadır.
 :::
+
 ## İSTEK
+
 ```xml
 <IdoAracTip />
 ```
+
 ## CEVAP
+
 ```xml
 <IdoAracTipleri>
   <AracTip>
@@ -59,4 +64,3 @@ Budo da araç tipi sorgulama bulunmamaktadır.
   </AracTip>
 </IdoAracTipleri>
 ```
-

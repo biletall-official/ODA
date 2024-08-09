@@ -1,14 +1,17 @@
-# BİNECEĞİ YER SORGULAMA 
+# BİNECEĞİ YER SORGULAMA
+
 ## ŞEMA
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
-|FirmaNo|Seçilen seferi yapacak olan firmanın firma numarası|
-|-------------------|---------------------------------------------|
-|**KalkisNoktaID***|Seçilen seferin KalkisNoktaID değeri. **Format:(integer).**|
-|**YerelSaat***|Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).**|
-|**HatNo***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**|
+| FirmaNo             | Seçilen seferi yapacak olan firmanın firma numarası                                                         |
+| ------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **KalkisNoktaID\*** | Seçilen seferin KalkisNoktaID değeri. **Format:(integer).**                                                 |
+| **YerelSaat\***     | Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).** |
+| **HatNo\***         | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**                     |
+
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -23,7 +26,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
     </xs:complexType>
   </xs:element>
 ```
+
 ## İSTEK
+
 ```xml
 <BinecegiYer>
   <FirmaNo>37</FirmaNo>
@@ -31,9 +36,10 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
   <YerelSaat>2018-12-10T02:30:00</YerelSaat>
   <HatNo>1</HatNo>
 </BinecegiYer>
-````
+```
 
 ## SONUÇ
+
 ```xml
 <NewDataSet>
   <Table>
@@ -70,4 +76,4 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
     <Internette_Gozuksunmu>1</Internette_Gozuksunmu>
   </Table>
 </NewDataSet>
-````
+```

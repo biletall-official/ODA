@@ -1,19 +1,23 @@
 # SEFER LİSTESİ SORGULAMA
-## ŞEMA  
-|**Firma No**|Sistemde bulunan bütün firmaların sefer listesini görüntülemek için kullanılır. Bu alanın değeri sabittir, sıfır göndermelisiniz.|  
-|------------------|-----------------------------------------------|  
-|Kalkış Nokta ID*|Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**|  
-|Varış Nokta ID*|Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**|  
-|Tarih*|Listelemek istediğiniz seferlerin kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’)**.|  
-|Ara Nokta Gelsin|Yalnızca seçmiş olduğunuz kalkış ve varış noktasına ait seferleri listelemek için bu alan 0 gönderilmelidir. Başka kalkış noktasından başlayan seferleri de listelemek için bu parametre 1 olarak gönderilmelidir.(1 kullanılmalıdır..)**Format: integer, 1 veya 0** |    
-|İslem Tipi*|Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir.Satış işlemi için olması gereken parametre değeri:**0** Rezervasyon işlemi için olması gereken parametre değeri:**1** **Format: integer, 1 veya 0**|  
-|Yolcu Sayısı|Seyahat edecek yolcu sayısı.|  
-|Ip*|Site ziyaretçisinin Ip adresi|  
+
+## ŞEMA
+
+| **Firma No**      | Sistemde bulunan bütün firmaların sefer listesini görüntülemek için kullanılır. Bu alanın değeri sabittir, sıfır göndermelisiniz.                                                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kalkış Nokta ID\* | Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**                                                                                                                                                                                    |
+| Varış Nokta ID\*  | Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**                                                                                                                                                                                    |
+| Tarih\*           | Listelemek istediğiniz seferlerin kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’)**.                                                                                                                                                                                 |
+| Ara Nokta Gelsin  | Yalnızca seçmiş olduğunuz kalkış ve varış noktasına ait seferleri listelemek için bu alan 0 gönderilmelidir. Başka kalkış noktasından başlayan seferleri de listelemek için bu parametre 1 olarak gönderilmelidir.(1 kullanılmalıdır..)**Format: integer, 1 veya 0** |
+| İslem Tipi\*      | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir.Satış işlemi için olması gereken parametre değeri:**0** Rezervasyon işlemi için olması gereken parametre değeri:**1** **Format: integer, 1 veya 0**                                                       |
+| Yolcu Sayısı      | Seyahat edecek yolcu sayısı.                                                                                                                                                                                                                                         |
+| Ip\*              | Site ziyaretçisinin Ip adresi                                                                                                                                                                                                                                        |
+
 :::info
-(*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.  
+(\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.  
 :::
 
-## İSTEK  
+## İSTEK
+
 ```xml
 <Sefer>
   <FirmaNo>0</FirmaNo>
@@ -25,9 +29,10 @@
   <YolcuSayisi>1</YolcuSayisi>
   <Ip>127.0.0.1</Ip>
 </Sefer>
-```  
+```
 
-## CEVAP  
+## CEVAP
+
 ```xml
 <NewDataSet>
   <Table>
@@ -270,12 +275,13 @@
     <O_Tip_Ozellik_Icon>Tanimsiz.gif</O_Tip_Ozellik_Icon>
   </OTipOzellik>
 </NewDataSet>
-````
+```
+
 :::info
 Sefer listesinde yeni kara nokta yapısındaki nokta karşılıkları için KalkisNoktaID, KalkisNokta, VarisNoktaID, VarisNokta alanları eklenmiştir.
 :::
 :::info
-Sefer lislemenizde otobüs hareket saati  için YerelInternetSaat bilet fiyatı içinse BiletFiyatiInternet alanlarını kullanınız.
+Sefer lislemenizde otobüs hareket saati için YerelInternetSaat bilet fiyatı içinse BiletFiyatiInternet alanlarını kullanınız.
 :::
 :::info
 Size gönderilen Tarih ve Saat alanı üzerinde **<u>_hiçbir değişiklik yapmadan_</u>** kullanabilirsiniz.( +03:00 +02:00 gibi yaz saati, kış saati uygulaması bizim tarafımızda ayarlanmaktadır.)
@@ -299,23 +305,25 @@ KoltukSecimiVar alanı false gelen seferler için satış adımında kullanılma
 Sefer sorgusuna “SeyahatSuresiGosterimTipi”parametresi eklenmiştir. Bu parametrenin değerleri şöyle anlamlandırılır;  
 0 : Seyahat süresi gösterilmemelidir.  
 1 : “YaklasikSeyahatSuresi” alanındaki değer kullanılmalıdır. (Saat aralığıdır.)  
-2 : Seyahat süresi “SeyahatSuresi” alanından alınarak kesin değeriyle gösterilmelidir.  
+2 : Seyahat süresi “SeyahatSuresi” alanından alınarak kesin değeriyle gösterilmelidir.
 
-“SeyahatSuresiGosterimTipi” alanı Otobüs ve Pnr Arama sorgularına da eklenmiştir.  
+“SeyahatSuresiGosterimTipi” alanı Otobüs ve Pnr Arama sorgularına da eklenmiştir.
+
 ```xml
 <OTipOzellik>
 	<O_Tip_Ozellik>0</O_Tip_Ozellik>
 	<O_Tip_Ozellik_Aciklama>İnternet</O_Tip_Ozellik_Aciklama>
-	<O_Tip_Ozellik_Detay>   
+	<O_Tip_Ozellik_Detay>
 </O_Tip_Ozellik_Detay>
 	<O_Tip_Ozellik_Icon>Internet.gif</O_Tip_Ozellik_Icon>
     </OTipOzellik>
     <OTipOzellik>
 	<O_Tip_Ozellik>1</O_Tip_Ozellik>
 	<O_Tip_Ozellik_Aciklama>Rahat Koltuk</O_Tip_Ozellik_Aciklama>
-	<O_Tip_Ozellik_Detay>    
+	<O_Tip_Ozellik_Detay>
 </O_Tip_Ozellik_Detay>
 	<O_Tip_Ozellik_Icon>Rahat_Koltuk.gif</O_Tip_Ozellik_Icon>
     </OTipOzellik>
 ```
+
 :::

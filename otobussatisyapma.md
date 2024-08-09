@@ -1,63 +1,67 @@
 # SATIŞ YAPMA
+
 ## ŞEMA
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
-|FirmaNo|Seçilen seferi yapacak olan firmanın firma numarası|
-|---------------------|----------------------------------------|
-|**KalkisNoktaID***|Seçilen seferin KalkisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**|
-|**VarisNoktaID***|Seçilen seferin VarisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**|
-|**Tarih***|Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**|
-|**Saat***|Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)**Format:(datetime, ‘s’).**|
-|**HatNo***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)**Format: integer**|
-|**SeferNo***|Sefer listesinde bulunan SeferTakipNo alanı|
-|**KoltukNo1***|İlk yolcu için seçilen koltuk numarası|
-|**Adi1***|İlk yolcunun adı|
-|**SoyAdi1***|İlk yolcunun soyadı.Yolcu Ad Soyad Bilgileri toplamda 20 karakteri geçmemelidir.Yolcu Ad ve Soyadı türkçe karakter içermemelidir.|
-|TcVatandasiMi1|1 ya da boş gönderildiğinde TcKimlikNo değeri zorunlu hale gelir. TC Vatandaşı olmayan her yolcu için 0 gönderilmelidir.|
-|TcKimlikNo1|İlk yolcunun kimlik numarası.Tc Vatandaşları için zorunludur.|
-|HESKodu1|İlk yolcunun HES Kodu Tc Vatandaşları için zorunludur.|
-|PasaportUlkeKod1|TC Vatandaşı olmayan her yolcu için pasaport ülke kodu bilgisi. Ülkelerin ikili kodları gönderilmelidir.|
-|PasaportNo1|TC Vatandaşı olmayan her yolcu için pasaport numarası bilgisi.|
-|BinecegiYer1|İlk yolcunun yolda bineceği yer bilgisi. (Biniş yerinin adı) **Format:(string, max: 15 karakter).**|
-|ServisYeriKalkis1|İlk yolcunun seferden önce alınacağı servis durağıdır.(Servis noktasının adı. Aynı anda Bineceği yer ve Kalkış servisi seçilmemelidir.) **Format:(string, max: 15 karakter).**|
-|ServisYeriVaris1|İlk yolcunun seferden sonra alınacağı servis durağıdır.(Servis noktasının adı) **Format:(string, max: 15 karakter).**|
-|**TelefonNo***|Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**|
-|**Cinsiyet***|Cinsiyet bilgisi. **Bayan Satış = 1 , Bay Satış = 2**|
-|**ToplamBiletFiyati***|Toplam bilet fiyatını içerir. Fiyat yanlış gönderilirse satış işlemi gerçekleştirilmeyecektir.|
-|**YolcuSayisi***|Biletteki yolcu sayısı|
-|**BiletSeriNo***|Bu değer sabittir ve 1 (birdir).|
-|**OdemeSekli***|Bu değer sabittir ve 0 (sıfırdır).|
-|**SeyahatTipi***|Bu değer sabittir ve 0 (sıfırdır).|
-|WebUyeNo|Bu değer sabittir ve 0 (sıfırdır).|
-|**IP***|Site ziyaretçisinin Ip adresi|
-|Email|Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$)|
-|KrediKartNo|Kart numarası Not: Yalnıca Kredi Kartı satışlarında kart bilgileri gönderilmelidir. Kredi kartı ile ödeme yapılmıyorsa kart bilgilerini göndermeye gerek yoktur.|
-|KrediKartSahip|Kart sahibinin ismi|
-|KrediKartGecerlilikTarihi|Kartın son kullanma tarihi **Format : (string,‘Ay.Yil’,Örnek : 24.2020).**|
-|KrediKartCCV2|Kartın CCV numarası|
-|OnOdemeKullan|Ön Ödeme kullanılıyorsa bu değer 1 olmalıdır. ***<u>Not:</u>*** Yalnıca Ön Ödeme satışlarında bu bilgiler gönderilmelidir. Ön ödeme ile ödeme yapılmıyorsa bu bilgileri göndermeye gerek yoktur.|
-|OnOdemeTutar|Ön ödemeden ne kadar kullanılacağı bilgisi ***<u>Not:</u>*** Olası açık biletleri kullanımı için bu şekildedir. Açık bilet kullanımı yoksa bu değer toplam bilet fiyatına eşit olmalıdır.|
-|AcikPnrNo|Açık biletin PNR kodu ***<u>Not:</u>*** Açık bilet kullanımı yoksa bu bilgiler gönderilmemelidir.|
-|AcikPnrSoyad(Yeni)|Açık biletin Soyad bilgisi ***<u>Not:</u>*** Açık bilet kullanımı yoksa bu bilgiler gönderilmemelidir.|
-|AcikTutar|Açık biletten kullanılacak tutar.|
-|RezervePnrNo|Eğer Satış işlemi aslında bir Rezervasyonlu Satış ise ilgili rezervasyonun PNR kodu.|
-|SeferKod|Eğer koltuk seçimi olmayan bir seferse ilgili seferin otobüs sefer listesi cevabında dönen SeferKod değeri gönderilmelidir. Koltuk seçimi yapılmayan seferler için zorunlu bir alandır. Koltuk seçimi yapılabilen seferler için boş gönderilmelidir.|
+| FirmaNo                   | Seçilen seferi yapacak olan firmanın firma numarası                                                                                                                                                                                                  |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
+| **KalkisNoktaID\***       | Seçilen seferin KalkisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**                                                                                                                                                                   |
+| **VarisNoktaID\***        | Seçilen seferin VarisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**                                                                                                                                                                    |
+| **Tarih\***               | Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**                                                                                                                                             |
+| **Saat\***                | Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)**Format:(datetime, ‘s’).**                                                                                                                                                        |
+| **HatNo\***               | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)**Format: integer**                                                                                                                                                               |
+| **SeferNo\***             | Sefer listesinde bulunan SeferTakipNo alanı                                                                                                                                                                                                          |
+| **KoltukNo1\***           | İlk yolcu için seçilen koltuk numarası                                                                                                                                                                                                               |
+| **Adi1\***                | İlk yolcunun adı                                                                                                                                                                                                                                     |
+| **SoyAdi1\***             | İlk yolcunun soyadı.Yolcu Ad Soyad Bilgileri toplamda 20 karakteri geçmemelidir.Yolcu Ad ve Soyadı türkçe karakter içermemelidir.                                                                                                                    |
+| TcVatandasiMi1            | 1 ya da boş gönderildiğinde TcKimlikNo değeri zorunlu hale gelir. TC Vatandaşı olmayan her yolcu için 0 gönderilmelidir.                                                                                                                             |
+| TcKimlikNo1               | İlk yolcunun kimlik numarası.Tc Vatandaşları için zorunludur.                                                                                                                                                                                        |
+| HESKodu1                  | İlk yolcunun HES Kodu Tc Vatandaşları için zorunludur.                                                                                                                                                                                               |
+| PasaportUlkeKod1          | TC Vatandaşı olmayan her yolcu için pasaport ülke kodu bilgisi. Ülkelerin ikili kodları gönderilmelidir.                                                                                                                                             |
+| PasaportNo1               | TC Vatandaşı olmayan her yolcu için pasaport numarası bilgisi.                                                                                                                                                                                       |
+| BinecegiYer1              | İlk yolcunun yolda bineceği yer bilgisi. (Biniş yerinin adı) **Format:(string, max: 15 karakter).**                                                                                                                                                  |
+| ServisYeriKalkis1         | İlk yolcunun seferden önce alınacağı servis durağıdır.(Servis noktasının adı. Aynı anda Bineceği yer ve Kalkış servisi seçilmemelidir.) **Format:(string, max: 15 karakter).**                                                                       |
+| ServisYeriVaris1          | İlk yolcunun seferden sonra alınacağı servis durağıdır.(Servis noktasının adı) **Format:(string, max: 15 karakter).**                                                                                                                                |
+| **TelefonNo\***           | Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**                                                                                                                                                                              |
+| **Cinsiyet\***            | Cinsiyet bilgisi. **Bayan Satış = 1 , Bay Satış = 2**                                                                                                                                                                                                |
+| **ToplamBiletFiyati\***   | Toplam bilet fiyatını içerir. Fiyat yanlış gönderilirse satış işlemi gerçekleştirilmeyecektir.                                                                                                                                                       |
+| **YolcuSayisi\***         | Biletteki yolcu sayısı                                                                                                                                                                                                                               |
+| **BiletSeriNo\***         | Bu değer sabittir ve 1 (birdir).                                                                                                                                                                                                                     |
+| **OdemeSekli\***          | Bu değer sabittir ve 0 (sıfırdır).                                                                                                                                                                                                                   |
+| **SeyahatTipi\***         | Bu değer sabittir ve 0 (sıfırdır).                                                                                                                                                                                                                   |
+| WebUyeNo                  | Bu değer sabittir ve 0 (sıfırdır).                                                                                                                                                                                                                   |
+| **IP\***                  | Site ziyaretçisinin Ip adresi                                                                                                                                                                                                                        |
+| Email                     | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)                                                                                                                                                                 | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
+| KrediKartNo               | Kart numarası Not: Yalnıca Kredi Kartı satışlarında kart bilgileri gönderilmelidir. Kredi kartı ile ödeme yapılmıyorsa kart bilgilerini göndermeye gerek yoktur.                                                                                     |
+| KrediKartSahip            | Kart sahibinin ismi                                                                                                                                                                                                                                  |
+| KrediKartGecerlilikTarihi | Kartın son kullanma tarihi **Format : (string,‘Ay.Yil’,Örnek : 24.2020).**                                                                                                                                                                           |
+| KrediKartCCV2             | Kartın CCV numarası                                                                                                                                                                                                                                  |
+| OnOdemeKullan             | Ön Ödeme kullanılıyorsa bu değer 1 olmalıdır. **_<u>Not:</u>_** Yalnıca Ön Ödeme satışlarında bu bilgiler gönderilmelidir. Ön ödeme ile ödeme yapılmıyorsa bu bilgileri göndermeye gerek yoktur.                                                     |
+| OnOdemeTutar              | Ön ödemeden ne kadar kullanılacağı bilgisi **_<u>Not:</u>_** Olası açık biletleri kullanımı için bu şekildedir. Açık bilet kullanımı yoksa bu değer toplam bilet fiyatına eşit olmalıdır.                                                            |
+| AcikPnrNo                 | Açık biletin PNR kodu **_<u>Not:</u>_** Açık bilet kullanımı yoksa bu bilgiler gönderilmemelidir.                                                                                                                                                    |
+| AcikPnrSoyad(Yeni)        | Açık biletin Soyad bilgisi **_<u>Not:</u>_** Açık bilet kullanımı yoksa bu bilgiler gönderilmemelidir.                                                                                                                                               |
+| AcikTutar                 | Açık biletten kullanılacak tutar.                                                                                                                                                                                                                    |
+| RezervePnrNo              | Eğer Satış işlemi aslında bir Rezervasyonlu Satış ise ilgili rezervasyonun PNR kodu.                                                                                                                                                                 |
+| SeferKod                  | Eğer koltuk seçimi olmayan bir seferse ilgili seferin otobüs sefer listesi cevabında dönen SeferKod değeri gönderilmelidir. Koltuk seçimi yapılmayan seferler için zorunlu bir alandır. Koltuk seçimi yapılabilen seferler için boş gönderilmelidir. |
 
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 :::danger
-Kredi Kartı ödeme yöntemi, Önödeme ödeme yöntemi ve 3D secure zorunluluğu hakkında kullanıcınızı yönlendirmek için, aşağıda size sunulan alanları kullanmalısınız. Aşağıda  3 taşıyıcı firma için örnek durumlar sunulmuştur. Bu firmalar örnek firmalar olup güncel durumun sonuç içerisindeki XML’den kontrol edilmesi gerekir.
+Kredi Kartı ödeme yöntemi, Önödeme ödeme yöntemi ve 3D secure zorunluluğu hakkında kullanıcınızı yönlendirmek için, aşağıda size sunulan alanları kullanmalısınız. Aşağıda 3 taşıyıcı firma için örnek durumlar sunulmuştur. Bu firmalar örnek firmalar olup güncel durumun sonuç içerisindeki XML’den kontrol edilmesi gerekir.
 :::
+
 ```xml
-<Otobus> Sonuc XML'i içerisinde <OdemeKurallari> tag’i bulunmaktadır.  
+<Otobus> Sonuc XML'i içerisinde <OdemeKurallari> tag’i bulunmaktadır.
 ```
-|Firmalar|**OdemeKurallari** içinde **OnOdemeAktifMi** alanı şu değer ise|
-|--------------|---------------------------------------------------|
-|Metro|**0** (Sadece Kredi Kartından satabilir,  Önödeme satamaz)|
-|OrnekFirma1|**0** (Sadece Kredi Kartından satabilir,  Önödeme satamaz)|
-|OrnekFirma2|**1** (Önödemeli satış yetkiniz varsa, önödeme ile satabilir)|
+
+| Firmalar    | **OdemeKurallari** içinde **OnOdemeAktifMi** alanı şu değer ise |
+| ----------- | --------------------------------------------------------------- |
+| Metro       | **0** (Sadece Kredi Kartından satabilir, Önödeme satamaz)       |
+| OrnekFirma1 | **0** (Sadece Kredi Kartından satabilir, Önödeme satamaz)       |
+| OrnekFirma2 | **1** (Önödemeli satış yetkiniz varsa, önödeme ile satabilir)   |
 
 :::info
 Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yapılır ve aşağıdaki kurallara göre uygun ödeme yöntemi belirlenir.
@@ -160,7 +164,9 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 </xs:element>
 
 ```
+
 ## STANDART İSTEK
+
 ```xml
 <IslemSatis>
   <FirmaNo>37</FirmaNo>
@@ -195,16 +201,18 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 </IslemSatis>
 
 ```
+
 ### CEVAP
-|Sonuc|İşlemin başarılı olup olmadığını belirtir|
-|----------|----------------------------------------------------|
-|PNR|Oluşan PNR kodunu belirtir.|
-|Mesaj|Bilet firma mesajını içerir.|
-|Ebilet1|İlk Yolcunun bilet numarası|
-|Ebilet2|İkinci Yolcunun bilet numarası|
-|Ebilet3|Üçüncü Yolcunun bilet numarası|
-|Ebilet4|Dördüncü Yolcunun bilet numarası|
-|SeferInternetTarihSaat|Sefer gerçekleşeceği tarihi ve saati belirtir.|
+
+| Sonuc                  | İşlemin başarılı olup olmadığını belirtir      |
+| ---------------------- | ---------------------------------------------- |
+| PNR                    | Oluşan PNR kodunu belirtir.                    |
+| Mesaj                  | Bilet firma mesajını içerir.                   |
+| Ebilet1                | İlk Yolcunun bilet numarası                    |
+| Ebilet2                | İkinci Yolcunun bilet numarası                 |
+| Ebilet3                | Üçüncü Yolcunun bilet numarası                 |
+| Ebilet4                | Dördüncü Yolcunun bilet numarası               |
+| SeferInternetTarihSaat | Sefer gerçekleşeceği tarihi ve saati belirtir. |
 
 ```xml
 <IslemSonuc>
@@ -215,7 +223,9 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
   <Ebilet1>037011459532</Ebilet1>
 </IslemSonuc>
 ```
+
 ## SEFER KOD İLE İSTEK
+
 ```xml
 <IslemSatis>
   <FirmaNo>-276</FirmaNo>
@@ -250,7 +260,9 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
   </WebYolcu>
 </IslemSatis>
 ```
+
 ### CEVAP
+
 ```xml
 <IslemSonuc>
   <Sonuc>true</Sonuc>
@@ -262,13 +274,14 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 ```
 
 ## YABANCI YOLCU İÇİN İSTEK
+
 :::danger
 Yabancı yolculara bilet satış işlemi için otobüs sorgusunda gelen aşağıda belirtilen iki Alana göre değerlendirme yapılmalıdır.
 :::
 
-|SubeSatistaTcKimlikNoYazmakZorunlu|Yolcuların kimlik numaralarının zorunlu olup olmadığını belirleyen parametredir. Bu parametre taşıyıcı firmaya özgü bir parametredir. ***0 ise zorunlu değil. 1 ise zorunludur.*** |
-|------------------------------------|----------------------------------------------------------------------------------|
-|PasaportNoIleIslemYapilirMi|**Değeri 0 gelirse;** SubeSatistaTcKimlikNoYazmakZorunlu değeri “1“ ise, T.C. vatandaşı olmayan yolculara bilet satılamaz. **Değeri 1 gelirse;**  T.C. vatandaşı olmayan yolculara bilet satılırken pasaport ülke ve pasaport numarası bilgisi gönderilmelidir.|
+| SubeSatistaTcKimlikNoYazmakZorunlu | Yolcuların kimlik numaralarının zorunlu olup olmadığını belirleyen parametredir. Bu parametre taşıyıcı firmaya özgü bir parametredir. **_0 ise zorunlu değil. 1 ise zorunludur._**                                                                             |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PasaportNoIleIslemYapilirMi        | **Değeri 0 gelirse;** SubeSatistaTcKimlikNoYazmakZorunlu değeri “1“ ise, T.C. vatandaşı olmayan yolculara bilet satılamaz. **Değeri 1 gelirse;** T.C. vatandaşı olmayan yolculara bilet satılırken pasaport ülke ve pasaport numarası bilgisi gönderilmelidir. |
 
 ```xml
 Yabancı yolcu için satış istek örneği;
@@ -309,12 +322,13 @@ Yabancı yolcu için satış istek örneği;
   </WebYolcu>
 </IslemSatis>
 ```
+
 ### CEVAP
 
 ## SEYAHAT ÜLKE İSTEK
 
 :::info
-***<u>**Pasaport ülke kodu alanı için ülkeler listesini ve kodlarını alabileceğiniz aşağıdaki sorgu web servise eklenmiştir;**</u>***
+**\*<u>**Pasaport ülke kodu alanı için ülkeler listesini ve kodlarını alabileceğiniz aşağıdaki sorgu web servise eklenmiştir;**</u>\***
 :::
 
 ```xml
@@ -322,6 +336,7 @@ Yabancı yolcu için satış istek örneği;
 ```
 
 ### CEVAP
+
 ```xml
 <SeyahatUlkeler>
   <Ulke>

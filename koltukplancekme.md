@@ -1,10 +1,12 @@
-#  KOLTUK PLAN ÇEKME İŞLEMİ
+# KOLTUK PLAN ÇEKME İŞLEMİ
+
 ## ŞEMA
+
 :::info
 Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz bu aşamayı kullanmadan direk satış kısmından devam edebilirsiniz. Ancak yolcunuza kendi koltuğunu seçtirmek isterseniz bu adımı kullanarak oluşturacağınız koltuk şemasından bir tercih yaptırmanız gerekmektedir.
 :::
 
- Çekme işlem şeması aşağıdaki gibidir;  
+Çekme işlem şeması aşağıdaki gibidir;
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -16,7 +18,7 @@ Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PnrNo" type="Str20-2" />
-              <xs:element name="PnrKod" type="Str20-2" />       
+              <xs:element name="PnrKod" type="Str20-2" />
               <xs:element name="SeferBilgi" maxOccurs="1" minOccurs="1">
                 <xs:complexType>
                   <xs:sequence>
@@ -31,7 +33,7 @@ Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz
                                     <xs:sequence>
                                       <xs:element name="SegmentKod" type="Str20" />
                                       <xs:element name="NeredenKod" type="Str20" />
-                                      <xs:element name="NereyeKod" type="Str20" />                                      
+                                      <xs:element name="NereyeKod" type="Str20" />
                                     </xs:sequence>
                                   </xs:complexType>
                                 </xs:element>
@@ -40,16 +42,16 @@ Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz
                           </xs:element>
                         </xs:sequence>
                       </xs:complexType>
-                    </xs:element>                
+                    </xs:element>
                   </xs:sequence>
                 </xs:complexType>
-              </xs:element>           
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
-        </xs:element>	
+        </xs:element>
 			</xs:sequence>
 		</xs:complexType>
-	</xs:element>  
+	</xs:element>
   <xs:simpleType name="Str20">
     <xs:restriction base="xs:string">
       <xs:maxLength value="20" />
@@ -61,17 +63,18 @@ Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz
       <xs:maxLength value="20" />
       <xs:minLength value="2" />
     </xs:restriction>
-  </xs:simpleType>  
+  </xs:simpleType>
 </xs:schema>
 ```
+
 ## İSTEK
 
-|**PnrNo***|Rezervasyon işlemi sonucunda dönen ‘PnrNo’ alanı|
-|-------------------|----------------------------------------|
-|**PnrKod***|Rezervasyon işlemi sonucunda dönen ‘PnrKod’ alanı|
-|**SegmentKod***|Sefer listesinden itibaren alınan rezervasyon işleminde de kullandığımız ‘SegmentKod’ alanıdır.|
-|**NeredenKod***|Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).**|
-|NereyeKod*|Segmentin varış noktasının kodu.**Format:(string, 3 karakter).**|
+| **PnrNo\***      | Rezervasyon işlemi sonucunda dönen ‘PnrNo’ alanı                                                |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **PnrKod\***     | Rezervasyon işlemi sonucunda dönen ‘PnrKod’ alanı                                               |
+| **SegmentKod\*** | Sefer listesinden itibaren alınan rezervasyon işleminde de kullandığımız ‘SegmentKod’ alanıdır. |
+| **NeredenKod\*** | Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).**                               |
+| NereyeKod\*      | Segmentin varış noktasının kodu.**Format:(string, 3 karakter).**                                |
 
 ```xml
 <IdoKoltukPlanCekKomut>
@@ -108,7 +111,7 @@ Görselde görünen koltuklar ilgili segmente ait feribotun **‘1.Kat’** ınd
 **Sutun:** Sağdan sola yerleşim sırası
 :::
 
-**Koltuk:**   
+**Koltuk:**  
 |Kat|Koltuğun bulunduğu kat bilgisi|
 |-----------|-----------------------------------------------------|
 |Bolum|Koltuğun bulunduğu bölüm|
@@ -122,13 +125,14 @@ Görselde görünen koltuklar ilgili segmente ait feribotun **‘1.Kat’** ınd
 |KoltukYon|Koltuk yönünü tasarımınızda gösterebilmenizi sağlar.**Dogu, Bati, Kuzey, Guney, KuzeyDogu, GuneyDogu, KuzeyBati, GuneyBati**|
 
 :::info
-Sonuç olarak Pnr yapısı içerisinde ilgili parkur ve sefer hiyerarşisi içinde koltuk planı gelmektedir. 
+Sonuç olarak Pnr yapısı içerisinde ilgili parkur ve sefer hiyerarşisi içinde koltuk planı gelmektedir.
 Koltuk planı kapsam sıralaması şöyledir.
 Parkur > Segment > KoltukPlan > Kat > Bolum > Koltuk
 :::
 :::tip
 Bir koltuk planı içerisinde öncelikle katlar bulunmaktadır. Sonra ilgili katın bölümleri bulunmaktadır. Bölüm içerisinde ise Sira ve Sutun verileriyle bir yerleşim yapılmaktadır. Bu bölümü anlamak ve xml yapısını daha anlamlı hale getirmek için yapılmış örnekler üzerinde bir feribot yapısının nasıl olduğuna bakabilirsiniz.
 :::
+
 ```xml
 <IdoKoltukPlanCekKomut>
   <Pnr>

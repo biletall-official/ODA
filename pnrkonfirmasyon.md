@@ -1,4 +1,5 @@
 # PNR KONFİRMASYON
+
 :::info
 Biletin yolcuya görüntülenmesinde herhangi bir sorun olup olmadığını anlamak için konfirmasyon işlemi yapmanız gerekmektedir. Konfirmasyon işlemi yapılmayan biletler için Biletall sorumluluk kabul etmemektedir. Konfirmasyon işlemi yapılmayan biletler için çağrı merkezimiz sizi uyaracaktır. Konfirmasyon işlemi aşağıdaki XML işlemi ile gerçekleşir.
 PnrYolcuId elementi , Pnr sorgulamınızda birlikte size gelen Yolcu Elementi içerisinde bulunan ID alanıdır.Aktif durumu satışa dönüşmüş yolcuların ID sini PnrYolcuId ile göndermeniz gerekmektedir.
@@ -8,6 +9,7 @@ PNR’da birden fazla koltuk satılmış ise, soyad alanına birinci yolcununun 
 :::
 
 ## İSTEK
+
 ```xml
 <PnrKonfirmasyon>
   <Pnr>ZSV3068</Pnr>
@@ -16,7 +18,9 @@ PNR’da birden fazla koltuk satılmış ise, soyad alanına birinci yolcununun 
   <IslemTipi>SATIS</IslemTipi>
 </PnrKonfirmasyon>
 ```
+
 ## SONUÇ
+
 ```xml
 <IslemSonuc>
   <Sonuc>true</Sonuc>

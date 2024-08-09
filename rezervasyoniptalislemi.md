@@ -1,14 +1,16 @@
 # REZERVASYON İPTAL İŞLEMİ
-|**PnrNo***|İşlemin PNR Numarası|
-|-------------|---------------------------------------|
-|PnrKoltukNo|Otobüste bu alanın girilmesi zorunludur.|
-|PnrAramaParametre|Yolcu Soyadı ya da Cep Telefonu|
+
+| **PnrNo\***       | İşlemin PNR Numarası                     |
+| ----------------- | ---------------------------------------- |
+| PnrKoltukNo       | Otobüste bu alanın girilmesi zorunludur. |
+| PnrAramaParametre | Yolcu Soyadı ya da Cep Telefonu          |
 
 :::info
-(*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ## İSTEK
+
 ```xml
 <PnrIslem>
 	<PnrNo>RDN206</PnrNo>
@@ -18,7 +20,9 @@
 	<PnrAramaParametre>OZDEMIR</PnrAramaParametre>
 </PnrIslem>
 ```
+
 ## CEVAP
+
 ```xml
 <IslemSonuc>
 	<Sonuc>true</Sonuc>

@@ -1,5 +1,6 @@
 # SERVİSLER
-Servis işlemlerindeki örnekler **C#.Net 2.0** için hazırlanmıştır ve kullanılan fonksiyonlar aşağıdaki gibidir.Buradaki fonksiyonlar ile webservisten veri çekilip datasetin içerisine alınmaktadır.   
+
+Servis işlemlerindeki örnekler **C#.Net 2.0** için hazırlanmıştır ve kullanılan fonksiyonlar aşağıdaki gibidir.Buradaki fonksiyonlar ile webservisten veri çekilip datasetin içerisine alınmaktadır.
 
 ```csharp
 
@@ -16,12 +17,12 @@ public XmlDocument StrtoXmldocument(string str)
     {
 
     }
-    return xd;    
+    return xd;
 }
 public DataSet StringtoDataset(string xmlstring, string kullaniciadi,     string sifre)
 {
       WebReference.Service sr = new WebReference.Service();//BiletAll WS
-        
+
         XmlNodeReader nr = new XmlNodeReader(sr.XmlIslet(StrtoXmldocument(xmlstring).DocumentElement, StrtoXmldocument("<Kullanici><Adi>" + kullaniciadi + "</Adi><Sifre>" + sifre + "</Sifre></Kullanici>").DocumentElement));
         DataSet ds = new DataSet();
 
@@ -30,8 +31,9 @@ public DataSet StringtoDataset(string xmlstring, string kullaniciadi,     string
             ds.ReadXml(nr);
         }
         catch
-        { 
-            
+        {
+
         }
         return ds;
     }
+```

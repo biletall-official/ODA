@@ -1,6 +1,7 @@
 # 3D SECURE SATIŞ İŞLEMİ
+
 :::tip
-Daha önce web servisimizde 3D entegrasyonu yaptıysanız aynı kurallar İdo için de geçerlidir. Detayları “3D GÜVENLİK İLE SATIŞ YAPMA” başlığında bulabilirsiniz. 
+Daha önce web servisimizde 3D entegrasyonu yaptıysanız aynı kurallar İdo için de geçerlidir. Detayları “3D GÜVENLİK İLE SATIŞ YAPMA” başlığında bulabilirsiniz.
 :::
 **Ido 3D secure işlemi de otobüs ve uçaktaki ile aynıdır.** satisXML alanına oluşturulan SatisKomut xml i gönderilecektir. Sonuç olarakta diğerleri ile aynı yapıda sonuç dönmektedir.
 
@@ -16,10 +17,11 @@ http://88.247.60.172/wstest/service.asmx web servis adresini kullanabilir, burad
 **Budo Test Kart Bilgileri:**
 Ödeme Ekranı Test Kartları şu şekildedir:
 
-|Test Kart Bilgileri|expiration date|cvv2|
-|-------------------|---------------|----|
-|4090700102323514|11/21|834|
-|5200190046477986|01/21|319|
+| Test Kart Bilgileri | expiration date | cvv2 |
+| ------------------- | --------------- | ---- |
+| 4090700102323514    | 11/21           | 834  |
+| 5200190046477986    | 01/21           | 319  |
+
 :::warning
 Tüm kartlar için 3D doğrulama şifresi: 123
 :::

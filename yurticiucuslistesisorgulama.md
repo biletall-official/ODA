@@ -1,26 +1,28 @@
 # YURTİÇİ UÇUŞ LİSTESİ SORGULAMA
+
 ## ŞEMA
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
-|**FirmaNo***|Yurtiçi uçuş işlemleri için kullanılacak firma numarası sabittir. **FirmaNo : 1000**|
-|--------------------------------|-------------------------------------------------------------|
-|**KalkisAdi***|Listelemek istediğiniz uçuşların kalkış havaalanı.Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).**|
-|**VarisAdi***|Listelemek istediğiniz uçuşların varış havaalanı. Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).**|
-|**Tarih***|Listelemek istediğiniz uçuşların kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**|
-|DonusTarih|Listelemek istediğiniz uçuşların varış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**|
-|**SeyahatTipi***|Yapılacak seyahatin Tek Yön veya Gidiş-Dönüş olduğunu gösterir. Tek Yön tipi için olması gereken parametre değeri: **1** Gidiş- Dönüş tipi için olması gereken parametre değeri: **2** **Format: integer, 1 veya 2**|
-|**IslemTipi***|Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir. Satış işlemi için olması gereken parametre değeri: **0** Rezervasyon işlemi için olması gereken parametre değeri: **1** **Format: integer, 1 veya 0**|
-|**YetiskinSayi***|Seyahat edecek yetişkin yolcu sayısı.|
-|CocukSayi|Seyahat edecek çocuk yolcu sayısı.|
-|BebekSayi|Seyahat edecek bebek yolcu sayısı.|
-|OgrenciSayi|Seyahat edecek öğrenci yolcu sayısı.|
-|YasliSayi|Seyahat edecek yaşlı yolcu sayısı.|
-|AskerSayi|Seyahat edecek asker yolcu sayısı.|
-|GencSayi|Seyahat edecek genç yolcu sayısı.|
-|**Ip***|Site ziyaretçisinin Ip adresi|
+| **FirmaNo\***      | Yurtiçi uçuş işlemleri için kullanılacak firma numarası sabittir. **FirmaNo : 1000**                                                                                                                                 |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **KalkisAdi\***    | Listelemek istediğiniz uçuşların kalkış havaalanı.Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).**                                                                               |
+| **VarisAdi\***     | Listelemek istediğiniz uçuşların varış havaalanı. Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).**                                                                               |
+| **Tarih\***        | Listelemek istediğiniz uçuşların kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**                                                                                                                                  |
+| DonusTarih         | Listelemek istediğiniz uçuşların varış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**                                                                                                                                   |
+| **SeyahatTipi\***  | Yapılacak seyahatin Tek Yön veya Gidiş-Dönüş olduğunu gösterir. Tek Yön tipi için olması gereken parametre değeri: **1** Gidiş- Dönüş tipi için olması gereken parametre değeri: **2** **Format: integer, 1 veya 2** |
+| **IslemTipi\***    | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir. Satış işlemi için olması gereken parametre değeri: **0** Rezervasyon işlemi için olması gereken parametre değeri: **1** **Format: integer, 1 veya 0**    |
+| **YetiskinSayi\*** | Seyahat edecek yetişkin yolcu sayısı.                                                                                                                                                                                |
+| CocukSayi          | Seyahat edecek çocuk yolcu sayısı.                                                                                                                                                                                   |
+| BebekSayi          | Seyahat edecek bebek yolcu sayısı.                                                                                                                                                                                   |
+| OgrenciSayi        | Seyahat edecek öğrenci yolcu sayısı.                                                                                                                                                                                 |
+| YasliSayi          | Seyahat edecek yaşlı yolcu sayısı.                                                                                                                                                                                   |
+| AskerSayi          | Seyahat edecek asker yolcu sayısı.                                                                                                                                                                                   |
+| GencSayi           | Seyahat edecek genç yolcu sayısı.                                                                                                                                                                                    |
+| **Ip\***           | Site ziyaretçisinin Ip adresi                                                                                                                                                                                        |
 
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -32,7 +34,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
         <xs:element name="VarisAdi" type="Str4" />
         <xs:element name="Tarih" type="trh" />
         <xs:element name="DonusTarih" type="trh" minOccurs="0" />
-	  <xs:element name="SeyahatTipi" type="xs:byte" minOccurs="0" />  
+	  <xs:element name="SeyahatTipi" type="xs:byte" minOccurs="0" />
         <xs:element name="IslemTipi" type="xs:byte" />
         <xs:element name="YetiskinSayi" type="xs:byte" minOccurs="0" />
 	  <xs:element name="CocukSayi" type="xs:byte" minOccurs="0" />
@@ -71,55 +73,55 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 ## CEVAP
 
-**Yurtiçi uçuş listesi yapısı şu şekildedir:**  
+**Yurtiçi uçuş listesi yapısı şu şekildedir:**
 
 Gidiş için seçilecek uçuşların fiyat seçeneklerinin yer aldığı bir Seçenekler listesi, uçuş bilgilerinin yer aldığı bir Segmentler listesi bulunmaktadır.  
 Gidiş seferlerinde olduğu gibi dönüş seferleri için DonusSecenekler ve DonusSegmentler listeleri bulunmaktadır.  
 :::tip
-Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçeneğin SegmentSiniflar listesinden sınıflarına bakılarak o sınıfın ilgili segmentleri alınabilir.Ve sonrasında istenilirse Segmentin  ücret detaylarını SecenekUcretDetaylar listesinden çekilerek kullanılabilir.  
+Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçeneğin SegmentSiniflar listesinden sınıflarına bakılarak o sınıfın ilgili segmentleri alınabilir.Ve sonrasında istenilirse Segmentin ücret detaylarını SecenekUcretDetaylar listesinden çekilerek kullanılabilir.  
 :::
 
 **SEÇENEKLER LİSTESİ**
 
-|ID|Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listesinden ilgili seçeneğe ait diğer bilgiler çekilebilir.|
-|---------------------------------------|------------------------------------|
-|FiyatP|Promosyon sınıfları için belirlenmiş fiyat bilgisi. Bu sınıflardan satılan biletlerin iptali yapılamamaktadır.|
-|FiyatE|Ekonomi sınıfları için belirlenmiş fiyat bilgisi.|
-|FiyatB|Bussiness sınıflar için belirlenmiş fiyat bilgisi.|
-|BagajP|Promosyon sınıfları için belirlenmiş bagaj bilgisi.|
-|BagajE|Ekonomi sınıfları için belirlenmiş bagaj bilgisi.|
-|BagajB|Bussiness sınıflar için belirlenmiş bagaj bilgisi.|
-|Vakit|Seçeneğe ait uçuşun vaktini belirtir.|
-|FirmaNo|Hizmeti sağlayan firmaNo belirtir. Fiyat çekme , rezervasyon ve satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır.|
+| ID      | Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listesinden ilgili seçeneğe ait diğer bilgiler çekilebilir.     |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| FiyatP  | Promosyon sınıfları için belirlenmiş fiyat bilgisi. Bu sınıflardan satılan biletlerin iptali yapılamamaktadır.                          |
+| FiyatE  | Ekonomi sınıfları için belirlenmiş fiyat bilgisi.                                                                                       |
+| FiyatB  | Bussiness sınıflar için belirlenmiş fiyat bilgisi.                                                                                      |
+| BagajP  | Promosyon sınıfları için belirlenmiş bagaj bilgisi.                                                                                     |
+| BagajE  | Ekonomi sınıfları için belirlenmiş bagaj bilgisi.                                                                                       |
+| BagajB  | Bussiness sınıflar için belirlenmiş bagaj bilgisi.                                                                                      |
+| Vakit   | Seçeneğe ait uçuşun vaktini belirtir.                                                                                                   |
+| FirmaNo | Hizmeti sağlayan firmaNo belirtir. Fiyat çekme , rezervasyon ve satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır. |
 
 **SEGMENTLER LİSTESİ**
 
-|ID|Her bir segment için tekil olan segment numarası.|
-|-----------------------|---------------------------------------------------|
-|SeçenekID|İlgili segmentin Seçenekler listesinde hangi seçeneğe ait olduğunu belirten seçenek numarası. Aktarmalı uçuşlarda bir fiyat seçeneği için birden fazla segment olabilir.|
-|Firma|İlgili uçuşu yapacak olan taşıyıcı firmanın ikili firma kodu.|
-|FirmaAd|İlgili uçuşu yapacak olan taşıyıcı firmanın ismi.|
-|SeferNo|İlgili uçuşun sefer numarası.|
-|SeferKod|İlgili uçuşun sefer kodu.Bu bilgi Atlasglobal seferlerinde gelmektedir.|
-|Kalkis|İlgili uçuşun kalkış havaalanı kodu.|
-|Varis|İlgili uçuşun varış havaalanı kodu.|
-|KalkisSehir|İlgili uçuşun kalkış havaalanı şehri|
-|VarisSehir|İlgili uçuşun varış havaalanı şehri.|
-|KalkisHavaAlan|İlgili uçuşun kalkış havaalanı ismi|
-|VarisHavaAlan|İlgili uçuşun varış havaalanı ismi|
-|KalkisTarih|İlgili uçuşun kalkış tarihi|
-|VarisTarih|İlgili uçuşun varış tarihi|
-|Sure|İlgili uçuşun dakika olarak süresi|
-|Ucaktip|İlgili uçuşu yapacak uçağın tipi|
-|SinifP|Promosyon uçuş sınıfı bilgisi|
-|SinifE|Ekonomi uçuş sınıfı bilgisi|
-|SinifB|Bussiness uçuş sınıfı bilgisi|
-|KoltukP|İlgili promosyon sınıfında kalan boş koltuk sayısı.|
-|KoltukE|İlgili ekonomi sınıfında kalan boş koltuk sayısı.|
-|KoltukB|İlgili bussiness sınıfında kalan boş koltuk sayısı.|
-|BagajP|Promosyon sınıfları için belirlenmiş bagaj bilgisi.|
-|BagajE|Ekonomi sınıfları için belirlenmiş bagaj bilgisi.|
-|BagajB|Bussiness sınıflar için belirlenmiş bagaj bilgisi.|
+| ID             | Her bir segment için tekil olan segment numarası.                                                                                                                        |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SeçenekID      | İlgili segmentin Seçenekler listesinde hangi seçeneğe ait olduğunu belirten seçenek numarası. Aktarmalı uçuşlarda bir fiyat seçeneği için birden fazla segment olabilir. |
+| Firma          | İlgili uçuşu yapacak olan taşıyıcı firmanın ikili firma kodu.                                                                                                            |
+| FirmaAd        | İlgili uçuşu yapacak olan taşıyıcı firmanın ismi.                                                                                                                        |
+| SeferNo        | İlgili uçuşun sefer numarası.                                                                                                                                            |
+| SeferKod       | İlgili uçuşun sefer kodu.Bu bilgi Atlasglobal seferlerinde gelmektedir.                                                                                                  |
+| Kalkis         | İlgili uçuşun kalkış havaalanı kodu.                                                                                                                                     |
+| Varis          | İlgili uçuşun varış havaalanı kodu.                                                                                                                                      |
+| KalkisSehir    | İlgili uçuşun kalkış havaalanı şehri                                                                                                                                     |
+| VarisSehir     | İlgili uçuşun varış havaalanı şehri.                                                                                                                                     |
+| KalkisHavaAlan | İlgili uçuşun kalkış havaalanı ismi                                                                                                                                      |
+| VarisHavaAlan  | İlgili uçuşun varış havaalanı ismi                                                                                                                                       |
+| KalkisTarih    | İlgili uçuşun kalkış tarihi                                                                                                                                              |
+| VarisTarih     | İlgili uçuşun varış tarihi                                                                                                                                               |
+| Sure           | İlgili uçuşun dakika olarak süresi                                                                                                                                       |
+| Ucaktip        | İlgili uçuşu yapacak uçağın tipi                                                                                                                                         |
+| SinifP         | Promosyon uçuş sınıfı bilgisi                                                                                                                                            |
+| SinifE         | Ekonomi uçuş sınıfı bilgisi                                                                                                                                              |
+| SinifB         | Bussiness uçuş sınıfı bilgisi                                                                                                                                            |
+| KoltukP        | İlgili promosyon sınıfında kalan boş koltuk sayısı.                                                                                                                      |
+| KoltukE        | İlgili ekonomi sınıfında kalan boş koltuk sayısı.                                                                                                                        |
+| KoltukB        | İlgili bussiness sınıfında kalan boş koltuk sayısı.                                                                                                                      |
+| BagajP         | Promosyon sınıfları için belirlenmiş bagaj bilgisi.                                                                                                                      |
+| BagajE         | Ekonomi sınıfları için belirlenmiş bagaj bilgisi.                                                                                                                        |
+| BagajB         | Bussiness sınıflar için belirlenmiş bagaj bilgisi.                                                                                                                       |
 
 **SEGMENT SINIFLAR LİSTESİ**
 |SegmentID2|Segmentler listesindeki ID alanıyla eşleştirilerek kullanılır.|
@@ -132,32 +134,32 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 
 **SEÇENEK ÜCRETLER LİSTESİ**
 
-|ID|Listesindeki elemanları birbirinden ayırmak için kullanılır.
-|-------------------------|----------------------------------------------------|
-|SecenekID2|Secenekler listesindeki ID alanıyla eşleşerek kullanılır.|
-|SinifAd|Havayolundakı sınıf adına karşılık gelen alan.|
-|SinifTip|Sınıfın Tipi|
-|KoltukSayi|Geçerli Seçenekte kaç koltuk boş durumda oldugu bilgisi içindir.|
-|Bagaj|Seçeneğin bagaj hakkı|
-|TekYolcuUcret|Seçeneğin ücreti|
-|TekYolcuServisUcret|Servis ücreti|
-|ToplamUcret|Seçeneğin ücreti|
-|ToplamServisUcret|Servis ücreti|
-|Aciklama|Kampanya, Bildirim vs gibi amaçlar içindir.|
+| ID                  | Listesindeki elemanları birbirinden ayırmak için kullanılır.     |
+| ------------------- | ---------------------------------------------------------------- |
+| SecenekID2          | Secenekler listesindeki ID alanıyla eşleşerek kullanılır.        |
+| SinifAd             | Havayolundakı sınıf adına karşılık gelen alan.                   |
+| SinifTip            | Sınıfın Tipi                                                     |
+| KoltukSayi          | Geçerli Seçenekte kaç koltuk boş durumda oldugu bilgisi içindir. |
+| Bagaj               | Seçeneğin bagaj hakkı                                            |
+| TekYolcuUcret       | Seçeneğin ücreti                                                 |
+| TekYolcuServisUcret | Servis ücreti                                                    |
+| ToplamUcret         | Seçeneğin ücreti                                                 |
+| ToplamServisUcret   | Servis ücreti                                                    |
+| Aciklama            | Kampanya, Bildirim vs gibi amaçlar içindir.                      |
 
 **Seçenek Ücret Detayları Listesi**
 
-|ID|SecenekUcretDetaylar listesindeki elemanları birbirinden ayırmak için kullanılır.|
-|----------------------------|------------------------------------------------|
-|SecenekUcretID|SecenekUcretler listesindeki ID alanıyla eşleşerek kullanılır.|
-|Tip|Detayın Tipi|
-|Aciklama|Tipin ilgili açıklama|
+| ID             | SecenekUcretDetaylar listesindeki elemanları birbirinden ayırmak için kullanılır. |
+| -------------- | --------------------------------------------------------------------------------- |
+| SecenekUcretID | SecenekUcretler listesindeki ID alanıyla eşleşerek kullanılır.                    |
+| Tip            | Detayın Tipi                                                                      |
+| Aciklama       | Tipin ilgili açıklama                                                             |
 
 :::info
 **Yurtiçi Dolu Seferler:**  
 Seçenek listesinde FiyatP, FiyatE, FiyatB alanlarının hepsinde 0 dönüyorsa hiçbir sınıfta yer olmadığı dolayısıyla seferin dolu olduğu anlamına gelir.
 :::
- 
+
 ```xml
 
 <NewDataSet>

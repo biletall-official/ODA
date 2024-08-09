@@ -1,14 +1,16 @@
 # OTOBÜS SATIŞ İPTAL İŞLEMİ
+
 ## İSTEK
-|**PnrNo***|İşlemin PNR Numarası|
-|--------------|---------------------------------------------------|
-|PnrKoltukNo|Otobüste bu alanın girilmesi zorunludur.|
-|PnrSatisIptalTutar|İptal edilecek tutar|
-|AcikParaIade|İşlem sonucunda oluşan açık paranın iade edilmesi için 1 parametresini göndermelisiniz.|
-|PnrAramaParametre|Yolcu Soyadı ya da Cep Telefonu|
+
+| **PnrNo\***        | İşlemin PNR Numarası                                                                    |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| PnrKoltukNo        | Otobüste bu alanın girilmesi zorunludur.                                                |
+| PnrSatisIptalTutar | İptal edilecek tutar                                                                    |
+| AcikParaIade       | İşlem sonucunda oluşan açık paranın iade edilmesi için 1 parametresini göndermelisiniz. |
+| PnrAramaParametre  | Yolcu Soyadı ya da Cep Telefonu                                                         |
 
 :::info
-(*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 :::info
@@ -17,8 +19,9 @@ Otobüste tüm koltukları tek seferde açığa almak için PnrKoltukNo alanın�
 
 ## CEVAP
 
-|Tutar|İşlem sonucu oluşan biletall açık para tutarı. Bazı firmalarda direk iptal edilip para iadesi yapılmaktadır. Hangi firmalarda direk iade yapıldığı bilgisi için biletall müşteri hizmetleri ile temasa geçiniz.|
-|--------------------|--------------------------------------------|
+| Tutar | İşlem sonucu oluşan biletall açık para tutarı. Bazı firmalarda direk iptal edilip para iadesi yapılmaktadır. Hangi firmalarda direk iade yapıldığı bilgisi için biletall müşteri hizmetleri ile temasa geçiniz. |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 ```xml
 <NewDataSet>
 	<IslemSonuc>

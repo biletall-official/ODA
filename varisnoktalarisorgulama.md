@@ -1,13 +1,15 @@
 # VARIŞ NOKTALARI SORGULAMA
+
 ## İSTEK
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
-|**FirmaNo***|İdo noktalarının gelmesi için FirmaNo parametresi 5000 olarak gönderilmesi zorunludur.|
-|-------------|---------------------------------|
-|**KalkisKod***|Seçilmiş Kalkış noktası. Bu alan zorunludur. Her bir kalkış noktasının belirli varış noktaları vardır. Kalkış noktalarında seçilen noktanın Kod değeri gönderilmelidir.**Format:(string, 3 karakter).**|
+| **FirmaNo\***   | İdo noktalarının gelmesi için FirmaNo parametresi 5000 olarak gönderilmesi zorunludur.                                                                                                                  |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **KalkisKod\*** | Seçilmiş Kalkış noktası. Bu alan zorunludur. Her bir kalkış noktasının belirli varış noktaları vardır. Kalkış noktalarında seçilen noktanın Kod değeri gönderilmelidir.**Format:(string, 3 karakter).** |
 
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -20,14 +22,18 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
     </xs:complexType>
 </xs:element>
 ```
+
 ## İSTEK
+
 ```xml
 <Varis>
   <FirmaNo>5000</FirmaNo>
   <KalkisKod>YKP</KalkisKod>
 </Varis>
 ```
+
 ## CEVAP
+
 ```xml
 <IdoNoktalar>
   <IdoNokta>
@@ -57,6 +63,6 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
   <IdoNokta>
     <Kod>BRS</Kod>
     <Ad>Bursa</Ad>
-  </IdoNokta>  
+  </IdoNokta>
 </IdoNoktalar>
 ```

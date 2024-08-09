@@ -1,12 +1,15 @@
 # UÇAK SATIŞ YAPMA
+
 :::info
 Uçak biletinde satış iptali göndermeden önce ceza bilgisini sorgulamalısınız.
 :::
 
 ## CEZA BİLGİSİ SORGULAMA
-Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir. 
+
+Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
 
 ### İSTEK
+
 ```xml
 <SatisIptalCezaGetirKomut>
   <Pnr>
@@ -15,15 +18,17 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
   </Pnr>
 </SatisIptalCezaGetirKomut>
 ```
-|**PnrNo***|PNR Numarası|
-|---------------|---------------------------------|
-|**PnrAramaParametre***|Soyad ya da Cep Telefonu|
+
+| **PnrNo\***             | PNR Numarası             |
+| ----------------------- | ------------------------ |
+| **PnrAramaParametre\*** | Soyad ya da Cep Telefonu |
 
 :::info
-(*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 #### CEVAP
+
 | Tutar            | Yolcunun toplam tutarı                       |
 | ---------------- | -------------------------------------------- |
 | Komisyon         | Yolcu servis ücreti                          |
@@ -53,10 +58,13 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
 ```
 
 ## SATIŞ İPTAL İŞLEMİ
+
 :::tip
 Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların OlusanAcikPara değerlerini toplayıp göndermelisiniz.
 :::
+
 ### İSTEK
+
 ```xml
 <SatisIptalKomut>
   <Pnr>
@@ -66,7 +74,9 @@ Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların Olu
   </Pnr>
 </SatisIptalKomut>
 ```
+
 #### CEVAP
+
 ```xml
 <IslemSonuc>
   <Sonuc>true</Sonuc>
@@ -75,7 +85,9 @@ Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların Olu
 ```
 
 ## SATIŞI İPTAL EDİP OLUŞAN AÇIK PARANIN İADESİ
+
 ### İSTEK
+
 ```xml
 <SatisIptalKomut>
      <Pnr>

@@ -1,9 +1,12 @@
 # SEFER SEÇME - FİYAT ÇEKME
+
 :::danger
 Fiyat çekme aşamasında ilgili uçuş sınıfının tükenmesinden kaynaklı hata alabilirsiniz. Hata almanız durumunda fiyat çekmeye çalıştığınız uçuşun parkuru için yeniden sefer sorgulaması yapmanız gerekmektedir.
 Yurtiçi veya yurtdışı uçuş listeleri alındıktan uçuş planına göre segment seçimleri yapılır. Tek yön bir uçuş planı varsa gidiş segmenti, gidiş-dönüş şeklinde bir uçuş planı varsa gidiş ve dönüş segmentleri seçilip oluşan seyahat planının ücret bilgisi çekilir. Fiyat çekme işleminde kullanılacak FirmaNo bilgisi için, sefer listesinde gelen FirmaNo alanı kullanılmalıdır.
 :::
+
 ## ŞEMA
+
 ```xml
 Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
 
@@ -138,30 +141,30 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
   </xs:simpleType>
 </xs:schema>
 ```
+
 ## İSTEK
 
-|FirmaNo|Sefer listesinde gelen FirmaNo alanı kullanılmalıdır.|
-|----------------------------------|-------------------------------------------|
-|YetiskinSayi|Yetişkin yolcu sayısı|
-|CocukSayi|Çocuk yolcu sayısı|
-|BebekSayi|Bebek yolcu sayısı|
-|OgrenciSayi|Öğrenci yolcu sayısı (Sadece yurtiçi uçuşlarda)|
-|YasliSayi|Yaşlı yolcu sayısı (Sadece yurtiçi uçuşlarda)|
-|AskerSayi|Asker yolcu sayısı (Sadece yurtiçi uçuşlarda)|
-|GencSayi|Genç yolcu sayısı (Sadece yurtiçi uçuşlarda)|
+| FirmaNo      | Sefer listesinde gelen FirmaNo alanı kullanılmalıdır. |
+| ------------ | ----------------------------------------------------- |
+| YetiskinSayi | Yetişkin yolcu sayısı                                 |
+| CocukSayi    | Çocuk yolcu sayısı                                    |
+| BebekSayi    | Bebek yolcu sayısı                                    |
+| OgrenciSayi  | Öğrenci yolcu sayısı (Sadece yurtiçi uçuşlarda)       |
+| YasliSayi    | Yaşlı yolcu sayısı (Sadece yurtiçi uçuşlarda)         |
+| AskerSayi    | Asker yolcu sayısı (Sadece yurtiçi uçuşlarda)         |
+| GencSayi     | Genç yolcu sayısı (Sadece yurtiçi uçuşlarda)          |
 
-|Segment Alanları|Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla girilmelidir.|
-|---------------------|----------------------------------------------------------|
-|Kalkis|havaSegmentin kalkışalanı kodu.|
-|Varis|Segmentin varış havaalanı kodu.|
-|KalkisTarih|Kalkış tarihi|
-|VarisTarih|Varış tarihi|
-|SeferNo|Segmentin uçuş numarası|
-|Firma|İlgili uçuşu yapan havayolu firması kodu.|
-|Sinif|İlgili uçuşun sınıfını belirtir.|
-|DonusMu|İlgili segmentin dönüş segmenti mi olduğunu belirtir|
-|SeferKod|İlgili segmentin sefer kodunu belirtir.Bu bilgi Atlasglobal uçuşlarında gelmektedir. |
-
+| Segment Alanları | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla girilmelidir. |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Kalkis           | havaSegmentin kalkışalanı kodu.                                                                                                  |
+| Varis            | Segmentin varış havaalanı kodu.                                                                                                  |
+| KalkisTarih      | Kalkış tarihi                                                                                                                    |
+| VarisTarih       | Varış tarihi                                                                                                                     |
+| SeferNo          | Segmentin uçuş numarası                                                                                                          |
+| Firma            | İlgili uçuşu yapan havayolu firması kodu.                                                                                        |
+| Sinif            | İlgili uçuşun sınıfını belirtir.                                                                                                 |
+| DonusMu          | İlgili segmentin dönüş segmenti mi olduğunu belirtir                                                                             |
+| SeferKod         | İlgili segmentin sefer kodunu belirtir.Bu bilgi Atlasglobal uçuşlarında gelmektedir.                                             |
 
 ```xml
 <UcusFiyat>
@@ -198,7 +201,9 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
 
 </UcusFiyat>
 ```
+
 ## CEVAP
+
 :::info
 Seçilen segmentler için toplam ve yolcu bazlı ücret değerlerini vermektedir.
 :::
@@ -220,22 +225,22 @@ ervis cevabında BagajBilgiler alanı zorunlu değildir. Belli bir segment-yolcu
 YolcuDogumTarihiZorunlumu alanı yolcu doğum tarihlerinin satış ve rezervasyon işleminde zorunlu olduğunu bildirir.Yolcu doğum tarihleri için yaş aralığı kontrolü aşağıda belirtildiği şekilde olmalıdır.
 :::
 :::warning
- (Yetiskin,Ogretmen,Ogrenci..)FirmaKartZorunlumu Bazı firmalar bazı yolcu tiplerine yaptıkları indirimi doğrulayabilmek için rezervasyon ya da fiyat adımlarında firma kart bilgilerini istemektedir. Rezervasyon ve satış işlemlerinizde firma kartının zorunluluğunu bu parametreden anlayabilirsiniz.
-Örn. THY öğrenci ve öğretmen yolcu tipleri için miles&smiles numarasını istemektedir. 
+(Yetiskin,Ogretmen,Ogrenci..)FirmaKartZorunlumu Bazı firmalar bazı yolcu tiplerine yaptıkları indirimi doğrulayabilmek için rezervasyon ya da fiyat adımlarında firma kart bilgilerini istemektedir. Rezervasyon ve satış işlemlerinizde firma kartının zorunluluğunu bu parametreden anlayabilirsiniz.
+Örn. THY öğrenci ve öğretmen yolcu tipleri için miles&smiles numarasını istemektedir.
 :::
 
-|Yetişkin|12 Yaş Üzeri|
-|---------------|-----------------|
-|Çocuk|2 - 12 Yaş Arası|
-|Bebek|0 - 2 Yaş Arası|
-|Öğrenci|13 - 24 Yaş Arası|
-|Asker|Asker Yolcu|
-|Genç|12 - 24 Yaş Arası|
+| Yetişkin | 12 Yaş Üzeri      |
+| -------- | ----------------- |
+| Çocuk    | 2 - 12 Yaş Arası  |
+| Bebek    | 0 - 2 Yaş Arası   |
+| Öğrenci  | 13 - 24 Yaş Arası |
+| Asker    | Asker Yolcu       |
+| Genç     | 12 - 24 Yaş Arası |
 
 :::warning
-Not: Gidiş Dönüş uçuşlarında Türk Havayolları(Anadolujet ve THY),SunExpress ve  Atlasglobal, Borajet birlikte seçilememektedir.Seçilen firmaların FirmaNo bilgileri aynı olmalıdır.
+Not: Gidiş Dönüş uçuşlarında Türk Havayolları(Anadolujet ve THY),SunExpress ve Atlasglobal, Borajet birlikte seçilememektedir.Seçilen firmaların FirmaNo bilgileri aynı olmalıdır.
 :::
-:::warning 
+:::warning
 RezervasyonAktifMi parametresi false ise bu sınıf/seyahat için rezervasyon yapılamayacağı anlamına gelmektedir. Satış işlemi yapılabilir.
 :::
 

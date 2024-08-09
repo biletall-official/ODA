@@ -1,16 +1,18 @@
 # SERVİS BİLGİSİ SORGULAMA
+
 ## ŞEMA
+
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |FirmaNo| Seçilen seferi yapacak olan firmanın firma numarası|
-|--------|-------------------------------------------------------------------------------| 
-|**KalkisNoktaID***|Seçilen seferin KalkisNoktaID değeri. (İniş Servisi için KalkisNoktaID alanı içerisinde VarisNoktaID değeri gönderilmelidir.) **Format:(integer).**|
-|**YerelSaat***|Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).**|
-|**HatNo***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**|
+|--------|-------------------------------------------------------------------------------|
+|**KalkisNoktaID\***|Seçilen seferin KalkisNoktaID değeri. (İniş Servisi için KalkisNoktaID alanı içerisinde VarisNoktaID değeri gönderilmelidir.) **Format:(integer).**|
+|**YerelSaat\***|Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).**|
+|**HatNo\***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**|
 |Tarih|Sefer listesinde bulunan Tarih alanı **Format:(datetime, ‘s’)**|
 |Saat| Sefer listesinde bulunan Saat alanı **Format:(datetime, ‘s’).**|
 
 :::info
-(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -29,7 +31,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## İSTEK
-**Örnek Biniş Servisi isteği;** (Kayseri » Ankara (Aşti) seferi) 
+
+**Örnek Biniş Servisi isteği;** (Kayseri » Ankara (Aşti) seferi)
+
 ```xml
 <Servis_2>
   <FirmaNo>37</FirmaNo>
@@ -39,9 +43,10 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
   <Tarih>2018-12-09T00:00:00</Tarih>
   <Saat>1900-01-01T02:30:00</Saat>
 </Servis_2>
-```  
+```
 
 **Örnek İniş Servisi isteği;** (Kayseri » Ankara (Aşti) seferi)
+
 ```xml
 <Servis_2>
   <FirmaNo>37</FirmaNo>
@@ -54,12 +59,13 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## CEVAP
+
 ```xml
-<NewDataSet>  
+<NewDataSet>
   <Table>
     <Yer>ANAYURT 2</Yer>
     <Saat>2018-12-10T15:47:00+03:00</Saat>
     <Internette_Gozuksunmu>1</Internette_Gozuksunmu>
   </Table>
 </NewDataSet>
-````
+```

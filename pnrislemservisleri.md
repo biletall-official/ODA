@@ -1,6 +1,9 @@
 # PNR İŞLEM SERVİSLERİ
+
 ## ŞEMA
-PNR İşlem servisleri aşağıda şeması verilen PnrIslem xml yapısı ile kullanılmaktadır. 
+
+PNR İşlem servisleri aşağıda şeması verilen PnrIslem xml yapısı ile kullanılmaktadır.
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">

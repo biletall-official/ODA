@@ -1,9 +1,13 @@
 # İDO SATIŞ İPTAL İŞLEMİ
+
 İdo biletinde satış iptali göndermeden önce ceza bilgisini sorgulamalısınız. Budo için satış iptali yapılamamaktadır.
 
 ## **Ceza Bilgisi Sorgulama :**
-Bilet iptal edildiğinde oluşacak ceza bilgisi için 
+
+Bilet iptal edildiğinde oluşacak ceza bilgisi için
+
 ### İSTEK
+
 ```xml
 <SatisIptalCezaGetirKomut>
   <Pnr>
@@ -13,16 +17,17 @@ Bilet iptal edildiğinde oluşacak ceza bilgisi için
   </Pnr>
 </SatisIptalCezaGetirKomut>
 ```
+
 #### CEVAP
 
-Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir. 
+Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
 
-|Tutar|Yolcunun toplam tutarı|
-|----------|-------------------------------------|
-|Komisyon|Yolcu servis ücreti|
-|FirmaCeza|Taşıyıcı firmanın ceza olarak keseceği tutar|
-|KomisyonCezaliMi|Servis ücreti cezalı mı bilgisi|
-|OlusanAcikPara|İptal servisine gönderilecek tutar|
+| Tutar            | Yolcunun toplam tutarı                       |
+| ---------------- | -------------------------------------------- |
+| Komisyon         | Yolcu servis ücreti                          |
+| FirmaCeza        | Taşıyıcı firmanın ceza olarak keseceği tutar |
+| KomisyonCezaliMi | Servis ücreti cezalı mı bilgisi              |
+| OlusanAcikPara   | İptal servisine gönderilecek tutar           |
 
 ```xml
 <SatisIptalCeza>
@@ -44,11 +49,15 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
   </Pnr>
 </SatisIptalCeza>
 ```
+
 ## SATIŞ İPTAL İŞLEMİ
+
 :::info
 Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların OlusanAcikPara değerlerini toplayıp göndermelisiniz.
 :::
+
 ## İSTEK
+
 ```xml
 <SatisIptalKomut>
   <Pnr>
@@ -60,6 +69,7 @@ Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların Olu
 ```
 
 ## CEVAP
+
 ```xml
 <IslemSonuc>
   <Sonuc>true</Sonuc>

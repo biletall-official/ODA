@@ -1,18 +1,24 @@
 # KARA NOKTALARI KALKIŞ-VARIŞ SORGULAMA
+
 ## ŞEMA
-Bu sorgu ile Biletall web servisleri için düzenlenmiş kalkış-varış noktaları elde edilir. 
-Sonraki işlemlerde bu sorgudan gelen ID alanı KalkisNoktaID ya da VarisNoktaID olarak kullanılacaktır. 
+
+Bu sorgu ile Biletall web servisleri için düzenlenmiş kalkış-varış noktaları elde edilir.
+Sonraki işlemlerde bu sorgudan gelen ID alanı KalkisNoktaID ya da VarisNoktaID olarak kullanılacaktır.
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-```xml 
+
+```xml
 <xs:element name="KaraNoktaGetirKomut" />
-```  
+```
+
 ## İSTEK
+
 ```xml
 <KaraNoktaGetirKomut/>
-``` 
+```
 
-## CEVAP  
+## CEVAP
+
 <u>Alanlar ile ilgili açıklamalar</u>  
 |ID|Sefer, Otobüs ve Satış işlemlerinde Kalkış-Varış bilgisi için göndereceğiniz noktanın kimlik değeridir.|
 |------------------|------------------------------------------------------------------|
@@ -23,7 +29,6 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |Açıklama|Varsa nokta ile ilgili açıklama belirtir.|
 |MerkezMi|Noktanın merkez mi yoksa bir merkeze bağlı mı olduğunu belirtir.|
 |BağlıOlduğuNokta|Noktanın bağlı olduğu merkez nokta ID'sidir.|
- 
 
 ```xml
 <KaraNoktalar>
@@ -186,7 +191,6 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
     <Aciklama />
     <MerkezMi>0</MerkezMi>
     < BagliOlduguNoktaID >738</BagliOlduguNoktaID>
-  </KaraNokta>  
+  </KaraNokta>
 </KaraNoktalar>
-```  
-
+```

@@ -5,15 +5,15 @@ Bu sorgu ile otobüs firmalarına ait komisyon bilgileri elde edilir.
 :::
 
 ## İSTEK
+
 ```xml
 <OtobusFirmaKomisyonlar ></OtobusFirmaKomisyonlar>
 ```
 
 ## CEVAP
 
-|KomisyonYuzde|Komisyon oranını yüzde olarak gösterir.|
-|--------------|---------------------------------------|
-
+| KomisyonYuzde | Komisyon oranını yüzde olarak gösterir. |
+| ------------- | --------------------------------------- |
 
 ```xml
 <Komisyonlar>
@@ -26,6 +26,6 @@ Bu sorgu ile otobüs firmalarına ait komisyon bilgileri elde edilir.
                         <FirmaNo>-320</FirmaNo>
                         <FirmaAd>Kapadokya VIP Turizm</FirmaAd>
                         <KomisyonYuzde>10.0000</KomisyonYuzde>
-</Komisyon>                   
+</Komisyon>
 </Komisyonlar>
 ```

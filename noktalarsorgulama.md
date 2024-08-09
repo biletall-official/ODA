@@ -5,11 +5,13 @@
 :::
 
 ## İSTEK
+
 ```xml
 <DenizNoktaGetirKomut />
 ```
 
 ## CEVAP
+
 ```xml
 <DenizNoktalar>
   <DenizNokta>

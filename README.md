@@ -1,9 +1,13 @@
 # aktif olmayanlar
+
 ## OTOBÜS SERVİSLERİ
+
 - otobusrezervasyonyapma.md
 - otobusrezervasyonlusatisyapma.md
+
 ## İDO&BUDO SERVİSLERİ
-- markdown.md 
+
+- markdown.md
 - kalkisnoktalarisorgulama.md
 - varisnoktalarisorgulama.md
 - noktalarsorgulama.md
