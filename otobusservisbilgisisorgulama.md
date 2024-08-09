@@ -5,14 +5,14 @@
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |FirmaNo| Seçilen seferi yapacak olan firmanın firma numarası|
 |--------|-------------------------------------------------------------------------------|
-|**KalkisNoktaID\***|Seçilen seferin KalkisNoktaID değeri. (İniş Servisi için KalkisNoktaID alanı içerisinde VarisNoktaID değeri gönderilmelidir.) **Format:(integer).**|
-|**YerelSaat\***|Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).**|
-|**HatNo\***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**|
+|**KalkisNoktaID***|Seçilen seferin KalkisNoktaID değeri. (İniş Servisi için KalkisNoktaID alanı içerisinde VarisNoktaID değeri gönderilmelidir.) **Format:(integer).**|
+|**YerelSaat***|Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).**|
+|**HatNo***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**|
 |Tarih|Sefer listesinde bulunan Tarih alanı **Format:(datetime, ‘s’)**|
 |Saat| Sefer listesinde bulunan Saat alanı **Format:(datetime, ‘s’).**|
 
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml

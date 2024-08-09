@@ -3,20 +3,20 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-
-| FirmaNo                                                | Seçilen seferi yapacak olan firmanın firma numarası                                                                                                                             |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| **KalkisNoktaID\***                                    | Seçilen seferin KalkisNoktaID değeri.**Format:(integer).**                                                                                                                      |
-| **VarisNoktaID\***                                     | Seçilen seferin VarisNoktaID değeri.**Format:(integer).**                                                                                                                       |
-| **Tarih\***                                            | Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**                                                                        |
-| Saat\*\*\*                                             | Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)                                                                                                              |
+|ALAN|AÇIKLAMA|
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| FirmaNo                                                | Seçilen seferi yapacak olan firmanın firma numarası                                                                                                                           |
+| **KalkisNoktaID***                                    | Seçilen seferin KalkisNoktaID değeri.**Format:(integer).**                                                                                                                      |
+| **VarisNoktaID***                                     | Seçilen seferin VarisNoktaID değeri.**Format:(integer).**                                                                                                                       |
+| **Tarih***                                            | Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**                                                                        |
+| **Saat***                                             | Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)                                                                                                              |
 | **Format:(datetime, ‘s’).**                            |
-| **HatNo\***                                            | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)                                                                                                             |
+| **HatNo***                                            | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)                                                                                                             |
 | **Format: integer**                                    |
-| **SeferNo\***                                          | Sefer listesinde bulunan SeferTakipNo alanı                                                                                                                                     |
-| **KoltukNo1\***                                        | İlk yolcu için seçilen koltuk numarası                                                                                                                                          |
-| **Adi1\***                                             | İlk yolcunun adı                                                                                                                                                                |
-| **SoyAdi1\***                                          | İlk yolcunun soyadı .Yolcu Ad Soyad Bilgileri toplamda 20 karakteri geçmemelidir.Yolcu Ad ve Soyadı türkçe karakter ve boşluk içermemelidir.                                    |
+| **SeferNo***                                          | Sefer listesinde bulunan SeferTakipNo alanı                                                                                                                                     |
+| **KoltukNo1***                                        | İlk yolcu için seçilen koltuk numarası                                                                                                                                          |
+| **Adi1***                                             | İlk yolcunun adı                                                                                                                                                                |
+| **SoyAdi1***                                          | İlk yolcunun soyadı .Yolcu Ad Soyad Bilgileri toplamda 20 karakteri geçmemelidir.Yolcu Ad ve Soyadı türkçe karakter ve boşluk içermemelidir.                                    |
 | TcVatandasiMi1                                         | 1 ya da boş gönderildiğinde TcKimlikNo değeri zorunlu hale gelir.                                                                                                               |
 | TC Vatandaşı olmayan her yolcu için 0 gönderilmelidir. |
 | TcKimlikNo1                                            | İlk yolcunun kimlik numarası.Tc Vatandaşları için zorunludur.                                                                                                                   |
@@ -25,18 +25,18 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 | BinecegiYer1                                           | İlk yolcunun yolda bineceği yer bilgisi. (Biniş yerinin adı) **Format:(string, max: 15 karakter).**                                                                             |
 | ServisYeriKalkis1                                      | İlk yolcunun seferden önce alınacağı servis durağıdır. (Servis noktasının adı. Aynı anda Bineceği yer ve Kalkış servisi seçilmemelidir.) **Format:(string, max: 15 karakter).** |
 | ServisYeriVaris1                                       | İlk yolcunun seferden sonra alınacağı servis durağıdır. (Servis noktasının adı)**Format:(string, max: 15 karakter).**                                                           |
-| **TelefonNo\***                                        | Telefon numarası bilgisi.**Format:(string, 10 karakter - XXXXXXXXXX).**                                                                                                         |
-| **Cinsiyet\***                                         | Cinsiyet bilgisi.**Bayan Satış = 1, Bay Satış = 2**                                                                                                                             |
-| **YolcuSayisi\***                                      | Biletteki yolcu sayısı                                                                                                                                                          |
+| **TelefonNo***                                        | Telefon numarası bilgisi.**Format:(string, 10 karakter - XXXXXXXXXX).**                                                                                                         |
+| **Cinsiyet***                                         | Cinsiyet bilgisi.**Bayan Satış = 1, Bay Satış = 2**                                                                                                                             |
+| **YolcuSayisi***                                      | Biletteki yolcu sayısı                                                                                                                                                          |
 | RezerveSaati                                           | Maximum Opsiyon tarihine göre ayarlamak istenilen opsiyon tarihi.(Bu değer gönderilmezse max tarih belirlenir.) **Format:(datetime, ‘s’).**                                     |
 | WebUyeNo                                               | Bu değer sabittir ve 0 (sıfırdır).                                                                                                                                              |
-| **IP\***                                               | Site ziyaretçisinin Ip adresi                                                                                                                                                   |
+| **IP***                                               | Site ziyaretçisinin Ip adresi                                                                                                                                                   |
 | Email                                                  | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)                                                                                            | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
 
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <xs:element name="IslemRezervasyon">
   <xs:complexType>
@@ -107,7 +107,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
   </xs:complexType>
 </xs:element>
 ```
-
+:::
 ## İSTEK
 
 ### T.C Vatandaşı olan yolcu için rezervasyon istek örneği;
@@ -178,9 +178,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## CEVAP
-
-| Sonuc                  | İşlemin başarılı olup olmadığını belirtir      |
+|ALAN|AÇIKLAMA|
 | ---------------------- | ---------------------------------------------- |
+|Sonuc                  | İşlemin başarılı olup olmadığını belirtir      |
 | PNR                    | Oluşan PNR kodunu belirtir.                    |
 | RezervasyonOpsiyon     | Belirlenmiş opsiyon tarihini belirtir.         |
 | Mesaj                  | Bilet firma mesajını içerir.                   |

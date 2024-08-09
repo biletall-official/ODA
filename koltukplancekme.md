@@ -7,7 +7,7 @@ Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz
 :::
 
 Çekme işlem şeması aşağıdaki gibidir;
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -66,11 +66,12 @@ Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz
   </xs:simpleType>
 </xs:schema>
 ```
+:::
 
 ## İSTEK
-
+|ALAN|AÇIKLAMA|
+| ---------------- | --------------------------------------------------------------------------------- |
 | **PnrNo\***      | Rezervasyon işlemi sonucunda dönen ‘PnrNo’ alanı                                                |
-| ---------------- | ----------------------------------------------------------------------------------------------- |
 | **PnrKod\***     | Rezervasyon işlemi sonucunda dönen ‘PnrKod’ alanı                                               |
 | **SegmentKod\*** | Sefer listesinden itibaren alınan rezervasyon işleminde de kullandığımız ‘SegmentKod’ alanıdır. |
 | **NeredenKod\*** | Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).**                               |
@@ -112,8 +113,9 @@ Görselde görünen koltuklar ilgili segmente ait feribotun **‘1.Kat’** ınd
 :::
 
 **Koltuk:**  
-|Kat|Koltuğun bulunduğu kat bilgisi|
+|ALAN|AÇIKLAMA|
 |-----------|-----------------------------------------------------|
+|Kat|Koltuğun bulunduğu kat bilgisi|
 |Bolum|Koltuğun bulunduğu bölüm|
 |BolumAd|Koltuğun bulunduğu bölümün adı|
 |Sira|Koltuğun bulunduğu sıra ya da satır|
@@ -127,12 +129,12 @@ Görselde görünen koltuklar ilgili segmente ait feribotun **‘1.Kat’** ınd
 :::info
 Sonuç olarak Pnr yapısı içerisinde ilgili parkur ve sefer hiyerarşisi içinde koltuk planı gelmektedir.
 Koltuk planı kapsam sıralaması şöyledir.
-Parkur > Segment > KoltukPlan > Kat > Bolum > Koltuk
+**Parkur > Segment > KoltukPlan > Kat > Bolum > Koltuk**
 :::
 :::tip
 Bir koltuk planı içerisinde öncelikle katlar bulunmaktadır. Sonra ilgili katın bölümleri bulunmaktadır. Bölüm içerisinde ise Sira ve Sutun verileriyle bir yerleşim yapılmaktadır. Bu bölümü anlamak ve xml yapısını daha anlamlı hale getirmek için yapılmış örnekler üzerinde bir feribot yapısının nasıl olduğuna bakabilirsiniz.
 :::
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <IdoKoltukPlanCekKomut>
   <Pnr>
@@ -321,3 +323,4 @@ Bir koltuk planı içerisinde öncelikle katlar bulunmaktadır. Sonra ilgili kat
   </Pnr>
 </IdoKoltukPlanCekKomut>
 ```
+:::

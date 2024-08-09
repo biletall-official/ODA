@@ -17,7 +17,7 @@ Cevap xml’indeki “IslemiYapanFarkliKullaniciMi” sizin satış işlemlerini
 ```
 
 ## CEVAP
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <Islemler xmlns="">
   <Islem>
@@ -58,3 +58,4 @@ Cevap xml’indeki “IslemiYapanFarkliKullaniciMi” sizin satış işlemlerini
   </Islem>
 </Islemler>
 ```
+:::

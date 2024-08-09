@@ -11,7 +11,7 @@
 ```
 
 ## CEVAP
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <DenizNoktalar>
   <DenizNokta>
@@ -84,3 +84,4 @@
   </DenizNokta>
 </DenizNoktalar>
 ```
+:::

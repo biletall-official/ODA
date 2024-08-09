@@ -7,9 +7,9 @@ Yurtiçi veya yurtdışı uçuş listeleri alındıktan uçuş planına göre se
 
 ## ŞEMA
 
-```xml
 Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
-
+:::details kodu görüntülemek için tıklayın.
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="UcusFiyat">
@@ -141,11 +141,12 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
   </xs:simpleType>
 </xs:schema>
 ```
+:::
 
 ## İSTEK
-
-| FirmaNo      | Sefer listesinde gelen FirmaNo alanı kullanılmalıdır. |
+|ALAN|AÇIKLAMA|
 | ------------ | ----------------------------------------------------- |
+| FirmaNo      | Sefer listesinde gelen FirmaNo alanı kullanılmalıdır. |
 | YetiskinSayi | Yetişkin yolcu sayısı                                 |
 | CocukSayi    | Çocuk yolcu sayısı                                    |
 | BebekSayi    | Bebek yolcu sayısı                                    |
@@ -154,8 +155,9 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
 | AskerSayi    | Asker yolcu sayısı (Sadece yurtiçi uçuşlarda)         |
 | GencSayi     | Genç yolcu sayısı (Sadece yurtiçi uçuşlarda)          |
 
-| Segment Alanları | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla girilmelidir. |
+|ALAN|AÇIKLAMA|
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Segment Alanları | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla girilmelidir. |
 | Kalkis           | havaSegmentin kalkışalanı kodu.                                                                                                  |
 | Varis            | Segmentin varış havaalanı kodu.                                                                                                  |
 | KalkisTarih      | Kalkış tarihi                                                                                                                    |
@@ -166,6 +168,7 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
 | DonusMu          | İlgili segmentin dönüş segmenti mi olduğunu belirtir                                                                             |
 | SeferKod         | İlgili segmentin sefer kodunu belirtir.Bu bilgi Atlasglobal uçuşlarında gelmektedir.                                             |
 
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <UcusFiyat>
 	<FirmaNo>1100</FirmaNo>
@@ -201,12 +204,14 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
 
 </UcusFiyat>
 ```
+:::
 
 ## CEVAP
 
 :::info
 Seçilen segmentler için toplam ve yolcu bazlı ücret değerlerini vermektedir.
 :::
+
 **BAGAJ BİLGİLERİ**
 :::tip
 Eğer servis cevabında bagaj bilgileri alanları dönmüşse, segment-yolcutipi bazında bagaj hakkı bilgisi oluşturulabilir. BagajMiktar + BagajBirim şeklinde bagaj bilgisi oluşturulabilir.
@@ -228,9 +233,9 @@ YolcuDogumTarihiZorunlumu alanı yolcu doğum tarihlerinin satış ve rezervasyo
 (Yetiskin,Ogretmen,Ogrenci..)FirmaKartZorunlumu Bazı firmalar bazı yolcu tiplerine yaptıkları indirimi doğrulayabilmek için rezervasyon ya da fiyat adımlarında firma kart bilgilerini istemektedir. Rezervasyon ve satış işlemlerinizde firma kartının zorunluluğunu bu parametreden anlayabilirsiniz.
 Örn. THY öğrenci ve öğretmen yolcu tipleri için miles&smiles numarasını istemektedir.
 :::
-
-| Yetişkin | 12 Yaş Üzeri      |
+|ALAN|AÇIKLAMA|
 | -------- | ----------------- |
+| Yetişkin | 12 Yaş Üzeri      |
 | Çocuk    | 2 - 12 Yaş Arası  |
 | Bebek    | 0 - 2 Yaş Arası   |
 | Öğrenci  | 13 - 24 Yaş Arası |
@@ -238,12 +243,12 @@ YolcuDogumTarihiZorunlumu alanı yolcu doğum tarihlerinin satış ve rezervasyo
 | Genç     | 12 - 24 Yaş Arası |
 
 :::warning
-Not: Gidiş Dönüş uçuşlarında Türk Havayolları(Anadolujet ve THY),SunExpress ve Atlasglobal, Borajet birlikte seçilememektedir.Seçilen firmaların FirmaNo bilgileri aynı olmalıdır.
+Gidiş Dönüş uçuşlarında Türk Havayolları(Anadolujet ve THY),SunExpress ve Atlasglobal, Borajet birlikte seçilememektedir.Seçilen firmaların FirmaNo bilgileri aynı olmalıdır.
 :::
 :::warning
 RezervasyonAktifMi parametresi false ise bu sınıf/seyahat için rezervasyon yapılamayacağı anlamına gelmektedir. Satış işlemi yapılabilir.
 :::
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <NewDataSet>
   <FiyatListesi>
@@ -387,3 +392,4 @@ RezervasyonAktifMi parametresi false ise bu sınıf/seyahat için rezervasyon ya
   </BagajBilgiler>
 </NewDataSet>
 ```
+:::

@@ -15,7 +15,7 @@
 ```
 
 ## CEVAP
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <OnOdemeIslemlerim>
   <xs:schema id="OnOdemeIslemlerim" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
@@ -53,3 +53,4 @@
   </OnOdemeIslem>
 </OnOdemeIslemlerim>
 ```
+:::

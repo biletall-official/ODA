@@ -17,8 +17,9 @@ http://88.247.60.172/wstest/service.asmx web servis adresini kullanabilir, burad
 **Budo Test Kart Bilgileri:**
 Ödeme Ekranı Test Kartları şu şekildedir:
 
-| Test Kart Bilgileri | expiration date | cvv2 |
+|ALAN|AÇIKLAMA|
 | ------------------- | --------------- | ---- |
+| Test Kart Bilgileri | expiration date | cvv2 |
 | 4090700102323514    | 11/21           | 834  |
 | 5200190046477986    | 01/21           | 319  |
 

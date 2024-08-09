@@ -1,12 +1,12 @@
 # REZERVASYON İPTAL İŞLEMİ
-
-| **PnrNo\***       | İşlemin PNR Numarası                     |
+|ALAN|AÇIKLAMA|
 | ----------------- | ---------------------------------------- |
+| **PnrNo***       | İşlemin PNR Numarası                     |
 | PnrKoltukNo       | Otobüste bu alanın girilmesi zorunludur. |
 | PnrAramaParametre | Yolcu Soyadı ya da Cep Telefonu          |
 
 :::info
-(\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ## İSTEK

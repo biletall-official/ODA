@@ -2,20 +2,21 @@
 
 ## ŞEMA
 
-Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.  
+Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir. 
+|ALAN |AÇIKLAMA|
+|----------------------|---------------------------------------| 
 |**FirmaNo**|Seçilen seferi yapacak olan firmanın firma numarası|
-|----------------------|---------------------------------------|
-|**KalkisNoktaID\***|Seçilen seferin KalkisNoktaID değeri.**Format:(integer).**|
-|**VarisNoktaID\***|Seçilen seferin VarisNoktaID değeri.**Format:(integer).**|
-|**Tarih\***|Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**|
-|**Saat\***|Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı) **Format:(datetime, ‘s’)**|
-|**HatNo\***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)**Format: integer**|
-|**IslemTipi\***|Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir.Satış işlemi için olması gereken parametre değeri: 0 Rezervasyon işlemi için olması gereken parametre değeri: 1 **Format: integer, 1 veya 0**|
+|**KalkisNoktaID***|Seçilen seferin KalkisNoktaID değeri.**Format:(integer).**|
+|**VarisNoktaID***|Seçilen seferin VarisNoktaID değeri.**Format:(integer).**|
+|**Tarih***|Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**|
+|**Saat***|Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı) **Format:(datetime, ‘s’)**|
+|**HatNo***|Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)**Format: integer**|
+|**IslemTipi***|Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir.Satış işlemi için olması gereken parametre değeri: 0 Rezervasyon işlemi için olması gereken parametre değeri: 1 **Format: integer, 1 veya 0**|
 |**YolcuSayisi**|Seyahat edecek yolcu sayısı.|
-|**SeferTakipNo\***|Sefer listesinde bulunan SeferTakipNo alanı|
-|**Ip\***|Site ziyaretçisinin Ip adresi|
+|**SeferTakipNo***|Sefer listesinde bulunan SeferTakipNo alanı|
+|**Ip***|Site ziyaretçisinin Ip adresi|
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -59,8 +60,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılabilecek yolcu tipleri bulunmaktadır.
 
 **Sefer Bilgileri**
-|InternetTarihSaat|Yolculara gösterilmesi gereken otobüsün kalkış saati.|
+|ALAN|AÇIKLAMA|
 |-----------------|-----------------------------------------------------|
+|InternetTarihSaat|Yolculara gösterilmesi gereken otobüsün kalkış saati.|
 |BiletFiyatiInternet|Herbir koltuk için uygulanacak olan bilet fiyatı.|
 |BiletFiyatiSinifFarki|Varsa özel koltuklu bölümler için BiletFiyatiInternet fiyatına eklenecek olan sınıf farkı fiyatı.|
 |BiletTekKoltukFarki|Varsa tek koltuklar için BiletFiyatiInternet fiyatına eklenecek olan sınıf farkı fiyatı.|
@@ -85,15 +87,15 @@ Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılab
 |**TekliKoltuklarDoluysaCiftliKoltuktanSatisYapilabilirMi**|Tüm tek koltukların dolu olması durumunda çift koltukların tek yolcuya satılıp satılamayacağı bilgisidir. “1” olması durumunda çift koltuklar tek satılabilirken, “0” olması durumunda satış yapılamaz.|
 
 **Koltuk Planı**
-
-| KoltukStr            | İlgili koltuğunu string olarak koltuk numarası. 01: 1 Numaralı koltuk KO: Koridor KA, PI: Kapı (ayrı ayrı değerler birleşiyor) MA, SA: Masa (ayrı ayrı değerler birleşiyor) PR : Personel Koltuğu                                                                                                                    |
+|ALAN|AÇIKLAMA|
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| KoltukNo             | Sayısal Koltuk numarasıdır. Koltuk numarası -1 veya -3 olanlar Koridor, Kapı veya Masaya denk gelen yerlerdir.                                                                                                                                                                                                       |
-| Durum                | Koltuğun o anki durumudur. **Durum=0 =>** Koltuk **Boş Durum=1=>** Koltuk Bir Bayana Satılmış **Durum=2 =>** Koltuk Bir Bayana Rezerve **Durum=3=>** Koltuk Bir Baya Satılmış **Durum=4 =>** Koltuk Bir Baya Rezerve **Durum=5=>** Koltuk Satılmakta **Durum=6=>** Koltuk Satılamaz                                  |
+| KoltukStr            | İlgili koltuğunu string olarak koltuk numarası. 01: 1 Numaralı koltuk KO: Koridor KA, PI: Kapı (ayrı ayrı değerler birleşiyor) MA, SA: Masa (ayrı ayrı değerler birleşiyor) PR : Personel Koltuğu                          |
+| KoltukNo             | Sayısal Koltuk numarasıdır. Koltuk numarası -1 veya -3 olanlar Koridor, Kapı veya Masaya denk gelen yerlerdir.                      |
+| Durum                | Koltuğun o anki durumudur. **Durum=0 =>** Koltuk **Boş Durum=1=>** Koltuk Bir Bayana Satılmış **Durum=2 =>** Koltuk Bir Bayana Rezerve **Durum=3=>** Koltuk Bir Baya Satılmış **Durum=4 =>** Koltuk Bir Baya Rezerve **Durum=5=>** Koltuk Satılmakta **Durum=6=>** Koltuk Satılamaz                 |
 | DurumYan             | Yan Koltuğun o anki durumudur. **DurumYan=0=>** Yan Koltuk Boş (Her İki Cinse Satılabilir) **DurumYan=1=>** Yan Koltuk Bir Bayana Satılmış (Sadece Bayana Satılabilir) **DurumYan=2=>** Yan Koltuk Bir Baya Satılmış (Sadece Baya Satılabilir) **DurumYan=3,4,5,6=>** Yan Koltuk Belirsiz (Hiçbir Şekilde Satılamaz) |
-| KoltukFiyatiInternet | İlgili koltuğun internet fiyatını göstermektedir.Temel olarak farklı fiyatlardaki koltuklar aynı anda satılamamaktadır.Özel bölüm ve tekli koltuklarda fiyat farkı **varsa** bütün koltuklar aynı fiyat tipinden seçilmelidir. Aksi takdirde bilet satışı gerçekleşmeyecektir.                                       |
-| Kat                  | Koltuğun çok katlı otobüslerde hangi kata ait olduğunu belirtir. Elementin gelmediği durumlarda 1 olarak kabul edilebilir.                                                                                                                                                                                           |
-
+| KoltukFiyatiInternet | İlgili koltuğun internet fiyatını göstermektedir.Temel olarak farklı fiyatlardaki koltuklar aynı anda satılamamaktadır.Özel bölüm ve tekli koltuklarda fiyat farkı **varsa** bütün koltuklar aynı fiyat tipinden seçilmelidir. Aksi takdirde bilet satışı gerçekleşmeyecektir.       |
+| Kat     | Koltuğun çok katlı otobüslerde hangi kata ait olduğunu belirtir. Elementin gelmediği durumlarda 1 olarak kabul edilebilir.    |
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <Otobus>
   <Sefer>
@@ -340,3 +342,4 @@ Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılab
   </OTipOzellik>
 </Otobus>
 ```
+:::

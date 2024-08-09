@@ -15,7 +15,7 @@
 ```
 
 ## CEVAP
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 Sonuc:
 <NewDataSet>
@@ -62,3 +62,4 @@ Sonuc:
 </NewDataSet>
 
 ```
+:::

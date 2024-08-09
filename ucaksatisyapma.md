@@ -18,19 +18,19 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
   </Pnr>
 </SatisIptalCezaGetirKomut>
 ```
-
-| **PnrNo\***             | PNR Numarası             |
+|ALAN|AÇIKLAMA|
 | ----------------------- | ------------------------ |
-| **PnrAramaParametre\*** | Soyad ya da Cep Telefonu |
+| **PnrNo***             | PNR Numarası             |
+| **PnrAramaParametre*** | Soyad ya da Cep Telefonu |
 
 :::info
-(\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 #### CEVAP
-
-| Tutar            | Yolcunun toplam tutarı                       |
+|ALAN|AÇIKLAMA|
 | ---------------- | -------------------------------------------- |
+| Tutar            | Yolcunun toplam tutarı                       |
 | Komisyon         | Yolcu servis ücreti                          |
 | FirmaCeza        | Taşıyıcı firmanın ceza olarak keseceği tutar |
 | KomisyonCezaliMi | Servis ücreti cezalı mı bilgisi              |
@@ -59,7 +59,7 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
 
 ## SATIŞ İPTAL İŞLEMİ
 
-:::tip
+:::warning
 Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların OlusanAcikPara değerlerini toplayıp göndermelisiniz.
 :::
 

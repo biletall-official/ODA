@@ -5,7 +5,7 @@
 :::info
 Sefer sorgulama işleminde yukarıda şeması verilen **SeferCekKomut** xml yapısı oluşturulmalıdır. **‘SeferCekKomut’** içerisine **‘AramaKriter’** xml yapısını alarak yapılan sorguya anlam kazandırır.
 :::
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -108,53 +108,56 @@ Sefer sorgulama işleminde yukarıda şeması verilen **SeferCekKomut** xml yap�
   </xs:simpleType>
 </xs:schema>
 ```
+:::
 
 ## İSTEK
 
 **AramaKriter Parametreleri Açıklamaları:**
-
-| **FirmaNo\*** | 5000 gönderilmelidir.         |
+|ALAN|AÇIKLAMA|
 | ------------- | ----------------------------- |
-| **Ip\***      | Site ziyaretçisinin Ip adresi |
+| **FirmaNo*** | 5000 gönderilmelidir.         |
+| **Ip***      | Site ziyaretçisinin Ip adresi |
 
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **Parkurlar:**
 :::tip
 Gidiş – Dönüş arama yapmak istediğinizde örnekte olduğu gibi ikinci bir parkur ekleyip dönüş değerleri girilmelidir. Parkur içeriği aşağıdaki gibi olmalıdır.
 :::
-
-| **NeredenKod\*** | Listelemek istediğiniz seferlerin kalkış noktasının kodu.**Format:(string, 3 karakter).** |
+|ALAN|AÇIKLAMA|
 | ---------------- | ----------------------------------------------------------------------------------------- |
-| **NereyeKod\***  | Listelemek istediğiniz seferlerin varış noktasının kodu.**Format:(string, 3 karakter).**  |
-| **Tarih\***      | Listelemek istediğiniz seferlerin kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**      |
+| **NeredenKod*** | Listelemek istediğiniz seferlerin kalkış noktasının kodu.**Format:(string, 3 karakter).** |
+| **NereyeKod***  | Listelemek istediğiniz seferlerin varış noktasının kodu.**Format:(string, 3 karakter).**  |
+| **Tarih***      | Listelemek istediğiniz seferlerin kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**      |
 
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **YolcuSayilar:**
 :::tip
 İçerisine YolcuSayi xml yapısını alarak aramak istediğiniz seferde hangi yolcu tipinden kaç adet yolcu olacağını belirtmelisiniz.
 :::
-|**TipKod\***|İdo Yolcu Tip kodları şöyledir; Yetişkin:1 Çocuk:2 Yaşlı:4 Öğrenci:5 Özürlü:6 Basın:10 Gazi:11**|
+|ALAN|AÇIKLAMA|
 |-------------------|-------------------------|
-|**Sayi**\*|Yolcu tipinden kaç adet yolcu olacağı. **Format:(int, max : 7).\*_|
+|**TipKod***|İdo Yolcu Tip kodları şöyledir; Yetişkin:1 Çocuk:2 Yaşlı:4 Öğrenci:5 Özürlü:6 Basın:10 Gazi:11**|
+|**Sayi***|Yolcu tipinden kaç adet yolcu olacağı. **Format:(int, max : 7).**_|
 :::info
-(_) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **AracSayilar:**
 :::tip
 İçerisine AracSayi xml yapısını alarak aramak istediğiniz seferde hangi araç tipinden kaç adet olacağını belirtmelisiniz.  
 :::
-|**TipKod\***|İdo araç tipleri sorgusundan kod alanını almalısınız.**Format:(string, 3 karakter).**|
+|ALAN|AÇIKLAMA|
 |----------------|-------------------------|
-|**Sayi\***|Araç tipinden kaç adet olacağı.**Format:(int, max : 7).**|
+|**TipKod***|İdo araç tipleri sorgusundan kod alanını almalısınız.**Format:(string, 3 karakter).**|
+|**Sayi***|Araç tipinden kaç adet olacağı.**Format:(int, max : 7).**|
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ## CEVAP
@@ -164,8 +167,9 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 :::
 
 **Segment Alanları:**
-|SegmentKod|Segment kodu sonraki işlemlerde kullanılmak için önemlidir.İdo ve Budo için farklı format ve uzunluklarda gelebilir.|
+|ALAN|AÇIKLAMA|
 |-------------|--------------------------------|
+|SegmentKod|Segment kodu sonraki işlemlerde kullanılmak için önemlidir.İdo ve Budo için farklı format ve uzunluklarda gelebilir.|
 |BudoSessionID|Sadece Budo seferlerinde gelir, Budo satış tamamlama aşamasına kadar gereklidir.|
 |SeferNo|Sefer numarasıdır.|
 |FeribotTip|Feribot tipinin kısa kodudur.|
@@ -177,8 +181,9 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 |VarisTarih|Tahmini varış tarih ve saati.|
 
 **UcretSecenek Alanları:**
-|SinifAd|İdo için (PROMO,ECO,BIZ),Budo için (TAM, PROMOSYON) Gibi kesin olmayan sınıf adları gelir.|
+|ALAN|AÇIKLAMA|
 |-------------------|---------------------------|
+|SinifAd|İdo için (PROMO,ECO,BIZ),Budo için (TAM, PROMOSYON) Gibi kesin olmayan sınıf adları gelir.|
 |SinifKod|Sınıfın kodunu ifade eder.|
 |FiyatKod|Ücret seçeneğinin kodudur.|
 |AracFiyatKod|Varsa araç için ücret seçeneğinin kodudur.|
@@ -187,8 +192,9 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 |KoltukAdet|İlgili ücretten kalan koltuk adedidir.|
 |ToplamUcret|İlgili ücret seçeneğinin ücret değerini ifade eder.|
 
-| YolcuUcretler | Yolcu Ucret                               |
+|ALAN|AÇIKLAMA|
 | ------------- | ----------------------------------------- |
+| YolcuUcretler | Yolcu Ucret                               |
 | YolcuTip      | Yolcu tipi açıklaması.                    |
 | YolcuTipKod   | Yolcu tipi kodu.                          |
 | AracTipKod    | Eğer araç sürücüsü ise araç tipinin kodu. |
@@ -199,7 +205,7 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 :::danger
 Sefer listesinde Budo seferleri de eklenmiştir. Budo firma numarası 5001 olarak gelecektir.
 :::
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <SeferListe>
   <Parkur>
@@ -444,3 +450,4 @@ Sefer listesinde Budo seferleri de eklenmiştir. Budo firma numarası 5001 olara
   </Parkur>
 </SeferListe>
 ```
+:::

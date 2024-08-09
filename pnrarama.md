@@ -3,13 +3,13 @@
 Rezervasyon veya satış işlemleri sonrası biletler işlem sonucu dönen PNR numarası ile takip edilebilmektedir.
 
 ## İSTEK
-
-| **PnrNo\***             | İşlemin PNR Numarası               |
+|ALAN|AÇIKLAMA|
 | ----------------------- | ---------------------------------- |
-| **PnrAramaParametre\*** | Yolcu soyadı veya telefon numarası |
+| **PnrNo***             | İşlemin PNR Numarası               |
+| **PnrAramaParametre*** | Yolcu soyadı veya telefon numarası |
 
 :::info
-(\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -21,7 +21,7 @@ Rezervasyon veya satış işlemleri sonrası biletler işlem sonucu dönen PNR n
 ```
 
 ## CEVAP
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <Bilet>
 	<PNR>
@@ -154,6 +154,7 @@ Rezervasyon veya satış işlemleri sonrası biletler işlem sonucu dönen PNR n
 </KoltukNolar>
 </Bilet>
 ```
+:::
 
 :::warning
 Yolcuları listeleme işleminde Durum1 değeri boş olmayan yolculara göre listeleme yapılmalıdır.AktifDurum değeri ise yolcunun son durumuyla ilgili bilgi verir.Örneğin AktifDurum değeri 2 ise yolcunun son durumu Durum2 dir.Durum1 Rezervasyon olabilirken Durum2 RezervasyonIptal olabilmektedir.

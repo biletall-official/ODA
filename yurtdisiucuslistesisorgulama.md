@@ -3,25 +3,25 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-
-| FirmaNo                            | Yurtdışı uçuş işlemleri için kullanılacak firma numarası sabittir.**FirmaNo : 1100**                                                                                                                                 |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **KalkisAdi\***                    | Listelemek istediğiniz uçuşların kalkış havaalanı. Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).**                                                                              |
-| **VarisAdi\***                     | Listelemek istediğiniz uçuşların varış havaalanı.Bu parametre üç harfli havaalanı kodudur. **Format:(string, min:3 max: 3 karakter).**                                                                               |
-| **Tarih\***                        | Listelemek istediğiniz uçuşların kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**                                                                                                                                  |
-| SplitSearch                        | Seferleri gruplamak istediğinizde bu alanı **1** göndermelisiniz. (Zorunlu değildir)                                                                                                                                 |
-| **DonusTarih\***                   | Listelemek istediğiniz uçuşların varış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**                                                                                                                                   |
-| SplitSearchGidisDonusGrupla        | Gidiş dönüş seferleri gruplamak istediğinizde bu alanı 1 göndermelisiniz.(Zorunlu değildir)                                                                                                                          |
-| Sinif (Gönderilmesi zorunlu değil) | Listelemek istediğiniz uçuşların sınıfı Ekonomi: **3** Business: **2** Bu parametre gönderilmediğinde tüm sınıflar için sonuç döner.                                                                                 |
-| **SeyahatTipi\***                  | Yapılacak seyahatin Tek Yön veya Gidiş-Dönüş olduğunu gösterir. Tek Yön tipi için olması gereken parametre değeri: **1** Gidiş- Dönüş tipi için olması gereken parametre değeri: **2** **Format: integer, 1 veya 2** |
-| **IslemTipi\***                    | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir. Satış işlemi için olması gereken parametre değeri: **0** Rezervasyon işlemi için olması gereken parametre değeri: **1** **Format: integer, 1 veya 0**    |
-| YetiskinSayi                       | Seyahat edecek yetişkin yolcu sayısı.                                                                                                                                                                                |
-| CocukSayi                          | Seyahat edecek çocuk yolcu sayısı.                                                                                                                                                                                   |
-| BebekSayi                          | Seyahat edecek bebek yolcu sayısı.                                                                                                                                                                                   |
-| **Ip\***                           | Site ziyaretçisinin Ip adresi.                                                                                                                                                                                       |
+|ALAN|AÇIKLAMA|
+| --------------------- | ------------------------------------ |
+| FirmaNo                            | Yurtdışı uçuş işlemleri için kullanılacak firma numarası sabittir.**FirmaNo : 1100**                                        |
+| **KalkisAdi***                    | Listelemek istediğiniz uçuşların kalkış havaalanı. Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).                                              |
+| **VarisAdi***                     | Listelemek istediğiniz uçuşların varış havaalanı.Bu parametre üç harfli havaalanı kodudur. **Format:(string, min:3 max: 3 karakter).                                           |
+| **Tarih***                        | Listelemek istediğiniz uçuşların kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**                                         |
+| SplitSearch                        | Seferleri gruplamak istediğinizde bu alanı **1** göndermelisiniz. (Zorunlu )         |
+| **DonusTarih***                   | Listelemek istediğiniz uçuşların varış tarihi **Format:(datetime, ‘yyyy-MM-dd’).**                                         |
+| SplitSearchGidisDonusGrupla        | Gidiş dönüş seferleri gruplamak istediğinizde bu alanı 1 göndermelisiniz.(Zorunlu değildir)                                |
+| Sinif (Gönderilmesi zorunlu değil) | Listelemek istediğiniz uçuşların sınıfı Ekonomi: **3** Business: **2** Bu parametre gönderilmediğinde tüm sınıflar için sonuç döner.                             |
+| **SeyahatTipi***           | Yapılacak seyahatin Tek Yön veya Gidiş-Dönüş olduğunu gösterir. Tek Yön tipi için olması gereken parametre değeri: **1** Gidiş- Dönüş tipi için olması gereken parametre değeri: **2** **Format: integer, 1 veya 2** |
+| **IslemTipi***                    | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir. Satış işlemi için olması gereken parametre değeri: **0** Rezervasyon işlemi için olması gereken parametre değeri: **1** **Format: integer, 1 veya 0**    |
+| YetiskinSayi              | Seyahat edecek yetişkin yolcu sayısı.|
+| CocukSayi      | Seyahat edecek çocuk yolcu sayısı. |
+| BebekSayi    | Seyahat edecek bebek yolcu sayısı.  |
+| **Ip***   | Site ziyaretçisinin Ip adresi.  |
 
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ```xml
@@ -79,8 +79,9 @@ Yurtdışı uçak biletlerinde ön plan fiyat bilgisi yer almaktadır. Seferler 
 Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, aynı şekilde dönüş içim uygun uçuşları filtreleyip seçtirmeniz gerekmektedir.
 :::
 **SEÇENEKLER LİSTESİ**
+|ALAN|AÇIKLAMA|
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | ID | Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listelerinden ilgili seçeneğe ait diğer bilgiler çekilebilir. |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | VFiyat | İlgili fiyat seçeneğinin net bilet fiyatı ve vergiler dâhil toplam bilet fiyatıdır.Bu fiyata hizmet bedeli(servis ücreti) dâhil değildir. Bunun sebebi, seçilecek uçuşların farklı hizmet bedeline ait olabilmesidir. Örneğin aktarmalı bir uçuşun ilki ekonomi sınıflarından birisiyle, diğer uçuşlardan herhangi biri de bussiness sınıflardan birisiyle yapılabilir. Böyle durumlarda hizmet bedeli farklılık arz edebilir. |
 | NFiyat | İlgili fiyat seçeneğinin vergi hariç net bilet fiyatıdır. |
 | YetiskinSayi | Seyahat edecek yetişkin yolcu sayısı. |
@@ -97,9 +98,9 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 | FirmaNo | Hizmeti sağlayan firmaNo belirtir . Fiyat çekme , rezervasyon ,satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır. |
 
 **SEGMENTLER LİSTELERİ**
-
-| ID              | Her bir segment için tekil olan segment numarası.                                                   |
+|ALAN|AÇIKLAMA|
 | --------------- | --------------------------------------------------------------------------------------------------- |
+| ID              | Her bir segment için tekil olan segment numarası.                                                   |
 | SeçenekID       | İlgili segmentin Seçenekler listesinde hangi fiyat seçeneğe ait olduğunu belirten seçenek numarası. |
 | UcusID          | Listelenen fiyat seçenekleri ile segmentlere göre belirlenmiş olası uçuşların sıra numarası.        |
 | Aktarma         | İlgili segmentin aktarma                                                                            |
@@ -122,7 +123,7 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 | Vakit           | Seçeneğe ait uçuşun vaktini                                                                         |
 | Sinif           | Seçeneğe ait uçuşun sınıfını                                                                        |
 | KalanKoltukSayi | Segmentte bulunan boş koltuk sayısını                                                               |
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <NewDataSet>
 	<Secenekler>
@@ -218,7 +219,7 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 <Ip>127.0.0.1</Ip>
 </Sefer>
 ```
-
+:::
 #### CEVAP
 
 :::info
@@ -228,8 +229,9 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 :::
 
 **SEÇENEKLER LİSTESİ**
-|ID|Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listelerinden ilgili seçeneğe ait diğer bilgiler çekilebilir.|
+|ALAN|AÇIKLAMA|
 |----------------------------------|--------------------------------------------------------------------------|
+|ID|Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listelerinden ilgili seçeneğe ait diğer bilgiler çekilebilir.|
 |VFiyat|İlgili fiyat seçeneğinin net bilet fiyatı ve vergiler dâhil toplam bilet fiyatıdır.Bu fiyata hizmet bedeli(servis ücreti) dâhil değildir. Bunun sebebi, seçilecek uçuşların farklı hizmet bedeline ait olabilmesidir. Örneğin aktarmalı bir uçuşun ilki ekonomi sınıflarından birisiyle, diğer uçuşlardan herhangi biri de bussiness sınıflardan birisiyle yapılabilir. Böyle durumlarda hizmet bedeli farklılık arz edebilir.|
 |NFiyat|İlgili fiyat seçeneğinin vergi hariç net bilet fiyatıdır.|
 |YetiskinSayi|Seyahat edecek yetişkin yolcu sayısı.|
@@ -246,9 +248,9 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 |FirmaNo|Hizmeti sağlayan firmaNo belirtir . Fiyat çekme , rezervasyon ,satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır.|
 
 **SEGMENTLER LİSTELERİ**
-
-| ID              | Her bir segment için tekil olan segment numarası.                                                   |
+|ALAN|AÇIKLAMA|
 | --------------- | --------------------------------------------------------------------------------------------------- |
+| ID              | Her bir segment için tekil olan segment numarası.                                                   |
 | SeçenekID       | İlgili segmentin Seçenekler listesinde hangi fiyat seçeneğe ait olduğunu belirten seçenek numarası. |
 | UcusID          | Listelenen fiyat seçenekleri ile segmentlere göre belirlenmiş olası uçuşların sıra numarası.        |
 | Aktarma         | İlgili segmentin aktarma bilgisi                                                                    |
@@ -271,7 +273,7 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 | Vakit           | Seçeneğe ait uçuşun vaktini belirtir.                                                               |
 | Sinif           | Seçeneğe ait uçuşun sınıfını belirtir.                                                              |
 | KalanKoltukSayi | Segmentte bulunan boş koltuk sayısını belirtir.                                                     |
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <GidisSecenekler>
 	<GidisSecenek>
@@ -347,3 +349,4 @@ BQT09LDAsVEssMjc1MSxWQU4sSVNULDIwMjMtMTEtMTFUMTI6MzA6MDAuMDAwKzAzOjAwLDIwMjMtMTE
 	<Value>ee96c996-84bf-48d1-b401-26372180fc48</Value>
 </IslemId>
 ```
+:::

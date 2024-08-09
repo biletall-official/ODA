@@ -45,9 +45,9 @@ Bazı yurtdışı charter firmalara yapılan biletleme isteklerinde cevap süres
 Yurtdışı uçak rezervasyonu yapıldığında sağlayıcıdan rezervasyona ait opsiyon tarihi bazı durumlarda iletilmemektedir. Opsiyon tarihinin iletilmediği zamanlarda ilgili rezervasyon belirli periyotlarla Biletall servisleri tarafından sorgulanır ve opsiyon tarihinin sağlayıcı tarafından iletilmesi durumunda sisteme yansıtılır. Bu durumda PNR’ın opsiyon tarihi **“Güncellenmiş Biletler”** servisinden sorgulanarak opsiyon tarihinin öğrenilmesi gerekmektedir.
 
 ### İSTEK
-
-| BaslangicTarih | yyyy-MM-dd HH:mm:ss formatında gönderilen sorgu başlangıç tarihi değerini içerir.**Not:** Başlangıç ve bitiş tarihleri arasında en fazla 30 gün olabilir. |
+|ALAN|AÇIKLAMA|
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BaslangicTarih | yyyy-MM-dd HH:mm:ss formatında gönderilen sorgu başlangıç tarihi değerini içerir.**Not:** Başlangıç ve bitiş tarihleri arasında en fazla 30 gün olabilir. |
 | BitisTarih     | yyyy-MM-dd HH:mm:ss formatında gönderilen sorgu bitiş tarihi değerini içerir.**Not:** Başlangıç ve bitiş tarihleri arasında en fazla 30 gün olabilir.     |
 | Tip            | Uçak biletleri için 2 gönderilmelidir.                                                                                                                    |
 
@@ -60,9 +60,9 @@ Yurtdışı uçak rezervasyonu yapıldığında sağlayıcıdan rezervasyona ait
 ```
 
 #### CEVAP
-
-| PNR             | Kesilen biletin PNR numarasını içerir.                                                                                                                                         |
+|ALAN|AÇIKLAMA|
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| PNR             | Kesilen biletin PNR numarasını içerir.                                                                                                                                      |
 | Soyad           | Kesilen biletin ilk yolcusunun soyadını içerir.                                                                                                                                |
 | GuncellemeTarih | Yapılan değişikliğin hangi tarihte ve saatte olduğunu belirtir.                                                                                                                |
 | DegisiklikTipi  | Yapılan değişikliğin hangi türde olduğunu belirtir. **0:** Bilinmeyen **1:** Biletlendi **2:** İptal edildi **3:** Bilet alanında değişiklik oldu (opsiyon tarihi vb.)         |

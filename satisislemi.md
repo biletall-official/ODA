@@ -5,10 +5,10 @@
 :::warning
 İdo için Satış işlemi öncesinde Rezervasyon işlemini gerçekleştirmiş olmanız gerekmektedir. Rezervasyon işlemi sonunda sistem tarafından oluşturulan koltuklar İdo tarafında kısa bir opsiyon süresine sahiptir. Satış işleminde ödeme İdo tarafından ve kendi posları üzerinde gerçekleşmektedir.
 :::
-**\*Budo için direkt olarak satış işlemi gerçekleştirilecektir**.
+**Budo için direkt olarak satış işlemi gerçekleştirilecektir**.
 
 Satış işleminin xml şeması aşağıdaki gibidir;
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -208,9 +208,10 @@ Satış işleminin xml şeması aşağıdaki gibidir;
   </xs:simpleType>
 </xs:schema>
 ```
+:::
 
 ## İSTEK
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <SatisKomut>
   <Pnr>
@@ -339,10 +340,10 @@ Satış işleminin xml şeması aşağıdaki gibidir;
   </OdemeBilgi>
 </SatisKomut>
 ```
-
+:::
 ## CEVAP
 
-```
+```xml
 <Bilet>
   <Pnr>
     <FirmaNo>5000</FirmaNo>
@@ -386,7 +387,7 @@ Satış işleminin xml şeması aşağıdaki gibidir;
 ```
 
 ## BUDO İSTEK
-
+:::details kodu görüntülemek için tıklayın.
 ```xml
 <SatisKomut>
   <Pnr>
@@ -442,3 +443,4 @@ Satış işleminin xml şeması aşağıdaki gibidir;
   </OdemeBilgi>
 </SatisKomut>
 ```
+:::

@@ -59,7 +59,7 @@ else if (Convert.ToBoolean(Request.Form.Get("Sonuc")))
 ```
 
 ## **Gönderilecek olan paremetleri şifrelemek için gerekli olan şifreleme metodları**
-
+:::details kodu görüntülemek  için tıklayın.
 ```csharp
 satisXML.value = USifrele(xmlstring)
 yetkiXML.value = USifrele(xmlstring)
@@ -120,3 +120,4 @@ failURL.value = USifrele(linkstring)
         return sonuc;
     }
 ```
+:::

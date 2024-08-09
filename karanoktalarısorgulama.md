@@ -18,17 +18,17 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## CEVAP
-
-<u>Alanlar ile ilgili açıklamalar</u>  
+|ALAN|AÇIKLAMA|
+|------------------|---------------------------------------------------------------|
 |ID|Sefer, Otobüs ve Satış işlemlerinde Kalkış-Varış bilgisi için göndereceğiniz noktanın kimlik değeridir.|
-|------------------|------------------------------------------------------------------|
 |Seyahat Şehir ID|Aynı şehirdeki noktaları gruplandırabilirsiniz.|
-|Bölge|Varsa noktanın bölgesini belirtir. (Örn : İstanbul Avrupa)|
+|Bölge|Varsa noktanın bölgesini belirtir. (**Örn:** İstanbul Avrupa)|
 |Ülke Kodu|Bağlı olduğu ülkenin kodunu belirtir.|
 |Ad|Noktanın adını belirtir.|
 |Açıklama|Varsa nokta ile ilgili açıklama belirtir.|
 |MerkezMi|Noktanın merkez mi yoksa bir merkeze bağlı mı olduğunu belirtir.|
 |BağlıOlduğuNokta|Noktanın bağlı olduğu merkez nokta ID'sidir.|
+
 ::: details Kodu görüntülemek için tıklayın.
 ```xml
 console.log(

@@ -4,8 +4,9 @@
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
-| **FirmaNo\*** | İdo noktalarının gelmesi için FirmaNo parametresi 5000 olarak gönderilmesi zorunludur. |
-| ------------- | -------------------------------------------------------------------------------------- |
+|ALAN|AÇIKLAMA|
+| ------------- | -------------------------------------------------------------------------------------|
+| **FirmaNo\*** | İdo noktalarının gelmesi için FirmaNo parametresi 5000 olarak gönderilmesi zorunludur.|
 
 :::info
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
