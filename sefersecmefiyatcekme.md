@@ -144,7 +144,7 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
 :::
 
 ## İSTEK
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------ | ----------------------------------------------------- |
 | FirmaNo      | Sefer listesinde gelen FirmaNo alanı kullanılmalıdır. |
 | YetiskinSayi | Yetişkin yolcu sayısı                                 |
@@ -155,7 +155,7 @@ Bu noktada aşağıda şeması verilen UcusFiyat xml’i kullanılacaktır.
 | AskerSayi    | Asker yolcu sayısı (Sadece yurtiçi uçuşlarda)         |
 | GencSayi     | Genç yolcu sayısı (Sadece yurtiçi uçuşlarda)          |
 
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Segment Alanları | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla girilmelidir. |
 | Kalkis           | havaSegmentin kalkışalanı kodu.                                                                                                  |
@@ -233,7 +233,7 @@ YolcuDogumTarihiZorunlumu alanı yolcu doğum tarihlerinin satış ve rezervasyo
 (Yetiskin,Ogretmen,Ogrenci..)FirmaKartZorunlumu Bazı firmalar bazı yolcu tiplerine yaptıkları indirimi doğrulayabilmek için rezervasyon ya da fiyat adımlarında firma kart bilgilerini istemektedir. Rezervasyon ve satış işlemlerinizde firma kartının zorunluluğunu bu parametreden anlayabilirsiniz.
 Örn. THY öğrenci ve öğretmen yolcu tipleri için miles&smiles numarasını istemektedir.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------- | ----------------- |
 | Yetişkin | 12 Yaş Üzeri      |
 | Çocuk    | 2 - 12 Yaş Arası  |

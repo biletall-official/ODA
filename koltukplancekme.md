@@ -69,13 +69,13 @@ Rezervasyon işleminde koltuk numaraları oluşturulmasından dolayı isterseniz
 :::
 
 ## İSTEK
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ---------------- | --------------------------------------------------------------------------------- |
-| **PnrNo\***      | Rezervasyon işlemi sonucunda dönen ‘PnrNo’ alanı                                                |
-| **PnrKod\***     | Rezervasyon işlemi sonucunda dönen ‘PnrKod’ alanı                                               |
-| **SegmentKod\*** | Sefer listesinden itibaren alınan rezervasyon işleminde de kullandığımız ‘SegmentKod’ alanıdır. |
-| **NeredenKod\*** | Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).**                               |
-| NereyeKod\*      | Segmentin varış noktasının kodu.**Format:(string, 3 karakter).**                                |
+| **PnrNo***      | Rezervasyon işlemi sonucunda dönen ‘PnrNo’ alanı                                                |
+| **PnrKod***     | Rezervasyon işlemi sonucunda dönen ‘PnrKod’ alanı                                               |
+| **SegmentKod*** | Sefer listesinden itibaren alınan rezervasyon işleminde de kullandığımız ‘SegmentKod’ alanıdır. |
+| **NeredenKod*** | Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).**                               |
+| **NereyeKod***      | Segmentin varış noktasının kodu.**Format:(string, 3 karakter).**                                |
 
 ```xml
 <IdoKoltukPlanCekKomut>
@@ -113,7 +113,7 @@ Görselde görünen koltuklar ilgili segmente ait feribotun **‘1.Kat’** ınd
 :::
 
 **Koltuk:**  
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |-----------|-----------------------------------------------------|
 |Kat|Koltuğun bulunduğu kat bilgisi|
 |Bolum|Koltuğun bulunduğu bölüm|

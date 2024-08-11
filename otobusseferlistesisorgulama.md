@@ -1,16 +1,16 @@
 # SEFER LİSTESİ SORGULAMA
 
 ## ŞEMA
-|ALAN|AÇIKLAMA|
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|Alan|Açıklama|
+| ----------------- | -------------------------------------------------------------------------------------------------- |
 | **Firma No***     | Sistemde bulunan bütün firmaların sefer listesini görüntülemek için kullanılır. Bu alanın değeri sabittir, sıfır göndermelisiniz.                                   |
-|**Kalkış Nokta ID*** | Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**                                                                                                                                                                                    |
-|**Varış Nokta ID***  | Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**                                                                                                                                                                                    |
-|**Tarih***          | Listelemek istediğiniz seferlerin kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’)**.                                                                                                                                                                                 |
+|**Kalkış Nokta ID*** | Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**                                                       |
+|**Varış Nokta ID***  | Listelemek istediğiniz seferlerin kalkış noktasının ID değeri.**Format: integer**                                                     |
+|**Tarih***          | Listelemek istediğiniz seferlerin kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’)**.                                                    |
 | Ara Nokta Gelsin  | Yalnızca seçmiş olduğunuz kalkış ve varış noktasına ait seferleri listelemek için bu alan 0 gönderilmelidir. Başka kalkış noktasından başlayan seferleri de listelemek için bu parametre 1 olarak gönderilmelidir.(1 kullanılmalıdır..)**Format: integer, 1 veya 0** |
-|**İslem Tipi***      | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir.Satış işlemi için olması gereken parametre değeri:**0** Rezervasyon işlemi için olması gereken parametre değeri:**1** **Format: integer, 1 veya 0**                                                       |
-| Yolcu Sayısı      | Seyahat edecek yolcu sayısı.                                                                                                                                                                                                                                         |
-| **Ip***              | Site ziyaretçisinin Ip adresi                                                                                                                                                                                                                                        |
+|**İslem Tipi***      | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir.Satış işlemi için olması gereken parametre değeri:**0** Rezervasyon işlemi için olması gereken parametre değeri:**1** **Format: integer, 1 veya 0** |
+| Yolcu Sayısı      | Seyahat edecek yolcu sayısı.   |
+| **Ip***              | Site ziyaretçisinin Ip adresi    |
 
 :::info
 (*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.  

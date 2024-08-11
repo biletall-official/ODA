@@ -178,7 +178,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## CEVAP
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ---------------------- | ---------------------------------------------- |
 |Sonuc                  | İşlemin başarılı olup olmadığını belirtir      |
 | PNR                    | Oluşan PNR kodunu belirtir.                    |

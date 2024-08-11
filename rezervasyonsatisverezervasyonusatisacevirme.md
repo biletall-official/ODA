@@ -328,18 +328,18 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 :::
 
 ### İSTEK
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------ | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
 | **IslemTip***     | Rezervasyon için **1** Satış için **0** değeri alır.                                 |
 | **FirmaNo***      | Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.                                |
 | **TelefonNo***    | Telefon numarası bilgisi**Format:(string, 10 karakter - XXXXXXXXXX).**               |
 | **CepTelefonNo*** | Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**          |
-| **Email\***        | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
+| **Email***        | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
 
 :::info
-(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Segment Alanları  | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir. |
 | **Kalkis***      | Segmentin kalkış havaalanı kodu.                                                                                                                                |
@@ -355,7 +355,7 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 :::info
 (*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Yolcu Alanları           | Yolcu alanlarında uçuş planı içerisindeki her yolcu bilgisi(Yolcu1, Yolcu2…şeklinde) girilmelidir.                                                           |
 | **Ad***                 | Yolcu adı                                                                                                                                                    |
@@ -421,7 +421,7 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 :::
 
 #### CEVAP
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------ | ------------------------------------------------ |
 | Sonuc              | İşlem sonucu. **true/false**                     |
 | PNR                | İşlem sonunda oluşan PNR numarası                |
@@ -440,7 +440,7 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 ### İSTEK
 
 Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulunmaktadır.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------ | ------------------------------------------------ |
 | **IslemTip***     | Rezervasyon için **1** Satış için **0** değeri alır.                                 |
 | **FirmaNo***      | Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.                                |
@@ -451,7 +451,7 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 :::info
 (*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Segment Alanları  | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir. |
 | **Kalkis***      | Segmentin kalkış havaalanı kodu.                                                                                                                                |
@@ -487,7 +487,7 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 :::
 
 **Fatura Alanı**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ----------------- | ------------------------------ |
 | FaturaTip         | Fatura tipi,**Kişi:0 Firma:1** |
 | KisiAd            | Fatura kişi adı                |
@@ -584,7 +584,7 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 ```
 :::
 #### CEVAP
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------- | ----------------------------------------------------------------------------- |
 | Sonuc           | İşlem sonucu. **true/false**                                                  |
 | PNR             | İşlem sonunda oluşan PNR numarası                                             |

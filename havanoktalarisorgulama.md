@@ -20,7 +20,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 ## CEVAP
 
-| ALANLAR         | AÇIKLAMALAR                                            |
+|Alan|Açıklama|
 | --------------- | ------------------------------------------------------ |
 | UlkeKod         | Havaalanının bulunduğu ülkenin kodudur.                |
 | UlkeAd          | Havaalanının bulunduğu ülkenin adıdır.                 |

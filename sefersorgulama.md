@@ -113,7 +113,7 @@ Sefer sorgulama işleminde yukarıda şeması verilen **SeferCekKomut** xml yap�
 ## İSTEK
 
 **AramaKriter Parametreleri Açıklamaları:**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------- | ----------------------------- |
 | **FirmaNo*** | 5000 gönderilmelidir.         |
 | **Ip***      | Site ziyaretçisinin Ip adresi |
@@ -126,7 +126,7 @@ Sefer sorgulama işleminde yukarıda şeması verilen **SeferCekKomut** xml yap�
 :::tip
 Gidiş – Dönüş arama yapmak istediğinizde örnekte olduğu gibi ikinci bir parkur ekleyip dönüş değerleri girilmelidir. Parkur içeriği aşağıdaki gibi olmalıdır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ---------------- | ----------------------------------------------------------------------------------------- |
 | **NeredenKod*** | Listelemek istediğiniz seferlerin kalkış noktasının kodu.**Format:(string, 3 karakter).** |
 | **NereyeKod***  | Listelemek istediğiniz seferlerin varış noktasının kodu.**Format:(string, 3 karakter).**  |
@@ -140,7 +140,7 @@ Gidiş – Dönüş arama yapmak istediğinizde örnekte olduğu gibi ikinci bir
 :::tip
 İçerisine YolcuSayi xml yapısını alarak aramak istediğiniz seferde hangi yolcu tipinden kaç adet yolcu olacağını belirtmelisiniz.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |-------------------|-------------------------|
 |**TipKod***|İdo Yolcu Tip kodları şöyledir; Yetişkin:1 Çocuk:2 Yaşlı:4 Öğrenci:5 Özürlü:6 Basın:10 Gazi:11**|
 |**Sayi***|Yolcu tipinden kaç adet yolcu olacağı. **Format:(int, max : 7).**_|
@@ -152,7 +152,7 @@ Gidiş – Dönüş arama yapmak istediğinizde örnekte olduğu gibi ikinci bir
 :::tip
 İçerisine AracSayi xml yapısını alarak aramak istediğiniz seferde hangi araç tipinden kaç adet olacağını belirtmelisiniz.  
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |----------------|-------------------------|
 |**TipKod***|İdo araç tipleri sorgusundan kod alanını almalısınız.**Format:(string, 3 karakter).**|
 |**Sayi***|Araç tipinden kaç adet olacağı.**Format:(int, max : 7).**|
@@ -167,7 +167,7 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 :::
 
 **Segment Alanları:**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |-------------|--------------------------------|
 |SegmentKod|Segment kodu sonraki işlemlerde kullanılmak için önemlidir.İdo ve Budo için farklı format ve uzunluklarda gelebilir.|
 |BudoSessionID|Sadece Budo seferlerinde gelir, Budo satış tamamlama aşamasına kadar gereklidir.|
@@ -181,7 +181,7 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 |VarisTarih|Tahmini varış tarih ve saati.|
 
 **UcretSecenek Alanları:**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |-------------------|---------------------------|
 |SinifAd|İdo için (PROMO,ECO,BIZ),Budo için (TAM, PROMOSYON) Gibi kesin olmayan sınıf adları gelir.|
 |SinifKod|Sınıfın kodunu ifade eder.|
@@ -192,7 +192,7 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 |KoltukAdet|İlgili ücretten kalan koltuk adedidir.|
 |ToplamUcret|İlgili ücret seçeneğinin ücret değerini ifade eder.|
 
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------- | ----------------------------------------- |
 | YolcuUcretler | Yolcu Ucret                               |
 | YolcuTip      | Yolcu tipi açıklaması.                    |

@@ -45,7 +45,7 @@ Bazı yurtdışı charter firmalara yapılan biletleme isteklerinde cevap süres
 Yurtdışı uçak rezervasyonu yapıldığında sağlayıcıdan rezervasyona ait opsiyon tarihi bazı durumlarda iletilmemektedir. Opsiyon tarihinin iletilmediği zamanlarda ilgili rezervasyon belirli periyotlarla Biletall servisleri tarafından sorgulanır ve opsiyon tarihinin sağlayıcı tarafından iletilmesi durumunda sisteme yansıtılır. Bu durumda PNR’ın opsiyon tarihi **“Güncellenmiş Biletler”** servisinden sorgulanarak opsiyon tarihinin öğrenilmesi gerekmektedir.
 
 ### İSTEK
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BaslangicTarih | yyyy-MM-dd HH:mm:ss formatında gönderilen sorgu başlangıç tarihi değerini içerir.**Not:** Başlangıç ve bitiş tarihleri arasında en fazla 30 gün olabilir. |
 | BitisTarih     | yyyy-MM-dd HH:mm:ss formatında gönderilen sorgu bitiş tarihi değerini içerir.**Not:** Başlangıç ve bitiş tarihleri arasında en fazla 30 gün olabilir.     |
@@ -60,7 +60,7 @@ Yurtdışı uçak rezervasyonu yapıldığında sağlayıcıdan rezervasyona ait
 ```
 
 #### CEVAP
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | PNR             | Kesilen biletin PNR numarasını içerir.                                                                                                                                      |
 | Soyad           | Kesilen biletin ilk yolcusunun soyadını içerir.                                                                                                                                |

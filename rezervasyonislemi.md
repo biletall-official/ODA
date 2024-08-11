@@ -150,7 +150,7 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
 ## İSTEK
 
 **Pnr:**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |------------|----------------------------------|
 |**CepTelefon***|İletişim için cep telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**|
 |**Eposta***|İletişim için eposta adresi bilgisi|
@@ -159,7 +159,7 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
 :::
 
 **Yolcular :**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |---------------------|-------------------------|
 |**ID***|ID alanına yolculara sıradan 1 den başlayarak değer vermeniz uygun olacaktır. ID alanı **Format: int**|
 |**YolcuTip***|İdo Yolcu Tip kodları şöyledir; **Yetişkin:1 Çocuk:2 Yaşlı:4 Öğrenci:5 Özürlü:6 Basın:10 Gazi:11 AracSurucu:12 EkCocuk:13**|
@@ -173,7 +173,7 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
 :::info
 (*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------- | ------------------------------------------------------------------------------------------------------------------ |
 | AracBilgi       | Eğer yolcu tipi araç sürücüsü ise AracBilgi alanları doldurulmalıdır.           |
 | **AracTip***   | İdo araç tipleri sorgusundan kod alanını kullanmalısınız.Örn: Otomobil için ‘OTM’ **Format:(string, 3 karakter).** |
@@ -189,7 +189,7 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
 İşleminiz tek yön ise tek bir parkur yapısı içerisinde sefer bilgisini oluşturmalısınız. Gidiş dönüş işlem yapıyor iseniz önce gidiş parkurunu sonra dönüş parkurunu **SeferBilgi** yapısına sırasıyla dahil etmeniz gerekmektedir.
 **SeferBilgi** ve **Parkur** yapısı içerisinde Segment alanları aşağıdaki şekilde açıklanmaktadır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------------------- | ----------------------------------------------------------------- |
 | **SegmentKod***     | Sefer sonucunda Segment alanında gelen **‘SegmentKod’** değeri.   |
 | **NeredenKod***     | Segmentin kalkış noktasının kodu.**Format:(string, 3 karakter).** |
@@ -208,7 +208,7 @@ Rezervasyon işleminin xml şeması aşağıdaki gibidir.
 :::tip
 Rezervasyon işleminde ekranınıza "E-Bilet İstiyorum" seçeneği koymalı, bu seçenek işaretlendiğinde de FaturaBilgi alanını göndermelisiniz. Burada şahıs/firma seçeneğide yaparak fatura/ebilet talebini gönderebilirsiniz.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |------------|----------------------------------|
 |**Tip***|0:Şahıs , 1:Firma|
 |Ad|**Şahıs ise zorunlu***|
@@ -306,7 +306,7 @@ Rezervasyon işleminde ekranınıza "E-Bilet İstiyorum" seçeneği koymalı, bu
 Rezervasyon işlemi sonucunda **RezervasyonKomut** yapısı içerisindeki Pnr yapısı içerisine bazı sonuç değerleri eklenerek sunulur.
 
 Burada oluşan değerlerden bazıları;
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | PnrNo       | Pnr numarası işlemin yolcular açısından takip numarasıdır. İdo tarafında da bu numara ile işlem takip edilmektedir.              |
 | PnrKod      | Pnr kodu sistem tarafından işlemin takibi amacıyla sonraki işlemlerde kullanılacaktır.                                                       |

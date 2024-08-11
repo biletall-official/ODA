@@ -11,7 +11,7 @@ Bu sorgu ile otobüs firmalarına ait komisyon bilgileri elde edilir.
 ```
 
 ## CEVAP
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |-------------|---------------------------------------|
 |KomisyonYuzde|Komisyon oranını yüzde olarak gösterir. |
 

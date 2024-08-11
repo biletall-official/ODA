@@ -3,7 +3,7 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **FirmaNo***      | Yurtiçi uçuş işlemleri için kullanılacak firma numarası sabittir. **FirmaNo :       |
 | **KalkisAdi***    | Listelemek istediğiniz uçuşların kalkış havaalanı.Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).**                                                                               |
@@ -82,7 +82,7 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 :::
 
 **SEÇENEKLER LİSTESİ**
-|alan|açıklama|
+|Alan|Açıklama|
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | ID      | Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listesinden ilgili seçeneğe ait diğer bilgiler çekilebilir.     |
 | FiyatP  | Promosyon sınıfları için belirlenmiş fiyat bilgisi. Bu sınıflardan satılan biletlerin iptali yapılamamaktadır.                          |
@@ -95,7 +95,7 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 | FirmaNo | Hizmeti sağlayan firmaNo belirtir. Fiyat çekme , rezervasyon ve satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır. |
 
 **SEGMENTLER LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------------- | ------------------------------------------------------------------------------- |
 | ID             | Her bir segment için tekil olan segment numarası.                               |
 | SeçenekID      | İlgili segmentin Seçenekler listesinde hangi seçeneğe ait olduğunu belirten seçenek numarası. Aktarmalı uçuşlarda bir fiyat seçeneği için birden fazla segment olabilir. |
@@ -124,7 +124,7 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 | BagajB         | Bussiness sınıflar için belirlenmiş bagaj bilgisi.                         |
 
 **SEGMENT SINIFLAR LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |---------------------|----------------------------------------------------|
 |SegmentID2|Segmentler listesindeki ID alanıyla eşleştirilerek kullanılır.|
 |SecenekUcretID|SecenekUcretler listesindeki ID alanıyla eşleşerek kullanılır.|
@@ -134,7 +134,7 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 |EksikKoltukMu| |
 
 **SEÇENEK ÜCRETLER LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------- | ---------------------------------------------------------------- |
 | ID                  | Listesindeki elemanları birbirinden ayırmak için kullanılır.     |
 | SecenekID2          | Secenekler listesindeki ID alanıyla eşleşerek kullanılır.        |
@@ -150,19 +150,21 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 
 **Seçenek Ücret Detayları Listesi**
 
+|Alan|Açıklama|
+|----------------|-----------------------------------------------------------------------------------|
 | ID             | SecenekUcretDetaylar listesindeki elemanları birbirinden ayırmak için kullanılır. |
-| -------------- | --------------------------------------------------------------------------------- |
 | SecenekUcretID | SecenekUcretler listesindeki ID alanıyla eşleşerek kullanılır.                    |
 | Tip            | Detayın Tipi                                                                      |
 | Aciklama       | Tipin ilgili açıklama                                                             |
 
 :::info
 **Yurtiçi Dolu Seferler:**  
+
 Seçenek listesinde FiyatP, FiyatE, FiyatB alanlarının hepsinde 0 dönüyorsa hiçbir sınıfta yer olmadığı dolayısıyla seferin dolu olduğu anlamına gelir.
+
 :::
 :::details kodu görüntülemek için tıklayın.
 ```xml
-
 <NewDataSet>
 	<Secenekler>
 		<ID>1</ID>

@@ -18,7 +18,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 ```
 
 ## CEVAP
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |------------------|---------------------------------------------------------------|
 |ID|Sefer, Otobüs ve Satış işlemlerinde Kalkış-Varış bilgisi için göndereceğiniz noktanın kimlik değeridir.|
 |Seyahat Şehir ID|Aynı şehirdeki noktaları gruplandırabilirsiniz.|
@@ -29,7 +29,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |MerkezMi|Noktanın merkez mi yoksa bir merkeze bağlı mı olduğunu belirtir.|
 |BağlıOlduğuNokta|Noktanın bağlı olduğu merkez nokta ID'sidir.|
 
-::: details Kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın.
 ```xml
 console.log(
 <KaraNoktalar>

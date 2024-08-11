@@ -18,7 +18,7 @@ Otobüste tüm koltukları tek seferde açığa almak için PnrKoltukNo alanın�
 :::
 
 ## CEVAP
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tutar | İşlem sonucu oluşan biletall açık para tutarı. Bazı firmalarda direk iptal edilip para iadesi yapılmaktadır. Hangi firmalarda direk iade yapıldığı bilgisi için biletall müşteri hizmetleri ile temasa geçiniz.|
 

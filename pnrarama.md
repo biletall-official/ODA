@@ -3,7 +3,7 @@
 Rezervasyon veya satış işlemleri sonrası biletler işlem sonucu dönen PNR numarası ile takip edilebilmektedir.
 
 ## İSTEK
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ----------------------- | ---------------------------------- |
 | **PnrNo***             | İşlemin PNR Numarası               |
 | **PnrAramaParametre*** | Yolcu soyadı veya telefon numarası |

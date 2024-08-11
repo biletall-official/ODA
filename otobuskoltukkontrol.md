@@ -3,24 +3,24 @@
 ## ŞEMA
 
 Koltuk seçim işleminde bazen seçilen koltuk ya da koltuklar başka bir platformdan satılmış olabiliyor. Rezervasyon ya da satış işlemini göndermeden önce koltuk kontrolü yapabilirsiniz.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------- | --------------------------------------- |
 | FirmaNo             | Seçilen seferi yapacak olan firmanın firma numarası          |
-| **KalkisNoktaID\*** | Seçilen seferin KalkisNoktaID değeri.**Format:(integer).** |
-| **VarisNoktaID\***  | Seçilen seferin VarisNoktaID değeri.**Format:(integer).** |
-| **Tarih\***         | Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**|
-| **Saat\***          | Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)**Format:(datetime, ‘s’).**|
-| **HatNo\***         | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)**Format: |
-| **IslemTipi\***     | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir. Satış işlemi için olması gereken parametre değeri:**0** Rezervasyon işlemi için olması gereken parametre değeri:**1 Format: integer, 1 veya 0** |
+| **KalkisNoktaID*** | Seçilen seferin KalkisNoktaID değeri.**Format:(integer).** |
+| **VarisNoktaID***  | Seçilen seferin VarisNoktaID değeri.**Format:(integer).** |
+| **Tarih***         | Seçilen seferin kalkış tarihi (Sefer listesinde bulunan Tarih alanı)**Format:(datetime, ‘yyyy-MM-dd’).**|
+| **Saat***          | Seçilen seferin kalkış saati (Sefer listesinde bulunan Saat alanı)**Format:(datetime, ‘s’).**|
+| **HatNo***         | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı)**Format: |
+| **IslemTipi***     | Yapılacak işlemin Satış veya Rezervasyon olduğunu gösterir. Satış işlemi için olması gereken parametre değeri:**0** Rezervasyon işlemi için olması gereken parametre değeri:**1 Format: integer, 1 veya 0** |
 | YolcuSayisi         | Seyahat edecek yolcu sayısı.|
-| **SeferTakipNo\***  | Sefer listesinde bulunan SeferTakipNo alanı |
-| **Ip\***            | Site ziyaretçisinin Ip adresi |
+| **SeferTakipNo***  | Sefer listesinde bulunan SeferTakipNo alanı |
+| **Ip***            | Site ziyaretçisinin Ip adresi |
 
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------- | --------------------------------------------------------------------------------- |
-|**Koltuklar\*** | Seçili koltukların koltuk numaraları ve cinsiyet bilgisinin gönderildiği alandır. |
-|**KoltukNo\***  | Seçilen koltuğun numarası                                                         |
-|**Cinsiyet\***  | Seçilen koltuk için yolcunun cinsiyet bilgisi. **Bayan = 1 , Bay = 2**            |
+|**Koltuklar*** | Seçili koltukların koltuk numaraları ve cinsiyet bilgisinin gönderildiği alandır. |
+|**KoltukNo***  | Seçilen koltuğun numarası                                                         |
+|**Cinsiyet***  | Seçilen koltuk için yolcunun cinsiyet bilgisi. **Bayan = 1 , Bay = 2**            |
 
 :::info
 (*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.

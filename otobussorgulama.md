@@ -3,7 +3,7 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir. 
-|ALAN |AÇIKLAMA|
+|Alan|Açıklama|
 |----------------------|---------------------------------------| 
 |**FirmaNo**|Seçilen seferi yapacak olan firmanın firma numarası|
 |**KalkisNoktaID***|Seçilen seferin KalkisNoktaID değeri.**Format:(integer).**|
@@ -60,7 +60,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılabilecek yolcu tipleri bulunmaktadır.
 
 **Sefer Bilgileri**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |-----------------|-----------------------------------------------------|
 |InternetTarihSaat|Yolculara gösterilmesi gereken otobüsün kalkış saati.|
 |BiletFiyatiInternet|Herbir koltuk için uygulanacak olan bilet fiyatı.|
@@ -87,7 +87,7 @@ Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılab
 |**TekliKoltuklarDoluysaCiftliKoltuktanSatisYapilabilirMi**|Tüm tek koltukların dolu olması durumunda çift koltukların tek yolcuya satılıp satılamayacağı bilgisidir. “1” olması durumunda çift koltuklar tek satılabilirken, “0” olması durumunda satış yapılamaz.|
 
 **Koltuk Planı**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | KoltukStr            | İlgili koltuğunu string olarak koltuk numarası. 01: 1 Numaralı koltuk KO: Koridor KA, PI: Kapı (ayrı ayrı değerler birleşiyor) MA, SA: Masa (ayrı ayrı değerler birleşiyor) PR : Personel Koltuğu                          |
 | KoltukNo             | Sayısal Koltuk numarasıdır. Koltuk numarası -1 veya -3 olanlar Koridor, Kapı veya Masaya denk gelen yerlerdir.                      |

@@ -3,7 +3,7 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------------- | ------------------------------------ |
 | FirmaNo                            | Yurtdışı uçuş işlemleri için kullanılacak firma numarası sabittir.**FirmaNo : 1100**                                        |
 | **KalkisAdi***                    | Listelemek istediğiniz uçuşların kalkış havaalanı. Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).                                              |
@@ -79,7 +79,7 @@ Yurtdışı uçak biletlerinde ön plan fiyat bilgisi yer almaktadır. Seferler 
 Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, aynı şekilde dönüş içim uygun uçuşları filtreleyip seçtirmeniz gerekmektedir.
 :::
 **SEÇENEKLER LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | ID | Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listelerinden ilgili seçeneğe ait diğer bilgiler çekilebilir. |
 | VFiyat | İlgili fiyat seçeneğinin net bilet fiyatı ve vergiler dâhil toplam bilet fiyatıdır.Bu fiyata hizmet bedeli(servis ücreti) dâhil değildir. Bunun sebebi, seçilecek uçuşların farklı hizmet bedeline ait olabilmesidir. Örneğin aktarmalı bir uçuşun ilki ekonomi sınıflarından birisiyle, diğer uçuşlardan herhangi biri de bussiness sınıflardan birisiyle yapılabilir. Böyle durumlarda hizmet bedeli farklılık arz edebilir. |
@@ -98,7 +98,7 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 | FirmaNo | Hizmeti sağlayan firmaNo belirtir . Fiyat çekme , rezervasyon ,satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır. |
 
 **SEGMENTLER LİSTELERİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | ID              | Her bir segment için tekil olan segment numarası.                                                   |
 | SeçenekID       | İlgili segmentin Seçenekler listesinde hangi fiyat seçeneğe ait olduğunu belirten seçenek numarası. |
@@ -229,7 +229,7 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 :::
 
 **SEÇENEKLER LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |----------------------------------|--------------------------------------------------------------------------|
 |ID|Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listelerinden ilgili seçeneğe ait diğer bilgiler çekilebilir.|
 |VFiyat|İlgili fiyat seçeneğinin net bilet fiyatı ve vergiler dâhil toplam bilet fiyatıdır.Bu fiyata hizmet bedeli(servis ücreti) dâhil değildir. Bunun sebebi, seçilecek uçuşların farklı hizmet bedeline ait olabilmesidir. Örneğin aktarmalı bir uçuşun ilki ekonomi sınıflarından birisiyle, diğer uçuşlardan herhangi biri de bussiness sınıflardan birisiyle yapılabilir. Böyle durumlarda hizmet bedeli farklılık arz edebilir.|
@@ -248,7 +248,7 @@ Fiyat seçeneklerinde bulunan bilgilere göre gidiş için uygun uçuşları, ay
 |FirmaNo|Hizmeti sağlayan firmaNo belirtir . Fiyat çekme , rezervasyon ,satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır.|
 
 **SEGMENTLER LİSTELERİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------- | --------------------------------------------------------------------------------------------------- |
 | ID              | Her bir segment için tekil olan segment numarası.                                                   |
 | SeçenekID       | İlgili segmentin Seçenekler listesinde hangi fiyat seçeneğe ait olduğunu belirten seçenek numarası. |

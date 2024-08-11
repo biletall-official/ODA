@@ -12,7 +12,9 @@ export default defineConfig({
         items: [{ text: "SÜRÜM NOTLARI", link: "/changelog.md" }],
       },
     ],
-
+    search: {
+      provider: "local"
+    },
     sidebar: {
       "/changelog/": [
         {
@@ -23,7 +25,6 @@ export default defineConfig({
         },
       ],
     },
-
     sidebar: [
       {
         text: "DÖKÜMANTASYON",
@@ -45,7 +46,7 @@ export default defineConfig({
           {
             text: "OTOBÜS SERVİSLERİ",
             link: "/otobusservisleri.md",
-            collapsed: true,
+            collapsible: true,
             collapsed: true,
             items: [
               { text: "1.FİRMA SORGULAMA", link: "/firmasorgulama.md" },
@@ -84,7 +85,7 @@ export default defineConfig({
           {
             text: "UÇAK SERVİSLERİ",
             link: "/havanoktalarisorgulama.md",
-            collapsed: true,
+            collapsible: true,
             collapsed: true,
             items: [
               {
@@ -120,7 +121,7 @@ export default defineConfig({
           {
             text: "PNR İŞLEM SERVİSLERİ",
             link: "/pnrislemservisleri.md",
-            collapsed: true,
+            collapsible: true,
             collapsed: true,
             items: [
               { text: "1.PNR ARAMA", link: "/pnrarama.md" },
@@ -148,7 +149,7 @@ export default defineConfig({
           {
             text: "ÖN ÖDEME İŞLEMLERİ",
             link: "/onodemebakiyesorgulama.md",
-            collapsed: true,
+            collapsible: true,
             collapsed: true,
             items: [
               {
@@ -164,7 +165,6 @@ export default defineConfig({
         ],
       },
     ],
-
     socialLinks: [
       { icon: "github", link: "https://github.com/biletall-official" },
     ],

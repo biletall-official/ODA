@@ -4,7 +4,7 @@
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
-|alan|açıklama|
+|Alan|Açıklama|
 | ------------- | ---------------------------------------------------- |
 | FirmaNo     | Seçilen seferi yapacak olan firmanın firma numarası            |
 | **KalkisNoktaID\*** | Seçilen seferin KalkisNoktaID değeri. **Format:(integer).**  |  
