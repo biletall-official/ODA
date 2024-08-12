@@ -150,3 +150,6 @@ dist
 package-lock.json
 .vitepress/cache
 pnpm-lock.yaml
+.vitepress/cache/
+.vitepress/cache/*.*
+.vitepress/cache/*
