@@ -21,7 +21,7 @@ Bilet iptal edildiğinde oluşacak ceza bilgisi için
 #### CEVAP
 
 Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
-|Alan|Açıklama|
+|Alan              |Açıklama                                      |
 | ---------------- | -------------------------------------------- |
 | Tutar            | Yolcunun toplam tutarı                       |
 | Komisyon         | Yolcu servis ücreti                          |

@@ -3,8 +3,9 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
+
 |Alan|Açıklama|
-| ------------------------- | --------------------------------------------------------------------------------------|
+| ------------------------- | -------------------------------------------|
 | FirmaNo                   | Seçilen seferi yapacak olan firmanın firma numarası |
 | **KalkisNoktaID***       | Seçilen seferin KalkisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**    |
 | **VarisNoktaID***        | Seçilen seferin VarisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).**    |
@@ -282,7 +283,7 @@ Yabancı yolculara bilet satış işlemi için otobüs sorgusunda gelen aşağı
 :::
 |Alan|Açıklama|
 | ---------------------------------- | -------------------------------------------------------------------- |
-| SubeSatistaTcKimlikNoYazmakZorunlu | Yolcuların kimlik numaralarının zorunlu olup olmadığını belirleyen parametredir. Bu parametre taşıyıcı firmaya özgü bir parametredir. **_0 ise zorunlu değil. 1 ise zorunludur._**    |
+| SubeSatistaTcKimlikNoYazmakZorunlu | Yolcuların kimlik numaralarının zorunlu olup olmadığını belirleyen parametredir. Bu parametre taşıyıcı firmaya özgü bir parametredir. **_0 ise zorunlu değil. 1 ise zorunludur._** |
 | PasaportNoIleIslemYapilirMi | **Değeri 0 gelirse;** SubeSatistaTcKimlikNoYazmakZorunlu değeri “1“ ise, T.C. vatandaşı olmayan yolculara bilet satılamaz. **Değeri 1 gelirse;** T.C. vatandaşı olmayan yolculara bilet satılırken pasaport ülke ve pasaport numarası bilgisi gönderilmelidir. |
 
 ```xml

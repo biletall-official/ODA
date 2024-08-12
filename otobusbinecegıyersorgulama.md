@@ -7,9 +7,9 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |Alan|Açıklama|
 | ------------- | ---------------------------------------------------- |
 | FirmaNo     | Seçilen seferi yapacak olan firmanın firma numarası            |
-| **KalkisNoktaID\*** | Seçilen seferin KalkisNoktaID değeri. **Format:(integer).**  |  
-| **YerelSaat\***     | Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).** |
-| **HatNo\***         | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**      |
+| **KalkisNoktaID*** | Seçilen seferin KalkisNoktaID değeri. **Format:(integer).**  |  
+| **YerelSaat***     | Seçilen seferin kalkış saati (Sefer listesinde bulunan YerelInternetSaat alanı) **Format:(datetime, ‘s’).** |
+| **HatNo***         | Seçilen seferin hat numarası (Sefer listesinde bulunan HatNo alanı) **Format: integer**      |
 
 :::info
 (*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.

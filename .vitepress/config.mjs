@@ -15,22 +15,12 @@ export default defineConfig({
     search: {
       provider: "local"
     },
-    sidebar: {
-      "/changelog/": [
-        {
-          text: "Sürüm Notları",
-          collapsible: true,
-          collapsed: true,
-          items: [{ text: "1.1.0", link: "/changelog.md" }],
-        },
-      ],
-    },
     sidebar: [
       {
         text: "DÖKÜMANTASYON",
         collapsible: true,
         collapsed: true,
-
+        
         items: [
           { text: "AMAÇ", link: "/amaç.md" },
           { text: "GENEL ŞARTLAR", link: "/genelsartlar.md" },
