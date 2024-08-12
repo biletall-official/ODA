@@ -1,0 +1,9 @@
+{
+  "trailingComma": "all",
+  "vueIndentScriptAndStyle": false,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "embeddedLanguageFormatting": "auto",
+  "tabWidth": 4,
+  "useTabs": true
+}
