@@ -5,7 +5,7 @@
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.  
 Alanların açıklaması şu şekildedir.
 
-| ALAN     | AÇIKLAMA                                                      |
+| Alan     | Açıklama                                                      |
 | -------- | ------------------------------------------------------------- |
 | Firma No | Hesabınıza bağlı otobüs firmasının bilgilerini çekmeye yarar. |
 
@@ -27,13 +27,13 @@ Görüldüğü üzere bu alanların hiç birini gönderme zorunluluğu yoktur.
 <Firmalar_2 xmlns=""></Firmalar_2>
 ```
 
-::: info
-Not : Test ortamında firmaları listelemek için <Firmalar xmlns=""></Firmalar> şeklinde istek göndermeniz gerekirken canlı ortamda <Firmalar_2 xmlns=""></Firmalar_2> şeklinde göndermeniz gerekmektedir.
+::: info :exclamation: Not 
+ Test ortamında firmaları listelemek için <Firmalar xmlns=""></Firmalar> şeklinde istek göndermeniz gerekirken canlı ortamda <Firmalar_2 xmlns=""></Firmalar_2> şeklinde göndermeniz gerekmektedir.
 :::
 
 ## CEVAP
 
-| ALAN                                      | AÇIKLAMA                                                                                                                                                        |
+| Alan                                      | Açıklama                                                                   |
 | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sefere kadar iptal edebilme süresi dakika | Eğer firmada bilet iptal aktifse sefer saatine kaç dakika kalana kadar iptal edilebileceğini belirtir. Boş gelirse firmada böyle bir bilgi bulunmuyor demektir. |
 

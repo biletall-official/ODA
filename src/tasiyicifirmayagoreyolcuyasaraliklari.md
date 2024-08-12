@@ -1,6 +1,6 @@
 # TAŞIYICI FİRMAYA GÖRE YOLCU YAŞ ARALIKLARI
 
-:::info
+:::info :exclamation: Not 
 Fiyat çek işlemi gerçekleştikten sonra Doğum Tarihi zorunluluğu var ise firmaya göre hangi yaş aralığında doğum tarihi kontrolünün yapılmasını sağlayan servistir.
 :::
 

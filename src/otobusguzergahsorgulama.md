@@ -16,7 +16,7 @@
 
 ## CEVAP
 
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 Sonuc:

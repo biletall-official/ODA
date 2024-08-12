@@ -18,10 +18,11 @@ Bilet iptal edildiğinde oluşacak ceza bilgisi için
 </SatisIptalCezaGetirKomut>
 ```
 
-#### CEVAP
+### CEVAP
 
 Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
-| ALAN | AÇIKLAMA |
+
+| Alan             | Açıklama                                     |
 | ---------------- | -------------------------------------------- |
 | Tutar | Yolcunun toplam tutarı |
 | Komisyon | Yolcu servis ücreti |
@@ -52,7 +53,7 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
 
 ## SATIŞ İPTAL İŞLEMİ
 
-:::info
+:::info :exclamation: Not
 Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların OlusanAcikPara değerlerini toplayıp göndermelisiniz.
 :::
 

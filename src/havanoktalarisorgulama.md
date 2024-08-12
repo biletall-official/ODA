@@ -1,6 +1,6 @@
 # HAVA NOKTALARI SORGULAMA
 
-:::info
+:::info :exclamation: Not 
 Bu sorgu ile Biletall web servisleri için düzenlenmiş havaalanı kalkış-varış noktaları elde edilir.
 :::
 
@@ -20,7 +20,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 ## CEVAP
 
-| ALANLAR         | AÇIKLAMALAR                                            |
+| Alan            | Açıklama                                               |
 | --------------- | ------------------------------------------------------ |
 | UlkeKod         | Havaalanının bulunduğu ülkenin kodudur.                |
 | UlkeAd          | Havaalanının bulunduğu ülkenin adıdır.                 |

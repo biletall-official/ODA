@@ -3,7 +3,7 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | FirmaNo | Seçilen seferi yapacak olan firmanın firma numarası |
 | **KalkisNoktaID\*** | Seçilen seferin KalkisNoktaID değeri. **Format:(string, min:2 max: 30 karakter).** |
@@ -19,7 +19,6 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 | TcKimlikNo1 | İlk yolcunun kimlik numarası.Tc Vatandaşları için zorunludur. |
 | HESKodu1 | İlk yolcunun HES Kodu Tc Vatandaşları için zorunludur. |
 | PasaportUlkeKod1 | TC Vatandaşı olmayan her yolcu için pasaport ülke kodu bilgisi. Ülkelerin ikili kodları gönderilmelidir. |
-
 | PasaportNo1 | TC Vatandaşı olmayan her yolcu için pasaport numarası bilgisi. |
 | BinecegiYer1 | İlk yolcunun yolda bineceği yer bilgisi. (Biniş yerinin adı) **Format:(string, max: 15 karakter).** |
 | ServisYeriKalkis1 | İlk yolcunun seferden önce alınacağı servis durağıdır.(Servis noktasının adı. Aynı anda Bineceği yer ve Kalkış servisi seçilmemelidir.) **Format:(string, max: 15 karakter).** |
@@ -46,11 +45,11 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 | RezervePnrNo | Eğer Satış işlemi aslında bir Rezervasyonlu Satış ise ilgili rezervasyonun PNR kodu. |
 | SeferKod | Eğer koltuk seçimi olmayan bir seferse ilgili seferin otobüs sefer listesi cevabında dönen SeferKod değeri gönderilmelidir. Koltuk seçimi yapılmayan seferler için zorunlu bir alandır. Koltuk seçimi yapılabilen seferler için boş gönderilmelidir. |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
-:::danger
+:::danger :rotating_light: Uyarı
 Kredi Kartı ödeme yöntemi, Önödeme ödeme yöntemi ve 3D secure zorunluluğu hakkında kullanıcınızı yönlendirmek için, aşağıda size sunulan alanları kullanmalısınız. Aşağıda 3 taşıyıcı firma için örnek durumlar sunulmuştur. Bu firmalar örnek firmalar olup güncel durumun sonuç içerisindeki XML’den kontrol edilmesi gerekir.
 :::
 
@@ -64,7 +63,7 @@ Kredi Kartı ödeme yöntemi, Önödeme ödeme yöntemi ve 3D secure zorunluluğ
 | OrnekFirma1 | **0** (Sadece Kredi Kartından satabilir, Önödeme satamaz)       |
 | OrnekFirma2 | **1** (Önödemeli satış yetkiniz varsa, önödeme ile satabilir)   |
 
-:::info
+:::info :exclamation: Not 
 Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yapılır ve aşağıdaki kurallara göre uygun ödeme yöntemi belirlenir.
 :::
 
@@ -74,7 +73,7 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 | OrnekFirma1 | **0** (3D ödeme yöntemi kullanılamaz)                                 | **0**                                                                                 |
 | OrnekFirma2 | **1** (3D ödeme yöntemi kullanılabilir durumda)                       | **1** (sadece 3D ödeme yöntemi kullanılmalı)                                          |
 
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <xs:element name="IslemSatis">
@@ -170,7 +169,8 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 
 :::
 
-## STANDART İSTEK
+## STANDART 
+### İSTEK
 
 ```xml
 <IslemSatis>
@@ -209,7 +209,7 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 
 ### CEVAP
 
-| ALAN                   | AÇIKLAMA                                       |
+| Alan                   | Açıklama                                       |
 | ---------------------- | ---------------------------------------------- |
 | Sonuc                  | İşlemin başarılı olup olmadığını belirtir      |
 | PNR                    | Oluşan PNR kodunu belirtir.                    |
@@ -230,7 +230,8 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 </IslemSonuc>
 ```
 
-## SEFER KOD İLE İSTEK
+## SEFER KOD 
+### İSTEK
 
 ```xml
 <IslemSatis>
@@ -279,12 +280,13 @@ Yukardaki önödeme satış yapılamayan durumda Kredi Kart’ı ile satış yap
 </IslemSonuc>
 ```
 
-## YABANCI YOLCU İÇİN İSTEK
+## YABANCI YOLCU 
+### İSTEK
 
-:::danger
+:::danger :rotating_light: Uyarı
 Yabancı yolculara bilet satış işlemi için otobüs sorgusunda gelen aşağıda belirtilen iki Alana göre değerlendirme yapılmalıdır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | SubeSatistaTcKimlikNoYazmakZorunlu | Yolcuların kimlik numaralarının zorunlu olup olmadığını belirleyen parametredir. Bu parametre taşıyıcı firmaya özgü bir parametredir. **_0 ise zorunlu değil. 1 ise zorunludur._** |
 | PasaportNoIleIslemYapilirMi | **Değeri 0 gelirse;** SubeSatistaTcKimlikNoYazmakZorunlu değeri “1“ ise, T.C. vatandaşı olmayan yolculara bilet satılamaz. **Değeri 1 gelirse;** T.C. vatandaşı olmayan yolculara bilet satılırken pasaport ülke ve pasaport numarası bilgisi gönderilmelidir. |
@@ -331,9 +333,10 @@ Yabancı yolcu için satış istek örneği;
 
 ### CEVAP
 
-## SEYAHAT ÜLKE İSTEK
+## SEYAHAT ÜLKE
+### İSTEK
 
-:::info
+:::info :exclamation: Not 
 **<u>**Pasaport ülke kodu alanı için ülkeler listesini ve kodlarını alabileceğiniz aşağıdaki sorgu web servise eklenmiştir;**</u>**
 :::
 

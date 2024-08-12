@@ -9,6 +9,7 @@
 -   geliştirme sırasında başlık etiketi güncellendi.
 -   nav ve sidebar yapılandırmaları eklendi.
 -   changelog eklendi  
+   
     **_Ayşe KÖKSOY_**
 
 ## **1.0.0 (08-08-2024)**

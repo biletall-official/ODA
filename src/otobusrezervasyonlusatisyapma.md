@@ -1,6 +1,6 @@
 # REZERVASYONLU SATIŞ YAPMA
 
-:::info
+:::info :exclamation: Not 
 Rezervasyonlu satış yapma işlemi, satış yapma işlemindeki gibidir.Ek olarak RezervePnrNo bilgisi kullanılmaktadır.
 :::
 

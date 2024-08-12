@@ -1,6 +1,6 @@
 # PNR KONFİRMASYON
 
-:::info
+:::info :exclamation: Not 
 Biletin yolcuya görüntülenmesinde herhangi bir sorun olup olmadığını anlamak için konfirmasyon işlemi yapmanız gerekmektedir. Konfirmasyon işlemi yapılmayan biletler için Biletall sorumluluk kabul etmemektedir. Konfirmasyon işlemi yapılmayan biletler için çağrı merkezimiz sizi uyaracaktır. Konfirmasyon işlemi aşağıdaki XML işlemi ile gerçekleşir.
 PnrYolcuId elementi , Pnr sorgulamınızda birlikte size gelen Yolcu Elementi içerisinde bulunan ID alanıdır.Aktif durumu satışa dönüşmüş yolcuların ID sini PnrYolcuId ile göndermeniz gerekmektedir.
 :::

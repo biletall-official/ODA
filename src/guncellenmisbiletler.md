@@ -2,7 +2,7 @@
 
 ## GEÇİCİ BİLETLERİN SORGULANMASI
 
-:::tip
+:::tip :bulb: İpucu
 Bazı yurtdışı charter firmalara yapılan biletleme isteklerinde cevap süresi beklenen sürenin çok üzerinde olabilmektedir ve sağlayıcı tarafından bir referans numarası ile geçici bilet oluşturulmaktadır. Bu durumda biletleme isteği yapıldıktan sonra işlem sonucunda geçici PNR numarası dönecektir. Bir biletin geçici bilet olup olmadığının anlaşılması için PNRIslem isteği atarak PNR sorgulanmalıdır. Sorgulanan PNR’ın cevap XML’inde PNR elementi içerisinde ReferansNo alanı geçiyorsa, bu bilet geçici bilettir. Sağlayıcı tarafından referans numarası döndüğü durumda ilgili bilet belirli aralıklarla Biletall servisi tarafından sorgulanarak, biletin son durumu sisteme yansıtılmaktadır. Bu durumda PNR’ın son durumu belirli periyotlarla **“Güncellenmiş Biletler”** servisinden sorgulanarak nihai durumunun öğrenilmesi gerekmektedir. Güncellenmiş biletler servisinden sorgulandığında ilgili PNR’ın cevabında DegisiklikTipi’nin 1 olması durumunda bilet oluşmuş, **DegisiklikTipi**’nin **2** olması durumunda ise bilet iptal edilmiş demektir. **DegisiklikTipi** alanının **1** veya **2** olmadığı durumda ise sistem tarafından biletin son durumunun sorgulanması devam ediyor anlamına gelmektedir. Bu durum taşıyıcı firma tarafında 48 saate kadar uzayabilmektedir. İlgili PNR acente ekranları üzerinden de takip edilebilmektedir.
 :::
 
@@ -46,7 +46,7 @@ Yurtdışı uçak rezervasyonu yapıldığında sağlayıcıdan rezervasyona ait
 
 ### İSTEK
 
-| ALAN           | AÇIKLAMA                                                                                                                                                  |
+| Alan           | Açıklama                                                                                                                                                  |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BaslangicTarih | yyyy-MM-dd HH:mm:ss formatında gönderilen sorgu başlangıç tarihi değerini içerir.**Not:** Başlangıç ve bitiş tarihleri arasında en fazla 30 gün olabilir. |
 | BitisTarih     | yyyy-MM-dd HH:mm:ss formatında gönderilen sorgu bitiş tarihi değerini içerir.**Not:** Başlangıç ve bitiş tarihleri arasında en fazla 30 gün olabilir.     |
@@ -60,9 +60,9 @@ Yurtdışı uçak rezervasyonu yapıldığında sağlayıcıdan rezervasyona ait
 </GuncellenmisBiletler>
 ```
 
-#### CEVAP
+### CEVAP
 
-| ALAN            | AÇIKLAMA                                                                                                                                                                       |
+| Alan            | Açıklama                                                                                                                                                                       |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | PNR             | Kesilen biletin PNR numarasını içerir.                                                                                                                                         |
 | Soyad           | Kesilen biletin ilk yolcusunun soyadını içerir.                                                                                                                                |

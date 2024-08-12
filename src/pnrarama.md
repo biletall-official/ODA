@@ -4,12 +4,12 @@ Rezervasyon veya satış işlemleri sonrası biletler işlem sonucu dönen PNR n
 
 ## İSTEK
 
-| ALAN                    | AÇIKLAMA                           |
+| Alan                    | Açıklama                           |
 | ----------------------- | ---------------------------------- |
 | **PnrNo\***             | İşlemin PNR Numarası               |
 | **PnrAramaParametre\*** | Yolcu soyadı veya telefon numarası |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
@@ -23,7 +23,7 @@ Rezervasyon veya satış işlemleri sonrası biletler işlem sonucu dönen PNR n
 
 ## CEVAP
 
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <Bilet>
@@ -160,11 +160,11 @@ Rezervasyon veya satış işlemleri sonrası biletler işlem sonucu dönen PNR n
 
 :::
 
-:::warning
+:::warning :warning: Dikkat
 Yolcuları listeleme işleminde Durum1 değeri boş olmayan yolculara göre listeleme yapılmalıdır.AktifDurum değeri ise yolcunun son durumuyla ilgili bilgi verir.Örneğin AktifDurum değeri 2 ise yolcunun son durumu Durum2 dir.Durum1 Rezervasyon olabilirken Durum2 RezervasyonIptal olabilmektedir.
 :::
 
-:::tip
+:::tip :bulb: İpucu
 PnrTip verisi ile biletin uçak veya otobüs bileti olduğunu anlıyabilirsiniz. PnrTip ile ilgili bilgileri aşağıda bulabilirsiniz.
 PnrTip=K,M (Otobüs bileti olduğunu ifade eder. )
 PnrTip=T,H,S(Yurtiçi uçak bileti olduğunu ifade eder. )

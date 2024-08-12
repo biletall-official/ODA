@@ -1,6 +1,6 @@
 # UÇAK SATIŞ YAPMA
 
-:::info
+:::info :exclamation: Not 
 Uçak biletinde satış iptali göndermeden önce ceza bilgisini sorgulamalısınız.
 :::
 
@@ -19,18 +19,18 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
 </SatisIptalCezaGetirKomut>
 ```
 
-| ALAN                    | AÇIKLAMA                 |
+| Alan                    | Açıklama                 |
 | ----------------------- | ------------------------ |
 | **PnrNo\***             | PNR Numarası             |
 | **PnrAramaParametre\*** | Soyad ya da Cep Telefonu |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işrateli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
-#### CEVAP
+### CEVAP
 
-| ALAN             | AÇIKLAMA                                     |
+| Alan             | Açıklama                                     |
 | ---------------- | -------------------------------------------- |
 | Tutar            | Yolcunun toplam tutarı                       |
 | Komisyon         | Yolcu servis ücreti                          |
@@ -61,7 +61,7 @@ Ceza bilgisi yolcu bazlı olarak aşağıdaki gibi gelmektedir.
 
 ## SATIŞ İPTAL İŞLEMİ
 
-:::warning
+:::warning :warning: Dikkat
 Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların OlusanAcikPara değerlerini toplayıp göndermelisiniz.
 :::
 
@@ -77,7 +77,7 @@ Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların Olu
 </SatisIptalKomut>
 ```
 
-#### CEVAP
+### CEVAP
 
 ```xml
 <IslemSonuc>
@@ -102,3 +102,4 @@ Satış iptal komuta iptal tutarı olarak ceza servisinden gelen yolcuların Olu
     </Pnr>
 </SatisIptalKomut>
 ```
+### CEVAP

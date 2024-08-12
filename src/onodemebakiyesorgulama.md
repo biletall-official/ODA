@@ -2,7 +2,7 @@
 
 ## İSTEK
 
-:::tip
+:::tip :bulb: İpucu
 Ön ödemeli çalışan kullanıcıların bakiyelerini kontrol edebilmeleri sağlanmaktadır.
 :::
 

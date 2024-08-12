@@ -1,9 +1,9 @@
 # TARİH ARALIKLI SATIŞLAR VE İPTALLER LİSTELEME
 
-:::tip
+:::tip :bulb: İpucu
 Tarih aralıklı satış ve iptallerinizi işlem bazında görmenizi sağlar. Tarih aralığında sizin yaptığınız veya sizin biletinize yapılan işlemleri listeler. Belli aralıklarla bu sorguyu çalıştırarak kendi veritabanınızla biletall arasındaki senkronizasyonu sağlayabilirsiniz.
 :::
-:::warning
+:::warning :warning: Dikkat
 Cevap xml’indeki “IslemiYapanFarkliKullaniciMi” sizin satış işlemleriniz başka bir kullanıcı tarafından(biletall veya çağrı merkezi) iptal edilmişse 1 değerini alır.
 :::
 
@@ -18,7 +18,7 @@ Cevap xml’indeki “IslemiYapanFarkliKullaniciMi” sizin satış işlemlerini
 
 ## CEVAP
 
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <Islemler xmlns="">

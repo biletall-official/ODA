@@ -3,7 +3,7 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **FirmaNo\*** | Yurtiçi uçuş işlemleri için kullanılacak firma numarası sabittir. **FirmaNo : |
 | **KalkisAdi**\* | Listelemek istediğiniz uçuşların kalkış havaalanı.Bu parametre üç harfli havaalanı kodudur.**Format:(string, min:3 max: 3 karakter).** |
@@ -21,7 +21,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 | GencSayi | Seyahat edecek genç yolcu sayısı. |
 | **Ip\*** | Site ziyaretçisinin Ip adresi |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
@@ -77,12 +77,12 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 Gidiş için seçilecek uçuşların fiyat seçeneklerinin yer aldığı bir Seçenekler listesi, uçuş bilgilerinin yer aldığı bir Segmentler listesi bulunmaktadır.  
 Gidiş seferlerinde olduğu gibi dönüş seferleri için DonusSecenekler ve DonusSegmentler listeleri bulunmaktadır.  
-:::tip
+:::tip :bulb: İpucu
 Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçeneğin SegmentSiniflar listesinden sınıflarına bakılarak o sınıfın ilgili segmentleri alınabilir.Ve sonrasında istenilirse Segmentin ücret detaylarını SecenekUcretDetaylar listesinden çekilerek kullanılabilir.  
 :::
 
 **SEÇENEKLER LİSTESİ**
-|alan|açıklama|
+|Alan|Açıklama|
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | ID | Her bir seçenek için tekil olan seçenek numarası. Bu numara ile Segment listesinden ilgili seçeneğe ait diğer bilgiler çekilebilir. |
 | FiyatP | Promosyon sınıfları için belirlenmiş fiyat bilgisi. Bu sınıflardan satılan biletlerin iptali yapılamamaktadır. |
@@ -95,7 +95,7 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 | FirmaNo | Hizmeti sağlayan firmaNo belirtir. Fiyat çekme , rezervasyon ve satış işlemlerinde `<FirmaNo>FirmaNo</FirmaNo>` olarak kullanılmalıdır. |
 
 **SEGMENTLER LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------------- | ------------------------------------------------------------------------------- |
 | ID | Her bir segment için tekil olan segment numarası. |
 | SeçenekID | İlgili segmentin Seçenekler listesinde hangi seçeneğe ait olduğunu belirten seçenek numarası. Aktarmalı uçuşlarda bir fiyat seçeneği için birden fazla segment olabilir. |
@@ -124,7 +124,7 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 | BagajB | Bussiness sınıflar için belirlenmiş bagaj bilgisi. |
 
 **SEGMENT SINIFLAR LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |---------------------|----------------------------------------------------|
 |SegmentID2|Segmentler listesindeki ID alanıyla eşleştirilerek kullanılır.|
 |SecenekUcretID|SecenekUcretler listesindeki ID alanıyla eşleşerek kullanılır.|
@@ -134,7 +134,7 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 |EksikKoltukMu| |
 
 **SEÇENEK ÜCRETLER LİSTESİ**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------- | ---------------------------------------------------------------- |
 | ID | Listesindeki elemanları birbirinden ayırmak için kullanılır. |
 | SecenekID2 | Secenekler listesindeki ID alanıyla eşleşerek kullanılır. |
@@ -149,18 +149,18 @@ Eğer sınıf bazlı gösterim isteniyorsa seçenekleri listelerken ilgili seçe
 | Aciklama | Kampanya, Bildirim vs gibi amaçlar içindir. |
 
 **Seçenek Ücret Detayları Listesi**
-
-| ID             | SecenekUcretDetaylar listesindeki elemanları birbirinden ayırmak için kullanılır. |
+|Alan|Açıklama|
 | -------------- | --------------------------------------------------------------------------------- |
+| ID             | SecenekUcretDetaylar listesindeki elemanları birbirinden ayırmak için kullanılır. |
 | SecenekUcretID | SecenekUcretler listesindeki ID alanıyla eşleşerek kullanılır.                    |
 | Tip            | Detayın Tipi                                                                      |
 | Aciklama       | Tipin ilgili açıklama                                                             |
 
-:::info
+:::info :exclamation: Not 
 **Yurtiçi Dolu Seferler:**  
 Seçenek listesinde FiyatP, FiyatE, FiyatB alanlarının hepsinde 0 dönüyorsa hiçbir sınıfta yer olmadığı dolayısıyla seferin dolu olduğu anlamına gelir.
 :::
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 

@@ -1,6 +1,6 @@
 # NOKTALAR SORGULAMA
 
-:::tip
+:::tip :bulb: İpucu
 İdo ve Budo için ortak oluşturulan deniz noktaları getirilir. Sonraki süreçte geliştirmeler bu sorgu üzerinden olacağından önemlidir.
 :::
 
@@ -12,7 +12,7 @@
 
 ## CEVAP
 
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <DenizNoktalar>

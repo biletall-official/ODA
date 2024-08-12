@@ -3,7 +3,7 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-|ALAN |AÇIKLAMA|
+|Alan |Açıklama|
 |----------------------|---------------------------------------|
 |**FirmaNo**|Seçilen seferi yapacak olan firmanın firma numarası|
 |**KalkisNoktaID\***|Seçilen seferin KalkisNoktaID değeri.**Format:(integer).**|
@@ -15,7 +15,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 |**YolcuSayisi**|Seyahat edecek yolcu sayısı.|
 |**SeferTakipNo\***|Sefer listesinde bulunan SeferTakipNo alanı|
 |**Ip\***|Site ziyaretçisinin Ip adresi|
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
@@ -60,7 +60,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılabilecek yolcu tipleri bulunmaktadır.
 
 **Sefer Bilgileri**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 |-----------------|-----------------------------------------------------|
 |InternetTarihSaat|Yolculara gösterilmesi gereken otobüsün kalkış saati.|
 |BiletFiyatiInternet|Herbir koltuk için uygulanacak olan bilet fiyatı.|
@@ -75,19 +75,20 @@ Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılab
 |SubeSatistaTcKimlikNoYazmakZorunlu|Yolcuların kimlik numaralarının zorunlu olup olmadığını belirleyen parametredir. Bu parametre taşıyıcı firmaya özgü bir parametredir ve yalnızca birkaç firma için aktiftir. **0 ise zorunlu değil.** **1 ise zorunludur.**|
 |OTipOzellik|Otobüsün hangi özelliklere sahip olduğunu belirtir.OTipOzellik veri setinde gelen sıraya göre o özelliğin olduğunu veya olmadığını belirtir. **Örneğin:** OTipOzellik veri setinde ilk sırada Internet özelliği bulunmaktadır. Eğer sefer bilgilerindeki OTipOzellik alandaki ilk değer 1 ise araçta Internet olduğunu, 0 ise araçta Internet olmadığını belirtir.|
 |RezervasyonAktifMi|**true:** rezervasyon yapılabilir, **false:** yapılamaz|
-|**SatilabilirKoltukSayi**|**Firma tarafından belirlenen sayıdır. Bu otobüste satılabilecek toplam koltuk sayısını belirtir. Bu sayıdan fazla işlem gönderdiğinizde hata alacağınızdan koltuk seçme aşamasında bir doğrulama yapmanız gerekmektedir.**|
+|**SatilabilirKoltukSayi***|**Firma tarafından belirlenen sayıdır. Bu otobüste satılabilecek toplam koltuk sayısını belirtir. Bu sayıdan fazla işlem gönderdiğinizde hata alacağınızdan koltuk seçme aşamasında bir doğrulama yapmanız gerekmektedir.**|
 |RezervasyonNedenYapilamaz|RezervasyonAktifMi false ise bazı firmalarda bunun nedeni belirtilmiş olabilir. Firma bu değeri girmemişse boş gelecektir.|
-|**FirmaMaxToplamBiletFiyati**|**Değeri 0’dan büyük geldiği durumlarda ilgili otobüs için firmanın belirlediği bir maksimum işlem tutarı vardır. Bu değeri geçen işlemlerinizde hata alırsınız.**|
-|**PasaportNoIleIslemYapilirMi**|**Değeri 0 gelirse;** SubeSatistaTcKimlikNoYazmakZorunlu değeri **“1“** ise, T.C. vatandaşı olmayan yolculara bilet satılamaz. **Değeri 1 gelirse;** T.C. vatandaşı olmayan yolculara bilet satılırken pasaport ülke ve pasaport numarası bilgisi gönderilmelidir.|
-|**FarkliFiyattaKoltuklarSecilebilirMi**|**Değeri 0 gelirse;** Farklı fiyatlardan koltuklar birlikte satılamaz.**Değeri 1 gelirse;** Tek koltuk farkı gibi fiyat farklarının olduğu farklı fiyatlardan koltuklar birlikte satılabilir.|
-|**OtobusKoltukBoslukSemasi**|ek koltuk farkı gibi|
-|**FarkliCinsiyetteKoltuklarSecilebilirMi**|Eğer “1” ise o otobüse birden farklı cinsiyet ile bilet rezervasyon ya da satışı yapılabilir.Eğer bu değer “0” ya da boş ise farklı cinsiyette işlem yapılamaz.|
-|**OtobusHesKoduZorunluMu**|Heskod degerinin zorunlu olup olmadığı bilgisidir.“1” ise zorunlu “0” ise zorunlu değil anlamındadır.|
-|**CiftKoltukTekYolcuyaSatilabilirMi**|Çift koltukların tek olarak satılma durumunu gösteren alandır. “1” olması durumunda çift koltuklar tek satılabilirken, “0“ olması durumunda çift koltuklar sadece birlikte satılabilir.|
-|**TekliKoltuklarDoluysaCiftliKoltuktanSatisYapilabilirMi**|Tüm tek koltukların dolu olması durumunda çift koltukların tek yolcuya satılıp satılamayacağı bilgisidir. “1” olması durumunda çift koltuklar tek satılabilirken, “0” olması durumunda satış yapılamaz.|
+|**FirmaMaxToplamBiletFiyati***|**Değeri 0’dan büyük geldiği durumlarda ilgili otobüs için firmanın belirlediği bir maksimum işlem tutarı vardır. Bu değeri geçen işlemlerinizde hata alırsınız.**|
+|**PasaportNoIleIslemYapilirMi***|**Değeri 0 gelirse;** SubeSatistaTcKimlikNoYazmakZorunlu değeri **“1“** ise, T.C. vatandaşı olmayan yolculara bilet satılamaz. **Değeri 1 gelirse;** T.C. vatandaşı olmayan yolculara bilet satılırken pasaport ülke ve pasaport numarası bilgisi gönderilmelidir.|
+|**FarkliFiyattaKoltuklarSecilebilirMi***|**Değeri 0 gelirse;** Farklı fiyatlardan koltuklar birlikte satılamaz.**Değeri 1 gelirse;** Tek koltuk farkı gibi fiyat farklarının olduğu farklı fiyatlardan koltuklar birlikte satılabilir.|
+|**OtobusKoltukBoslukSemasi***|ek koltuk farkı gibi|
+|**FarkliCinsiyetteKoltuklarSecilebilirMi***|Eğer “1” ise o otobüse birden farklı cinsiyet ile bilet rezervasyon ya da satışı yapılabilir.Eğer bu değer “0” ya da boş ise farklı cinsiyette işlem yapılamaz.|
+|**OtobusHesKoduZorunluMu***|Heskod degerinin zorunlu olup olmadığı bilgisidir.“1” ise zorunlu “0” ise zorunlu değil anlamındadır.|
+|**CiftKoltukTekYolcuyaSatilabilirMi***|Çift koltukların tek olarak satılma durumunu gösteren alandır. “1” olması durumunda çift koltuklar tek satılabilirken, “0“ olması durumunda çift koltuklar sadece birlikte satılabilir.|
+|**TekliKoltuklarDoluysaCiftliKoltuktanSatisYapilabilirMi***|Tüm tek koltukların dolu olması durumunda çift koltukların tek yolcuya satılıp satılamayacağı bilgisidir. “1” olması durumunda çift koltuklar tek satılabilirken, “0” olması durumunda satış yapılamaz.|
+
 
 **Koltuk Planı**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | KoltukStr | İlgili koltuğunu string olarak koltuk numarası. 01: 1 Numaralı koltuk KO: Koridor KA, PI: Kapı (ayrı ayrı değerler birleşiyor) MA, SA: Masa (ayrı ayrı değerler birleşiyor) PR : Personel Koltuğu |
 | KoltukNo | Sayısal Koltuk numarasıdır. Koltuk numarası -1 veya -3 olanlar Koridor, Kapı veya Masaya denk gelen yerlerdir. |
@@ -95,7 +96,12 @@ Otobüs detaylarını gösteren cevapta sefer bilgileri, koltuk planı, satılab
 | DurumYan | Yan Koltuğun o anki durumudur. **DurumYan=0=>** Yan Koltuk Boş (Her İki Cinse Satılabilir) **DurumYan=1=>** Yan Koltuk Bir Bayana Satılmış (Sadece Bayana Satılabilir) **DurumYan=2=>** Yan Koltuk Bir Baya Satılmış (Sadece Baya Satılabilir) **DurumYan=3,4,5,6=>** Yan Koltuk Belirsiz (Hiçbir Şekilde Satılamaz) |
 | KoltukFiyatiInternet | İlgili koltuğun internet fiyatını göstermektedir.Temel olarak farklı fiyatlardaki koltuklar aynı anda satılamamaktadır.Özel bölüm ve tekli koltuklarda fiyat farkı **varsa** bütün koltuklar aynı fiyat tipinden seçilmelidir. Aksi takdirde bilet satışı gerçekleşmeyecektir. |
 | Kat | Koltuğun çok katlı otobüslerde hangi kata ait olduğunu belirtir. Elementin gelmediği durumlarda 1 olarak kabul edilebilir. |
-:::details kodu görüntülemek için tıklayın.
+
+:::info :exclamation: Not 
+(\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+:::
+
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <Otobus>

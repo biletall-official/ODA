@@ -1,6 +1,6 @@
 # HES KODU SORGULAMA
 
-:::info
+:::info :exclamation: Not 
 Yolcunun hes kodu geçerliliğini olup olmadığını ve geçerlilik tarihini öğrenmek için aşağıdaki xml yapmak gerekiyor.
 Hes kodu sorgularken Hes Kodu, Tc Kimlik numarası ve sefer tarihi ile göndermeniz gerekmektedir.
 :::

@@ -3,12 +3,12 @@
 ## İSTEK
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | --------------- |---------------------------------------------------------------- |
 | **FirmaNo\*** | İdo noktalarının gelmesi için FirmaNo parametresi 5000 olarak gönderilmesi zorunludur. |
 | **KalkisKod\*** | Seçilmiş Kalkış noktası. Bu alan zorunludur. Her bir kalkış noktasının belirli varış noktaları vardır. Kalkış noktalarında seçilen noktanın Kod değeri gönderilmelidir.**Format:(string, 3 karakter).** |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 

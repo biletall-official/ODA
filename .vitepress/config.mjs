@@ -326,10 +326,7 @@ export default defineConfig({
                     },
                 ],
             },
-            {
-                text: "3D Güvenli Ödeme ile Satış Yapma",
-                link: "/ucdilesatisyapma.md",
-            },
+
             {
                 text: "PNR İslem",
                 link: "/pnrislemservisleri.md",
@@ -359,7 +356,7 @@ export default defineConfig({
                 ],
             },
             {
-                text: "Ön Ödene İşlemleri",
+                text: "Ödene İşlemleri",
                 link: "/onodemebakiyesorgulama.md",
                 collapsible: true,
                 collapsed: true,
@@ -371,6 +368,10 @@ export default defineConfig({
                     {
                         text: "ÖN ÖDEME İŞLEMLERİ SORGULAMA",
                         link: "/onodemeislemlerisorgulama.md",
+                    },
+                    {
+                        text: "3D GÜVENLİ ÖDEME İLE SATIŞ YAPMA",
+                        link: "/ucdilesatisyapma.md",
                     },
                 ],
             },

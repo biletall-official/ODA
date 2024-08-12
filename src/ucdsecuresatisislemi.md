@@ -1,6 +1,6 @@
 # 3D SECURE SATIŞ İŞLEMİ
 
-:::tip
+:::tip :bulb: İpucu
 Daha önce web servisimizde 3D entegrasyonu yaptıysanız aynı kurallar İdo için de geçerlidir. Detayları “3D GÜVENLİK İLE SATIŞ YAPMA” başlığında bulabilirsiniz.
 :::
 **Ido 3D secure işlemi de otobüs ve uçaktaki ile aynıdır.** satisXML alanına oluşturulan SatisKomut xml i gönderilecektir. Sonuç olarakta diğerleri ile aynı yapıda sonuç dönmektedir.
@@ -17,16 +17,16 @@ http://88.247.60.172/wstest/service.asmx web servis adresini kullanabilir, burad
 **Budo Test Kart Bilgileri:**
 Ödeme Ekranı Test Kartları şu şekildedir:
 
-| ALAN                | AÇIKLAMA        |
+| Alan                | Açıklama        |      |
 | ------------------- | --------------- | ---- |
 | Test Kart Bilgileri | expiration date | cvv2 |
 | 4090700102323514    | 11/21           | 834  |
 | 5200190046477986    | 01/21           | 319  |
 
-:::warning
+:::warning :warning: Dikkat
 Tüm kartlar için 3D doğrulama şifresi: 123
 :::
 
-:::danger
+:::danger :rotating_light: Uyarı
 RezervasyonKomut işleminden sonra gelen OdemeKurallari bilgisi ödemeyi nasıl yapmanız gerektiğini bildirir. Odeme3DSecureAktifMi alanı 1 geldiğinde sanal poslu ödemede 3d secure kullanabileceğinizi, Odeme3DSecureZorunluMu alanı 1 geldiğinde ise ödeme işlemini 3D secure ile yapmanızın zorunlu olduğunu ifade eder. Burada 3D secure kullanma yönteminiz diğer satış işlemleriyle aynıdır. satisXML input değeri içerisinde SatisKomut gönderilir ve sonuç olarak diğer işlemlerdeki gibi PNR bilgisi alınır.
 :::

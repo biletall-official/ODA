@@ -2,7 +2,7 @@
 
 ## ŞEMA
 
-:::info
+:::info :exclamation: Not 
 Sefer sorgulama işleminde yukarıda şeması verilen **SeferCekKomut** xml yapısı oluşturulmalıdır. **‘SeferCekKomut’** içerisine **‘AramaKriter’** xml yapısını alarak yapılan sorguya anlam kazandırır.
 :::
 :::details kodu görüntülemek için tıklayın.
@@ -115,61 +115,61 @@ Sefer sorgulama işleminde yukarıda şeması verilen **SeferCekKomut** xml yap�
 ## İSTEK
 
 **AramaKriter Parametreleri Açıklamaları:**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ------------- | ----------------------------- |
 | **FirmaNo\*** | 5000 gönderilmelidir. |
 | **Ip\*** | Site ziyaretçisinin Ip adresi |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **Parkurlar:**
-:::tip
+:::tip :bulb: İpucu
 Gidiş – Dönüş arama yapmak istediğinizde örnekte olduğu gibi ikinci bir parkur ekleyip dönüş değerleri girilmelidir. Parkur içeriği aşağıdaki gibi olmalıdır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ---------------- | ----------------------------------------------------------------------------------------- |
 | **NeredenKod\*** | Listelemek istediğiniz seferlerin kalkış noktasının kodu.**Format:(string, 3 karakter).** |
 | **NereyeKod\*** | Listelemek istediğiniz seferlerin varış noktasının kodu.**Format:(string, 3 karakter).** |
 | **Tarih\*** | Listelemek istediğiniz seferlerin kalkış tarihi **Format:(datetime, ‘yyyy-MM-dd’).** |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **YolcuSayilar:**
-:::tip
+:::tip :bulb: İpucu
 İçerisine YolcuSayi xml yapısını alarak aramak istediğiniz seferde hangi yolcu tipinden kaç adet yolcu olacağını belirtmelisiniz.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 |-------------------|-------------------------|
 |**TipKod\***|İdo Yolcu Tip kodları şöyledir; Yetişkin:1 Çocuk:2 Yaşlı:4 Öğrenci:5 Özürlü:6 Basın:10 Gazi:11**|
 |**Sayi**\*|Yolcu tipinden kaç adet yolcu olacağı. **Format:(int, max : 7).\*_\_|
-:::info
-(_) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
+:::info :exclamation: Not 
+(*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **AracSayilar:**
-:::tip
+:::tip :bulb: İpucu
 İçerisine AracSayi xml yapısını alarak aramak istediğiniz seferde hangi araç tipinden kaç adet olacağını belirtmelisiniz.  
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 |----------------|-------------------------|
 |**TipKod\***|İdo araç tipleri sorgusundan kod alanını almalısınız.**Format:(string, 3 karakter).**|
 |**Sayi\***|Araç tipinden kaç adet olacağı.**Format:(int, max : 7).**|
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 ## CEVAP
 
-:::info
+:::info :exclamation: Not 
 Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapıları bulunmaktadır. Gidiş ve dönüş parkurlarına eş olarak gidiş ve dönüş seferleri ilgili parkurun içerisinde gelmektedir. Her sefer ‘Segment’ yapıları içerisinde detaylandırılmaktadır. Her segmentin de içerisinde o segmentin ücret seçenekleri **‘UcretSecenekler’** içerisinde verilmektedir.
 :::
 
 **Segment Alanları:**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 |-------------|--------------------------------|
 |SegmentKod|Segment kodu sonraki işlemlerde kullanılmak için önemlidir.İdo ve Budo için farklı format ve uzunluklarda gelebilir.|
 |BudoSessionID|Sadece Budo seferlerinde gelir, Budo satış tamamlama aşamasına kadar gereklidir.|
@@ -183,7 +183,7 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 |VarisTarih|Tahmini varış tarih ve saati.|
 
 **UcretSecenek Alanları:**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 |-------------------|---------------------------|
 |SinifAd|İdo için (PROMO,ECO,BIZ),Budo için (TAM, PROMOSYON) Gibi kesin olmayan sınıf adları gelir.|
 |SinifKod|Sınıfın kodunu ifade eder.|
@@ -194,7 +194,7 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 |KoltukAdet|İlgili ücretten kalan koltuk adedidir.|
 |ToplamUcret|İlgili ücret seçeneğinin ücret değerini ifade eder.|
 
-| ALAN          | AÇIKLAMA                                  |
+| Alan          | Açıklama                                  |
 | ------------- | ----------------------------------------- |
 | YolcuUcretler | Yolcu Ucret                               |
 | YolcuTip      | Yolcu tipi açıklaması.                    |
@@ -204,10 +204,10 @@ Sefer arama sonucunda **‘SeferListe’** içerisinde **‘Parkur’** yapılar
 | NetFiyat      | İlgili yolcu tipinin net fiyatı.          |
 | ServisUcret   | İlgili yolcu tipinin servis ücreti.       |
 
-:::danger
+:::danger :rotating_light: Uyarı
 Sefer listesinde Budo seferleri de eklenmiştir. Budo firma numarası 5001 olarak gelecektir.
 :::
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <SeferListe>

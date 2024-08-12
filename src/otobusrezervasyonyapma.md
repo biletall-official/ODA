@@ -3,7 +3,7 @@
 ## ŞEMA
 
 Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama|
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | FirmaNo | Seçilen seferi yapacak olan firmanın firma numarası |
 | **KalkisNoktaID\*** | Seçilen seferin KalkisNoktaID değeri.**Format:(integer).** |
@@ -33,10 +33,10 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 | **IP\*** | Site ziyaretçisinin Ip adresi |
 | Email | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <xs:element name="IslemRezervasyon">
@@ -182,7 +182,7 @@ Sorgulamada kullanacağımız alanların xml şeması aşağıdaki gibidir.
 
 ## CEVAP
 
-| ALAN                   | AÇIKLAMA                                       |
+| Alan                   | Açıklama                                       |
 | ---------------------- | ---------------------------------------------- |
 | Sonuc                  | İşlemin başarılı olup olmadığını belirtir      |
 | PNR                    | Oluşan PNR kodunu belirtir.                    |

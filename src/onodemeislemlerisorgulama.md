@@ -1,6 +1,6 @@
 # ÖN ÖDEME İŞLEMLERİ SORGULAMA
 
-:::tip
+:::tip :bulb: İpucu
 Ön ödemeli çalışan kullanıcıların hesaplarına, daha önce ön ödeme ile satılan biletlerle ilgili, diğer kanallardan yapılan iptal işlemi sonucu iade yapılabilir. Aşağıdaki servis ile her gün bir önceki günün iadeleri çekilip, pnr sahiplerine belirtilen tutar kadar iade yapılmalıdır.
 :::
 
@@ -16,7 +16,7 @@
 
 ## CEVAP
 
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <OnOdemeIslemlerim>

@@ -7,7 +7,7 @@ Uçak Rezervasyon ve Satış işlemleri için sorgulamada kullanacağımız alan
 :::tip
 IslemUcak_2 xml’i ile yurtiçi ve yurtdışı rezervasyon ve satış istekleri gönderilebilmektedir.
 :::
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -326,24 +326,24 @@ IslemUcak_2 xml’i ile yurtiçi ve yurtdışı rezervasyon ve satış istekleri
 
 ## UÇAK REZERVASYON İŞLEMİ
 
-:::info
+:::info :exclamation: Not 
 Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları bulunmaktadır. Yurt dışı uçuşlarda rezervasyon işlemi sadece FirmaNo su 1100 olan firmalar için geçerlidir. Diğer firmalar için rezervasyon işlemi yapılamamaktadır.
 :::
 
 ### İSTEK
 
-| ALAN               | AÇIKLAMA                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| **IslemTip\***     | Rezervasyon için **1** Satış için **0** değeri alır.                                 |
-| **FirmaNo\***      | Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.                                |
-| **TelefonNo\***    | Telefon numarası bilgisi**Format:(string, 10 karakter - XXXXXXXXXX).**               |
-| **CepTelefonNo\*** | Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**          |
-| **Email\***        | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
+|Alan|Açıklama
+| ------------------ | --------------------------------------------------------------- |
+| **IslemTip\***     | Rezervasyon için **1** Satış için **0** değeri alır.    |
+| **FirmaNo\***      | Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır.    |
+| **TelefonNo\***    | Telefon numarası bilgisi**Format:(string, 10 karakter - XXXXXXXXXX).**   |
+| **CepTelefonNo\*** | Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).**|
+| **Email\***   | Yolcu email adresi (Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) (([\w-]+\.)+))([a-zA-Z]{2,4} [0-9]{1,3})(\]?)$) |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Segment Alanları | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir. |
 | **Kalkis\*** | Segmentin kalkış havaalanı kodu. |
@@ -356,10 +356,10 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 | **DonusMu\*** | İlgili segmentin dönüş segmenti mi olduğunu belirtir |
 | SeferKod | İlgili segmentin sefer kodunu belirtir |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Yolcu Alanları | Yolcu alanlarında uçuş planı içerisindeki her yolcu bilgisi(Yolcu1, Yolcu2…şeklinde) girilmelidir. |
 | **Ad\*** | Yolcu adı |
@@ -374,10 +374,10 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 | **Vergi\*** | UcusFiyat ile çekilen ücretlerden yolcu tipine göre vergi bilgisi |
 | **ServisUcret\*** | UcusFiyat ile çekilen ücretlerden yolcu tipine göre Servis ücreti bilgisi |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <IslemUcak_2>
@@ -426,9 +426,9 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 
 :::
 
-#### CEVAP
+### CEVAP
 
-| ALAN               | AÇIKLAMA                                         |
+| Alan               | Açıklama                                         |
 | ------------------ | ------------------------------------------------ |
 | Sonuc              | İşlem sonucu. **true/false**                     |
 | PNR                | İşlem sonunda oluşan PNR numarası                |
@@ -447,7 +447,7 @@ Aşağıda örnek bir yurtiçi rezervasyon isteği, cevabı ve açıklamaları b
 ### İSTEK
 
 Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulunmaktadır.
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ------------------ | ------------------------------------------------ |
 | **IslemTip\*** | Rezervasyon için **1** Satış için **0** değeri alır. |
 | **FirmaNo\*** | Sefer Listesinde gelen FirmaNo alanı kullanılmalıdır. |
@@ -455,10 +455,10 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 | **CepTelefonNo\*** | Cep Telefon numarası bilgisi **Format:(string, 10 karakter - XXXXXXXXXX).** |
 | **Email\*** | Yolcu email adresi ( Pattern = ^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.) | (([\w-]+\.)+))([a-zA-Z]{2,4} | [0-9]{1,3})(\]?)$) |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Segment Alanları | Segment alanlarında uçuş planı içerisindeki önce gidiş, sonra varsa dönüş segmentleri seyahat planındaki sırasıyla(Segment1, Segment2.. şeklinde) girilmelidir. |
 | **Kalkis\*** | Segmentin kalkış havaalanı kodu. |
@@ -471,10 +471,10 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 | **DonusMu\*** | İlgili segmentin dönüş segmenti mi olduğunu belirtir |
 | SeferKod | İlgili segmentin sefer kodunu belirtir.Bu bilgi Atlasglobal uçuşlarında gelmektedir. |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Yolcu Alanları | Yolcu alanlarında uçuş planı içerisindeki her yolcu bilgisi(Yolcu1, Yolcu2…şeklinde) girilmelidir. |
 | **Ad\*** | Yolcu adı |
@@ -489,12 +489,12 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 | **Vergi\*** | UcusFiyat ile çekilen ücretlerden yolcu tipine göre vergi bilgisi |
 | **ServisUcret\*** | UcusFiyat ile çekilen ücretlerden yolcu tipine göre Servis ücreti bilgisi |
 
-:::info
+:::info :exclamation: Not 
 (\*) ile işaretli alanlar, gönderilmesi zorunlu alanlardır.
 :::
 
 **Fatura Alanı**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ----------------- | ------------------------------ |
 | FaturaTip | Fatura tipi,**Kişi:0 Firma:1** |
 | KisiAd | Fatura kişi adı |
@@ -507,7 +507,7 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 | FirmaAdres | Fatura firma adresi |
 
 **WebYolcu Alanı**
-|ALAN|AÇIKLAMA|
+|Alan|Açıklama
 | ------------------------- | ---------------------------------------------------------------------------------------------------- |
 | KrediKartNo | Müşteri kredi kartı numarası |
 | KrediKartSahip | Müşteri kredi kart sahibi adı |
@@ -517,7 +517,7 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 | AcikPnrSoyad(Yeni) | Açık biletin Soyad bilgisi <u>**Not:**</u> Açık bilet kullanımı yoksa bu bilgiler gönderilmemelidir. |
 | AcikTutar | Kullanılmak istenen biletall açık parasının tutarı |
 | RezervePnrNo | Daha önce rezerve edilen bir işlem satışa dönüştürülüyorsa işlemin Rezervasyon PNR kodu. |
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <IslemUcak_2>
@@ -593,9 +593,9 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 
 :::
 
-#### CEVAP
+### CEVAP
 
-| ALAN            | AÇIKLAMA                                                                      |
+| Alan            | Açıklama                                                                      |
 | --------------- | ----------------------------------------------------------------------------- |
 | Sonuc           | İşlem sonucu. **true/false**                                                  |
 | PNR             | İşlem sonunda oluşan PNR numarası                                             |
@@ -612,10 +612,10 @@ Aşağıda örnek bir yurtiçi satış isteği, cevabı ve açıklamaları bulun
 
 ## UÇAK REZERVASYONUNU SATIŞA ÇEVİRME İŞLEMİ
 
-:::tip
+:::tip :bulb: İpucu
 Rezervasyonu satışa çevirme işlemi satış işlemi gibidir. Buna ek olarak WebYolcu içerisinde RezervePnrNo alanı da gönderilmelidir.FirmaNo alanı için PNR sorgusuyla birlikte gelen PNR listesinde bulunan FirmaNo alanı kullanılmalıdır.
 :::
-:::details kodu görüntülemek için tıklayın.
+:::details Kodu görüntülemek için tıklayın. :computer_mouse:
 
 ```xml
 <IslemUcak_2>
